@@ -1,0 +1,947 @@
+fileFormatVersion: 2
+guid: 9b3b470bc84e56045ba37f4ab688dc13
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 7
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 2.5, y: -16}
+        - {x: 3.5, y: -21}
+        - {x: 9.5, y: -21}
+        - {x: 9.5, y: -17}
+        - {x: 8.5, y: -16}
+        - {x: 8.5, y: -7}
+        - {x: 12.5, y: -7}
+        - {x: 13.5, y: -6}
+        - {x: 13.5, y: 1}
+        - {x: 9.5, y: 0}
+        - {x: 8.5, y: 2}
+        - {x: 8.5, y: 10}
+        - {x: 6.5, y: 13}
+        - {x: 3.5, y: 14}
+        - {x: -1.5, y: 14}
+        - {x: -5.5, y: 12}
+        - {x: -5.5, y: 10}
+        - {x: -5.5, y: 13}
+        - {x: -4.5, y: 14}
+        - {x: -3.5, y: 21}
+        - {x: -9.5, y: 21}
+        - {x: -10.5, y: 20}
+        - {x: -9.5, y: 18}
+        - {x: -9.5, y: 15}
+        - {x: -13.5, y: 11}
+        - {x: -13.5, y: 10}
+        - {x: -11.5, y: 8}
+        - {x: -11.5, y: 6}
+        - {x: -12.5, y: 5}
+        - {x: -12.5, y: 2}
+        - {x: -13.5, y: 1}
+        - {x: -13.5, y: -8}
+        - {x: -12.5, y: -9}
+        - {x: -9.5, y: -8}
+        - {x: -9.5, y: -5}
+        - {x: -7.5, y: -5}
+        - {x: -4.5, y: -7}
+        - {x: -8.5, y: -12}
+        - {x: -8.5, y: -16}
+        - {x: -7.5, y: -17}
+        - {x: -7.5, y: -20}
+        - {x: -6.5, y: -21}
+        - {x: -0.5, y: -21}
+        - {x: -0.5, y: -15}
+        - {x: 0.5, y: -15}
+        - {x: 1.5, y: -14}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7fb2248381042ad438542f89d134f0b7
+      internalID: -570573959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 7
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 4, y: -18}
+        - {x: 6, y: -21}
+        - {x: 14, y: -21}
+        - {x: 14, y: -19}
+        - {x: 11, y: -16}
+        - {x: 11, y: -13}
+        - {x: 10, y: -12}
+        - {x: 10, y: -7}
+        - {x: 8, y: -5}
+        - {x: 10, y: -5}
+        - {x: 12, y: -7}
+        - {x: 13, y: -7}
+        - {x: 15, y: -6}
+        - {x: 15, y: 0}
+        - {x: 14, y: 0}
+        - {x: 12, y: 2}
+        - {x: 9, y: 2}
+        - {x: 10, y: 3}
+        - {x: 10, y: 5}
+        - {x: 8, y: 10}
+        - {x: 4, y: 13}
+        - {x: 1, y: 13}
+        - {x: 3, y: 15}
+        - {x: 3, y: 16}
+        - {x: 0, y: 19}
+        - {x: -2, y: 19}
+        - {x: -4, y: 17}
+        - {x: -3, y: 15}
+        - {x: -5, y: 13}
+        - {x: -7, y: 13}
+        - {x: -8, y: 14}
+        - {x: -11, y: 12}
+        - {x: -9, y: 8}
+        - {x: -11, y: 6}
+        - {x: -13, y: 6}
+        - {x: -15, y: 4}
+        - {x: -15, y: -3}
+        - {x: -13, y: -2}
+        - {x: -9, y: -6}
+        - {x: -6, y: -6}
+        - {x: -4, y: -5}
+        - {x: -3, y: -6}
+        - {x: -3, y: -7}
+        - {x: -6, y: -9}
+        - {x: -8, y: -14}
+        - {x: -8, y: -18}
+        - {x: -5, y: -21}
+        - {x: 1, y: -21}
+        - {x: 0, y: -16}
+        - {x: 2, y: -14}
+        - {x: 4, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 6ffea33890e49ee4b9727e5c24aaf5a0
+      internalID: 1112033170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 7
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 14, y: -21}
+        - {x: 14, y: -20}
+        - {x: 8, y: -14}
+        - {x: 8, y: -10}
+        - {x: 7, y: -9}
+        - {x: 6, y: -4}
+        - {x: 9, y: -4}
+        - {x: 11, y: -6}
+        - {x: 12, y: -6}
+        - {x: 14, y: -5}
+        - {x: 14, y: 1}
+        - {x: 10, y: 3}
+        - {x: 8, y: 3}
+        - {x: 8, y: 5}
+        - {x: 6, y: 8}
+        - {x: 8, y: 10}
+        - {x: 8, y: 11}
+        - {x: 4, y: 15}
+        - {x: 3, y: 15}
+        - {x: 1, y: 13}
+        - {x: 2, y: 11}
+        - {x: -4, y: 11}
+        - {x: -8, y: 8}
+        - {x: -11, y: 6}
+        - {x: -13, y: 6}
+        - {x: -14, y: 5}
+        - {x: -14, y: -2}
+        - {x: -12, y: -2}
+        - {x: -10, y: -5}
+        - {x: -8, y: -6}
+        - {x: -5, y: -8}
+        - {x: -5, y: -9}
+        - {x: -10, y: -14}
+        - {x: -10, y: -18}
+        - {x: -7, y: -21}
+        - {x: 0, y: -21}
+        - {x: -1, y: -15}
+        - {x: 5, y: -21}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ff2da2716ccbdd64ba9d9c9137cda3f2
+      internalID: -1295470559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 7
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 1, y: -15}
+        - {x: 1, y: -17}
+        - {x: 5, y: -21}
+        - {x: 11, y: -21}
+        - {x: 11, y: -17}
+        - {x: 9, y: -15}
+        - {x: 9, y: -13}
+        - {x: 8, y: -12}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 12, y: -8}
+        - {x: 13, y: -8}
+        - {x: 15, y: -7}
+        - {x: 15, y: -1}
+        - {x: 14, y: -1}
+        - {x: 11, y: 2}
+        - {x: 9, y: 2}
+        - {x: 9, y: 8}
+        - {x: 5, y: 13}
+        - {x: -1, y: 13}
+        - {x: -4, y: 12}
+        - {x: -7, y: 9}
+        - {x: -9, y: 5}
+        - {x: -15, y: 5}
+        - {x: -15, y: 0}
+        - {x: -14, y: 0}
+        - {x: -9, y: -5}
+        - {x: -7, y: -5}
+        - {x: -6, y: -4}
+        - {x: -5, y: -5}
+        - {x: -5, y: -7}
+        - {x: -7, y: -9}
+        - {x: -7, y: -11}
+        - {x: -9, y: -13}
+        - {x: -9, y: -21}
+        - {x: -3, y: -21}
+        - {x: -2, y: -19}
+        - {x: -2, y: -15}
+        - {x: 0, y: -13}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 86d78ddd807b0d1438a07ede524c6a9e
+      internalID: 1345222722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 7
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 0.5, y: -18}
+        - {x: 1.5, y: -20}
+        - {x: 2.5, y: -20}
+        - {x: 3.5, y: -21}
+        - {x: 9.5, y: -21}
+        - {x: 9.5, y: -18}
+        - {x: 7.5, y: -16}
+        - {x: 7.5, y: -12}
+        - {x: 6.5, y: -11}
+        - {x: 6.5, y: -5}
+        - {x: 8.5, y: -6}
+        - {x: 8.5, y: -7}
+        - {x: 11.5, y: -10}
+        - {x: 13.5, y: -10}
+        - {x: 13.5, y: -3}
+        - {x: 9.5, y: 2}
+        - {x: 9.5, y: 9}
+        - {x: 6.5, y: 13}
+        - {x: -0.5, y: 13}
+        - {x: -3.5, y: 12}
+        - {x: -6.5, y: 8}
+        - {x: -6.5, y: 6}
+        - {x: -7.5, y: 6}
+        - {x: -10.5, y: 3}
+        - {x: -13.5, y: 4}
+        - {x: -13.5, y: -2}
+        - {x: -11.5, y: -4}
+        - {x: -12.5, y: -5}
+        - {x: -12.5, y: -7}
+        - {x: -10.5, y: -9}
+        - {x: -7.5, y: -8}
+        - {x: -10.5, y: -13}
+        - {x: -10.5, y: -21}
+        - {x: -4.5, y: -21}
+        - {x: -3.5, y: -19}
+        - {x: -3.5, y: -15}
+        - {x: -2.5, y: -14}
+      tessellationDetail: 1
+      bones: []
+      spriteID: c54548b531f5e044ca5d3fa57700bb18
+      internalID: 637283044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 7
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 27.5, y: 14}
+        - {x: 20.5, y: 23}
+        - {x: -5.5, y: 23}
+        - {x: -21.5, y: 15}
+        - {x: -21.5, y: 10}
+        - {x: -20.5, y: 9}
+        - {x: -16.5, y: 9}
+        - {x: -9.5, y: 12}
+        - {x: -2.5, y: 12}
+        - {x: -3.5, y: 12}
+        - {x: -7.5, y: 7}
+        - {x: -15.5, y: -16}
+        - {x: -15.5, y: -21}
+        - {x: 3.5, y: -21}
+        - {x: 28.5, y: -7}
+        - {x: 28.5, y: 11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40eb9a7d114c7f409231f365bdbd069
+      internalID: -203061423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_6
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 7
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 20, y: 13}
+        - {x: 15, y: 18}
+        - {x: 12, y: 22}
+        - {x: -16, y: 22}
+        - {x: -18, y: 19}
+        - {x: -18, y: -21}
+        - {x: 9, y: -21}
+        - {x: 27, y: -11}
+        - {x: 28, y: -10}
+        - {x: 28, y: 4}
+      - - {x: -24, y: 12}
+        - {x: -23, y: 9}
+        - {x: -20, y: 9}
+        - {x: -18, y: 11}
+        - {x: -19, y: 14}
+        - {x: -22, y: 14}
+      - - {x: -10, y: 21}
+        - {x: -16, y: 19}
+        - {x: -18, y: 15}
+        - {x: -18, y: 12}
+        - {x: -4, y: 12}
+        - {x: -4, y: 20}
+        - {x: -5, y: 21}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e74d74d8f0a84b418ad42e790e5fbd4
+      internalID: 2129863504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 7
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 6.5, y: 9}
+        - {x: -10.5, y: 9}
+        - {x: -18.5, y: -9}
+        - {x: -18.5, y: -21}
+        - {x: 10.5, y: -21}
+        - {x: 20.5, y: -13}
+        - {x: 20.5, y: 4}
+        - {x: 16.5, y: 7}
+      - - {x: 11.5, y: 10}
+        - {x: 17.5, y: 1}
+        - {x: 18.5, y: 1}
+        - {x: 20.5, y: 2}
+        - {x: 20.5, y: 11}
+        - {x: 14.5, y: 16}
+        - {x: 11.5, y: 15}
+      - - {x: -18.5, y: 17}
+        - {x: -17.5, y: 14}
+        - {x: -14.5, y: 14}
+        - {x: -12.5, y: 16}
+        - {x: -13.5, y: 19}
+        - {x: -16.5, y: 19}
+      - - {x: 2.5, y: 17}
+        - {x: 7.5, y: 15}
+        - {x: 10.5, y: 17}
+        - {x: 9.5, y: 21}
+        - {x: 5.5, y: 22}
+        - {x: 2.5, y: 22}
+        - {x: 1.5, y: 20}
+      - - {x: -8.5, y: 17}
+        - {x: -5.5, y: 18}
+        - {x: -5.5, y: 21}
+        - {x: -8.5, y: 22}
+        - {x: -10.5, y: 20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a17b779427d04cb013dee1f7e632b
+      internalID: 1396362998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 7
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: -1, y: -21}
+        - {x: 5, y: -21}
+        - {x: 5, y: -16}
+        - {x: 4, y: -15}
+        - {x: 4, y: -13}
+        - {x: 2, y: -9}
+        - {x: 3, y: -10}
+        - {x: 4, y: -12}
+        - {x: 7, y: -12}
+        - {x: 10, y: -15}
+        - {x: 11, y: -15}
+        - {x: 12, y: -14}
+        - {x: 12, y: -9}
+        - {x: 10, y: -9}
+        - {x: 9, y: -8}
+        - {x: 9, y: -6}
+        - {x: 5, y: -2}
+        - {x: 6, y: -1}
+        - {x: 6, y: 2}
+        - {x: 4, y: 7}
+        - {x: 0, y: 10}
+        - {x: -6, y: 10}
+        - {x: -9, y: 8}
+        - {x: -11, y: 3}
+        - {x: -11, y: 0}
+        - {x: -12, y: -2}
+        - {x: -9, y: -8}
+        - {x: -12, y: -10}
+        - {x: -12, y: -21}
+        - {x: -8, y: -21}
+        - {x: -4, y: -15}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 921668ad4d8f8814983f4bac26c6083f
+      internalID: 1599071254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 7
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 19.5, y: -1}
+        - {x: 12.5, y: -9}
+        - {x: 14.5, y: -14}
+        - {x: 18.5, y: -14}
+        - {x: 26.5, y: -6}
+        - {x: 26.5, y: 12}
+        - {x: 25.5, y: 15}
+        - {x: 7.5, y: 23}
+        - {x: -26.5, y: 23}
+        - {x: -26.5, y: 14}
+        - {x: -25.5, y: 11}
+        - {x: -16.5, y: -21}
+        - {x: 10.5, y: -21}
+        - {x: 11.5, y: -8}
+        - {x: 14.5, y: -5}
+        - {x: 14.5, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fbb761324091444bcc1f622b6d6a59
+      internalID: -141031222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 7
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 2.5, y: -16}
+        - {x: 5.5, y: -21}
+        - {x: 11.5, y: -21}
+        - {x: 11.5, y: -18}
+        - {x: 8.5, y: -12}
+        - {x: 8.5, y: -7}
+        - {x: 11.5, y: -10}
+        - {x: 12.5, y: -10}
+        - {x: 16.5, y: -7}
+        - {x: 16.5, y: -5}
+        - {x: 14.5, y: -3}
+        - {x: 13.5, y: -3}
+        - {x: 10.5, y: 1}
+        - {x: 8.5, y: 1}
+        - {x: 9.5, y: 6}
+        - {x: 6.5, y: 11}
+        - {x: 9.5, y: 13}
+        - {x: 8.5, y: 16}
+        - {x: 3.5, y: 18}
+        - {x: 1.5, y: 18}
+        - {x: 0.5, y: 19}
+        - {x: -1.5, y: 19}
+        - {x: -5.5, y: 21}
+        - {x: -24.5, y: 21}
+        - {x: -24.5, y: 15}
+        - {x: -19.5, y: 10}
+        - {x: -19.5, y: 8}
+        - {x: -17.5, y: 6}
+        - {x: -15.5, y: 7}
+        - {x: -14.5, y: 3}
+        - {x: -11.5, y: 1}
+        - {x: -10.5, y: 1}
+        - {x: -7.5, y: -5}
+        - {x: -5.5, y: -6}
+        - {x: -5.5, y: -7}
+        - {x: -7.5, y: -8}
+        - {x: -9.5, y: -13}
+        - {x: -9.5, y: -17}
+        - {x: -8.5, y: -18}
+        - {x: -9.5, y: -21}
+        - {x: -2.5, y: -21}
+        - {x: -2.5, y: -16}
+        - {x: -0.5, y: -14}
+        - {x: 1.5, y: -14}
+      - - {x: 22.5, y: 8}
+        - {x: 18.5, y: 9}
+        - {x: 17.5, y: 8}
+        - {x: 15.5, y: 9}
+        - {x: 13.5, y: 7}
+        - {x: 14.5, y: 4}
+        - {x: 17.5, y: 4}
+        - {x: 21.5, y: 1}
+        - {x: 21.5, y: -2}
+        - {x: 22.5, y: -3}
+        - {x: 19.5, y: -5}
+        - {x: 16.5, y: -12}
+        - {x: 18.5, y: -14}
+        - {x: 19.5, y: -14}
+        - {x: 23.5, y: -11}
+        - {x: 24.5, y: -7}
+        - {x: 24.5, y: 6}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a6374508cb99a36429c12087516f75d2
+      internalID: -1965897519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stella Atacando SE 64x64_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 7
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -32}
+        - {x: 32, y: 0}
+        - {x: 0, y: 32}
+        - {x: -32, y: 0}
+      physicsShape:
+      - - {x: 3, y: -16}
+        - {x: 6, y: -21}
+        - {x: 12, y: -21}
+        - {x: 12, y: -18}
+        - {x: 9, y: -12}
+        - {x: 9, y: -9}
+        - {x: 8, y: -7}
+        - {x: 9, y: -7}
+        - {x: 12, y: -10}
+        - {x: 13, y: -10}
+        - {x: 17, y: -7}
+        - {x: 17, y: -5}
+        - {x: 15, y: -3}
+        - {x: 14, y: -3}
+        - {x: 11, y: 1}
+        - {x: 9, y: 1}
+        - {x: 10, y: 3}
+        - {x: 10, y: 8}
+        - {x: 5, y: 13}
+        - {x: -1, y: 13}
+        - {x: -4, y: 12}
+        - {x: -8, y: 8}
+        - {x: -9, y: 6}
+        - {x: -11, y: 6}
+        - {x: -16, y: 11}
+        - {x: -15, y: 14}
+        - {x: -17, y: 16}
+        - {x: -14, y: 17}
+        - {x: -13, y: 16}
+        - {x: -9, y: 16}
+        - {x: -8, y: 15}
+        - {x: -5, y: 15}
+        - {x: -4, y: 14}
+        - {x: 1, y: 14}
+        - {x: 3, y: 13}
+        - {x: 5, y: 15}
+        - {x: 4, y: 18}
+        - {x: -1, y: 19}
+        - {x: -4, y: 21}
+        - {x: -13, y: 21}
+        - {x: -14, y: 20}
+        - {x: -17, y: 21}
+        - {x: -18, y: 20}
+        - {x: -21, y: 20}
+        - {x: -24, y: 18}
+        - {x: -24, y: 11}
+        - {x: -18, y: 5}
+        - {x: -18, y: 3}
+        - {x: -16, y: 1}
+        - {x: -15, y: 1}
+        - {x: -13, y: -2}
+        - {x: -10, y: -2}
+        - {x: -9, y: -1}
+        - {x: -5, y: -5}
+        - {x: -5, y: -7}
+        - {x: -7, y: -8}
+        - {x: -9, y: -13}
+        - {x: -9, y: -17}
+        - {x: -8, y: -18}
+        - {x: -9, y: -21}
+        - {x: -2, y: -21}
+        - {x: -2, y: -16}
+        - {x: 0, y: -14}
+        - {x: 2, y: -14}
+      - - {x: 20, y: -6}
+        - {x: 22, y: -8}
+        - {x: 24, y: -7}
+        - {x: 24, y: -1}
+        - {x: 21, y: -2}
+      - - {x: 14, y: 11}
+        - {x: 12, y: 9}
+        - {x: 13, y: 6}
+        - {x: 16, y: 6}
+        - {x: 22, y: 1}
+        - {x: 24, y: 2}
+        - {x: 24, y: 5}
+        - {x: 19, y: 10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8c8e0d947fb8af94788f9c756428da0c
+      internalID: -759263742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Stella Atacando SE 64x64_0: -570573959
+      Stella Atacando SE 64x64_1: 1112033170
+      Stella Atacando SE 64x64_10: -1965897519
+      Stella Atacando SE 64x64_11: -759263742
+      Stella Atacando SE 64x64_12: -934924984
+      Stella Atacando SE 64x64_2: -1295470559
+      Stella Atacando SE 64x64_3: 1345222722
+      Stella Atacando SE 64x64_4: 637283044
+      Stella Atacando SE 64x64_5: -203061423
+      Stella Atacando SE 64x64_6: 2129863504
+      Stella Atacando SE 64x64_7: 1396362998
+      Stella Atacando SE 64x64_8: 1599071254
+      Stella Atacando SE 64x64_9: -141031222
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
