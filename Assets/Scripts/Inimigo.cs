@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class Inimigo : MonoBehaviour
 {
     public float walkSpeed = 3f;
@@ -11,6 +11,7 @@ public class Inimigo : MonoBehaviour
     public DetectionZone AtackZone;
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
+    Damageable damageable;
     Animator animator;
     public enum WalkableDirection {Right, Left};
     private WalkableDirection _walkDirection;
@@ -59,6 +60,7 @@ public class Inimigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         touchingDirection = GetComponent<TouchingDirection>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
 
     private void Update()
@@ -71,13 +73,16 @@ public class Inimigo : MonoBehaviour
         {
             FlipDirection();
         }
-        if(canMove)
+        if(!damageable.LockVelocity)
         {
-            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+            if(canMove)
+            {
+                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+            }
         }
     }
 
@@ -93,5 +98,10 @@ public class Inimigo : MonoBehaviour
         {
             Debug.LogError("Current walkable direction is not set to legal valuer of right or left");
         }
+    }
+
+    public void OnHit(int damage, Vector2 KnockBack)
+    {
+        rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
     }
 }

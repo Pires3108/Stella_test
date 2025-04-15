@@ -19,7 +19,7 @@ public class SetBoolBehaviour : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(updateOnState){
-            animator.SetBool(boolName, valueOnEnter);
+            animator.SetBool(boolName, valueOnExit);
         }
     }
 

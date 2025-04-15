@@ -19,4 +19,6 @@ internal class AnimationStrings : MonoBehaviour
     internal static string canMove = "canMove";
     internal static string HasTarget = "HasTarget";
     internal static string isAlive = "isAlive";
+    internal static string lockVelocity = "lockVelocity";
+    internal static string hitTrigger = "hit";
 } 

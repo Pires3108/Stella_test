@@ -8772,6 +8772,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271320713214180927, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3057011621819967353, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_Name
       value: Stella
@@ -8815,6 +8819,14 @@ PrefabInstance:
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043971430343496636, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27734128
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043971430343496636, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0034937859
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
