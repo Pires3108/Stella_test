@@ -413,6 +413,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &762090948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8314574341189047650, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+  m_PrefabInstance: {fileID: 697552699632902457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5937a9ef111c9e4fabbe6ea5751bdf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961128773
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,30 +648,6 @@ CompositeCollider2D:
         Y: -50000000
       - X: 146250000
         Y: -50000000
-    - - X: 100000000
-        Y: -38750000
-      - X: 100000000
-        Y: -30000000
-      - X: 98750000
-        Y: -30000000
-      - X: 100000000
-        Y: -28750000
-      - X: 100000000
-        Y: -20000000
-      - X: 90000000
-        Y: -20000000
-      - X: 90000000
-        Y: -28750000
-      - X: 90625000
-        Y: -30000000
-      - X: 90000000
-        Y: -30000000
-      - X: 90000000
-        Y: -38750000
-      - X: 90625000
-        Y: -40000000
-      - X: 98750000
-        Y: -40000000
     - - X: 90000000
         Y: -65000000
       - X: 90000000
@@ -743,18 +730,6 @@ CompositeCollider2D:
       - {x: 12.000003, y: -4.3750057}
       - {x: 12.187507, y: -4.750004}
       - {x: 12.625007, y: -5}
-    - - {x: 9.874989, y: -4}
-      - {x: 10, y: -3.8749893}
-      - {x: 9.99997, y: -3}
-      - {x: 9.875062, y: -2.9999385}
-      - {x: 10, y: -2.8749893}
-      - {x: 9.99997, y: -2}
-      - {x: 9, y: -2.0000293}
-      - {x: 9.000003, y: -2.8750057}
-      - {x: 9.062448, y: -3}
-      - {x: 9, y: -3.0000293}
-      - {x: 9.000003, y: -3.8750057}
-      - {x: 9.062517, y: -4}
     - - {x: -9.125011, y: -4}
       - {x: -9, y: -3.8749893}
       - {x: -9.00003, y: -3}
@@ -3252,16 +3227,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 9, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 12, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -3393,16 +3358,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -10, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 9, y: -3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 15
@@ -4364,7 +4319,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4c8185a9a3dcd984aa33bcd9f5a0c35e, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 6a5d61df994020d4b9a3b898ce93658a, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 513f816ada5491a478c4d107bc92d2a6, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 20
@@ -4397,10 +4352,10 @@ Tilemap:
     m_Data: {fileID: -639950552, guid: 9200123ff9838914b9ffe031f9ca3e45, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 1077862575, guid: 9200123ff9838914b9ffe031f9ca3e45, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 2
     m_Data: {fileID: 2089959636, guid: 9200123ff9838914b9ffe031f9ca3e45, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 341
+  - m_RefCount: 339
     m_Data:
       e00: 1
       e01: 0
@@ -4419,7 +4374,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 341
+  - m_RefCount: 339
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4751,6 +4706,17 @@ Transform:
   - {fileID: 1327967478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938053435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+  m_PrefabInstance: {fileID: 697552699632902457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edcfe0b9661741240b5dceada258a703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2121206194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8758,6 +8724,38 @@ PrefabInstance:
     - target: {fileID: 6179764613172067972, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314574341189047650, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: cliffDetectionZone
+      value: 
+      objectReference: {fileID: 1938053435}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 762090948}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCliffDetected
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Inimigo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169597417604467758, guid: e7a8ed2f3839ccf48a28859debf16f53, type: 3}
+      propertyPath: NoCollidersRemain.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

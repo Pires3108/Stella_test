@@ -9,6 +9,7 @@ public class Inimigo : MonoBehaviour
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone AtackZone;
+    public DetectionZone cliffDetectionZone;
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
     Damageable damageable;
@@ -54,6 +55,11 @@ public class Inimigo : MonoBehaviour
         }
     }
 
+    public float AttackCooldown {get{
+        return animator.GetFloat(AnimationStrings.AttackCooldown);
+    } private set{
+        animator.SetFloat(AnimationStrings.AttackCooldown, Mathf.Max(value, 0));
+    } }
 
 
     private void Awake(){
@@ -66,6 +72,9 @@ public class Inimigo : MonoBehaviour
     private void Update()
     {
         HasTarget = AtackZone.DetectColliders.Count > 0;
+        if(AttackCooldown > 0 ){
+            AttackCooldown -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate(){
@@ -104,4 +113,12 @@ public class Inimigo : MonoBehaviour
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
     }
-}
+
+    public void OnCliffDetected(){
+        if(touchingDirection.IsGround){
+            FlipDirection();
+        }
+    }
+
+    }
+
