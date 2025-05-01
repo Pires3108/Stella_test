@@ -45,6 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcfe0b9661741240b5dceada258a703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoCollidersRemain:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8314574341189047650}
+        m_TargetAssemblyTypeName: Inimigo, Assembly-CSharp
+        m_MethodName: OnCliffDetected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   DetectColliders: []
 --- !u!61 &5141104313297241702
 BoxCollider2D:
@@ -181,6 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcfe0b9661741240b5dceada258a703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoCollidersRemain:
+    m_PersistentCalls:
+      m_Calls: []
   DetectColliders: []
 --- !u!1 &5457481640894214962
 GameObject:
@@ -373,6 +391,7 @@ MonoBehaviour:
   walkSpeed: 3
   walkStopRate: 0.05
   AtackZone: {fileID: 5960940104943649854}
+  cliffDetectionZone: {fileID: 9169597417604467758}
   walkDirectionVector: {x: 0, y: 0}
   _HasTarget: 0
 --- !u!114 &6326664637123470527

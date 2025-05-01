@@ -289,8 +289,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0020736067, y: -0.0208628}
-  m_Size: {x: 0.19939725, y: 0.5097768}
+  m_Offset: {x: -0.0034937859, y: -0.0208628}
+  m_Size: {x: 0.27734128, y: 0.5097768}
   m_Direction: 0
 --- !u!95 &662326422550130300
 Animator:
@@ -436,7 +436,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6747229450478004476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

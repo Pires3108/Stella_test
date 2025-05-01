@@ -99,7 +99,7 @@ public class Damageable : MonoBehaviour
             LockVelocity = true;
             animator.SetTrigger(AnimationStrings.hitTrigger);
             damageableHit?.Invoke(damage, KnockBack);
-
+            CharacterEvents.characterDamaged.Invoke(gameObject, damage);
             return true;
         }
         return false;
