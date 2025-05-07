@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
         CharacterEvents.characterHealed.RemoveListener(CharacterHealed);
     }
 
+
     void CharacterTookDamage(GameObject character, int damageReceived)
     {
         Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
