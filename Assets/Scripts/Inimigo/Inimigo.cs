@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class Inimigo : MonoBehaviour
 {
-    public float walkSpeed = 3f;
+    public float walkAcceleration = 3f;
+    public float maxSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone AtackZone;
     public DetectionZone cliffDetectionZone;
@@ -86,7 +87,12 @@ public class Inimigo : MonoBehaviour
         {
             if(canMove)
             {
-                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+
+                rb.velocity = new Vector2(
+                Mathf.Clamp(
+                    rb.velocity.x + (walkAcceleration * walkDirectionVector.x * Time.fixedDeltaTime),
+                    -maxSpeed,maxSpeed),
+                    rb.velocity.y);
             }
             else
             {
