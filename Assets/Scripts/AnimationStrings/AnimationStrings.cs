@@ -22,4 +22,5 @@ internal class AnimationStrings : MonoBehaviour
     internal static string lockVelocity = "lockVelocity";
     internal static string hitTrigger = "hit";
     internal static string AttackCooldown = "attackCooldown";
-} 
+    internal static string rangedAttackTrigger = "rangedAttack";
+}
