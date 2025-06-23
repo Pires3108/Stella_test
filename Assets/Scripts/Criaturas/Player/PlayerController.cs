@@ -16,46 +16,49 @@ public class PlayerController : MonoBehaviour
     TouchingDirection touchingDirection;
     Damageable damageable;
 
-    public float CurrentMoveSpeed{
-    get
+// codigo que define o movimento do player true or false
+    public float CurrentMoveSpeed
     {
-        if (CanMove)
+        get
         {
-        if(IsMoving && !touchingDirection.IsOnWall)
+            if (CanMove)
             {
-                if(touchingDirection.IsGround)
+                if (IsMoving && !touchingDirection.IsOnWall)
                 {
-                    if(IsRunning)
+                    if (touchingDirection.IsGround)
                     {
-                        return runSpeed;
+                        if (IsRunning)
+                        {
+                            return runSpeed;
+                        }
+                        else
+                        {
+                            return walkSpeed;
+                        }
                     }
                     else
                     {
-                        return walkSpeed;
+                        return airWalkSpeed;
                     }
                 }
                 else
                 {
-                    return airWalkSpeed;
+                    return 0;
                 }
             }
             else
             {
+                //movement locked
                 return 0;
             }
-        } else
-        {
-            //movement locked
-            return 0;
+
         }
-        
-    }
     }
 
     [SerializeField]
     private bool _isMoving = false;
 
-
+    //detecta movimentação
     public bool IsMoving { get
     {
         return _isMoving;
@@ -66,8 +69,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(AnimationStrings.isMoving,value);
     }
     }
-    
+
+    // detecta se o player is running
     [SerializeField]
+    
     private bool _isrunning = false;
     public bool IsRunning
     {
@@ -83,16 +88,22 @@ public class PlayerController : MonoBehaviour
 
     public bool _isFacingRight = true;
 
-    public bool IsFacingRight { get {return _isFacingRight; } private set{
-        if(_isFacingRight != value)
+    //faz o player inverter de lado
+    public bool IsFacingRight
+    {
+        get { return _isFacingRight; }
+        private set
         {
+            if (_isFacingRight != value)
+            {
 
-            transform.localScale *= new Vector2(-1, 1);
+                transform.localScale *= new Vector2(-1, 1);
+            }
+            _isFacingRight = value;
+
+
         }
-        _isFacingRight = value;
-    
-    
-    } }
+    }
 
     public bool CanMove
     {
@@ -157,7 +168,7 @@ public class PlayerController : MonoBehaviour
             IsFacingRight = false;
         }
     }
-
+    //corrida do player
     public void OnRun(InputAction.CallbackContext context)
     {
         if(context.started)
@@ -169,7 +180,7 @@ public class PlayerController : MonoBehaviour
             IsRunning = false;
         }
     }
-    
+    //Pulo do player
     public void OnJump(InputAction.CallbackContext context)
     {
         if(context.started && touchingDirection.IsGround && CanMove)
@@ -178,7 +189,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
         }
     }
-
+    //attack
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -186,7 +197,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
-
+    //Area de attack
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -194,7 +205,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
         }
     }
-
+    //set the movimentation in relation of the HIT
     public void OnHit(int damage, Vector2 KnockBack)
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);

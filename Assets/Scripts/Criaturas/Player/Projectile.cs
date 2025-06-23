@@ -18,7 +18,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         rb.velocity = new Vector2(moveSpeed.x * transform.localScale.x, moveSpeed.y);
     }
-
+    //codigo da flecha do player
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Damageable damageable = collision.GetComponent<Damageable>();

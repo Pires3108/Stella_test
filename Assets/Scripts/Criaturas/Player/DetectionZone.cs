@@ -14,15 +14,17 @@ public class DetectionZone : MonoBehaviour
         col = GetComponent<BoxCollider2D>();
     }
 
+    //Detecta colisao
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DetectColliders.Add(collision);
     }
 
+    //Remove a colisao
     private void OnTriggerExit2D(Collider2D collision)
     {
         DetectColliders.Remove(collision);
-        if(DetectColliders.Count == 0 )
+        if (DetectColliders.Count == 0)
         {
             NoCollidersRemain.Invoke();
         }

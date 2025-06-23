@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour
     private int _maxHealth = 100;
 
 
-
+    //vida máxima do player
     public int MaxHealth
     {
         get
@@ -30,7 +30,7 @@ public class Damageable : MonoBehaviour
     [SerializeField]
     private int _health = 100;
 
-
+    // vida do player
     public int Health
     {
         get
@@ -54,7 +54,8 @@ public class Damageable : MonoBehaviour
 
     public float invicibilityTime = 0.25f;
     private float timeSinceHit = 0;
-
+    
+    //void que define a vida do player
     public bool IsAlive
     {
         get
@@ -66,7 +67,7 @@ public class Damageable : MonoBehaviour
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set" + value);
-        
+
             if (value == false)
             {
                 damageableDeath.Invoke();
@@ -74,6 +75,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    // função que faz o player não se movimentar ao sofrer dano
     public bool LockVelocity
     {
         get
@@ -105,6 +107,7 @@ public class Damageable : MonoBehaviour
 
     }
 
+    // Função de Hit com knockback, player para inimigo
     public bool Hit(int damage, Vector2 KnockBack)
     {
         if (IsAlive && !isInvincible)
@@ -120,6 +123,7 @@ public class Damageable : MonoBehaviour
         return false;
     }
 
+    // Função de Cura para o Player quando entra em contato com o Item Heal
     public bool Heal(int healthRestore)
     {
         if (IsAlive && Health < MaxHealth)
