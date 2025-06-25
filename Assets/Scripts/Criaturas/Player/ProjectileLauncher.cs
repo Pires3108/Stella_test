@@ -6,9 +6,13 @@ public class ProjectileLauncher : MonoBehaviour
 {
     [SerializeField] public GameObject projectilePrefab;
     public Transform launchPoint;
-
+    public bool canFire = true;
     public void FireProjectile()
     {
+        if (!canFire)
+        {
+            return; // Exit if the launcher cannot fire
+        }
         GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, projectilePrefab.transform.rotation);
         Vector3 originalScale = projectile.transform.localScale;
 

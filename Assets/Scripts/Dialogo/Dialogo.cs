@@ -52,4 +52,5 @@ public class Dialogo : ScriptableObject
             return false;
         }
     }
+    
 }

@@ -7,10 +7,15 @@ public class Personagem : MonoBehaviour
 
     [SerializeField]
     private Dialogo dialogo;
+    public bool podeInteragir;
 
-    private void OnMouseDown()
+
+    void Update()
     {
-        TelaDialogo.Instancia.Exibir(this.dialogo);
+        if (Input.GetKeyDown(KeyCode.E) && podeInteragir)
+        {
+            TelaDialogo.Instancia.Exibir(this.dialogo);
+        }   
     }
 
 }

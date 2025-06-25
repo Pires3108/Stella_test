@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
@@ -12,11 +14,15 @@ public class PlayerController : MonoBehaviour
     public float runSpeed;
     public float airWalkSpeed;
     public float jumpImpulse;
+    public bool canAttack = true;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     Damageable damageable;
+    public ProjectileLauncher projectileLauncher;
+    public Personagem NPCScript;
+    public GameObject caixaDialogo;
 
-// codigo que define o movimento do player true or false
+    // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
     {
         get
@@ -59,20 +65,22 @@ public class PlayerController : MonoBehaviour
     private bool _isMoving = false;
 
     //detecta movimentação
-    public bool IsMoving { get
+    public bool IsMoving
     {
-        return _isMoving;
-    } 
-    private set
-    {
-        _isMoving = value;
-        animator.SetBool(AnimationStrings.isMoving,value);
-    }
+        get
+        {
+            return _isMoving;
+        }
+        private set
+        {
+            _isMoving = value;
+            animator.SetBool(AnimationStrings.isMoving, value);
+        }
     }
 
     // detecta se o player is running
     [SerializeField]
-    
+
     private bool _isrunning = false;
     public bool IsRunning
     {
@@ -134,7 +142,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!damageable.LockVelocity)
+        if (!damageable.LockVelocity)
         {
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         }
@@ -145,7 +153,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        if(IsAlive)
+        if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
 
@@ -159,11 +167,11 @@ public class PlayerController : MonoBehaviour
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if(moveInput.x > 0 && !IsFacingRight)
+        if (moveInput.x > 0 && !IsFacingRight)
         {
             IsFacingRight = true;
         }
-        else if(moveInput.x < 0 && IsFacingRight)
+        else if (moveInput.x < 0 && IsFacingRight)
         {
             IsFacingRight = false;
         }
@@ -171,7 +179,7 @@ public class PlayerController : MonoBehaviour
     //corrida do player
     public void OnRun(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if (context.started)
         {
             IsRunning = true;
         }
@@ -183,7 +191,7 @@ public class PlayerController : MonoBehaviour
     //Pulo do player
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(context.started && touchingDirection.IsGround && CanMove)
+        if (context.started && touchingDirection.IsGround && CanMove)
         {
             animator.SetTrigger(AnimationStrings.jump);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
@@ -192,7 +200,7 @@ public class PlayerController : MonoBehaviour
     //attack
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && caixaDialogo.activeSelf == false && canAttack)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
@@ -200,7 +208,7 @@ public class PlayerController : MonoBehaviour
     //Area de attack
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && projectileLauncher.canFire)
         {
             animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
         }
@@ -209,5 +217,28 @@ public class PlayerController : MonoBehaviour
     public void OnHit(int damage, Vector2 KnockBack)
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.CompareTag("NPC"))
+        {
+            Debug.Log("Player entrou na área de interação com NPC");
+            NPCScript.podeInteragir = true;
+            projectileLauncher.canFire = false;
+            canAttack = false;
+
+        }
+    }
+    
+    void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.CompareTag("NPC"))
+        {
+            Debug.Log("Player saiu da área de interação com NPC");
+            NPCScript.podeInteragir = false;
+            projectileLauncher.canFire = true;
+            canAttack = true;
+        }
     }
 }
