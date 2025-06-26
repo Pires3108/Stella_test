@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdaeccd398ef7024b8379a6af6f7fd5a
+guid: 08ffe8daaac1e02499c67a19ee5d6262
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit_0
+      name: Lagarto Chefe Attack Combo 2-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 17
-        width: 56
-        height: 37
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c393e2437e3c8a5498659c6a531b1d0d
-      internalID: 1132754587
+      spriteID: 9802dec226b64ef4ab18b1db35bd4d0e
+      internalID: 1577532942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_1
+      name: Lagarto Chefe Attack Combo 2-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 17
-        width: 56
-        height: 37
+        x: 41
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87dd5064c42590243aea3f38b76c65dd
-      internalID: -1126222528
+      spriteID: a1f1fa091434ec9479043d4ceadb8e8d
+      internalID: 1287549390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_2
+      name: Lagarto Chefe Attack Combo 2-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 17
-        width: 56
-        height: 37
+        x: 82
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3b9480d68728445a371c4182eec9cc
-      internalID: -520415372
+      spriteID: 3483ac4dfbbd5cb4980132bfb83f0559
+      internalID: -477240778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo 2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e337534950353424d946ac0725fd1417
+      internalID: -283117760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo 2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7419040c2c60646bfec954d0829031
+      internalID: 829648329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo 2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a666ad81154d44f96edc4e5ff7d602
+      internalID: 574327208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo 2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0fbb6fa738c9341bdccab4985caf39
+      internalID: -1373431348
       vertices: []
       indices: 
       edges: []
@@ -222,11 +306,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit_0: 1132754587
-      Hit_1: -1126222528
-      Hit_2: -520415372
-      Hit_3: 1390740544
-      Hit_4: -84990834
+      Lagarto Chefe Attack Combo 2-Sheet_0: 1577532942
+      Lagarto Chefe Attack Combo 2-Sheet_1: 1287549390
+      Lagarto Chefe Attack Combo 2-Sheet_2: -477240778
+      Lagarto Chefe Attack Combo 2-Sheet_3: -283117760
+      Lagarto Chefe Attack Combo 2-Sheet_4: 829648329
+      Lagarto Chefe Attack Combo 2-Sheet_5: 574327208
+      Lagarto Chefe Attack Combo 2-Sheet_6: -1373431348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

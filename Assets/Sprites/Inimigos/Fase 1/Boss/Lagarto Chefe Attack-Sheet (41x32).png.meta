@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdaeccd398ef7024b8379a6af6f7fd5a
+guid: 5ac1663fde61ecb43865dcd796480246
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit_0
+      name: Lagarto Chefe Attack-Sheet (41x32)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 17
-        width: 56
-        height: 37
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c393e2437e3c8a5498659c6a531b1d0d
-      internalID: 1132754587
+      spriteID: 0be39fe6d1f8da949aa371daa1117b25
+      internalID: -367667526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_1
+      name: Lagarto Chefe Attack-Sheet (41x32)_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 17
-        width: 56
-        height: 37
+        x: 41
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87dd5064c42590243aea3f38b76c65dd
-      internalID: -1126222528
+      spriteID: 0b125a10cf67c1f47bc210b162a447e4
+      internalID: 919331209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_2
+      name: Lagarto Chefe Attack-Sheet (41x32)_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 17
-        width: 56
-        height: 37
+        x: 82
+        y: 0
+        width: 41
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +205,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3b9480d68728445a371c4182eec9cc
-      internalID: -520415372
+      spriteID: 3e86d09d689150348b44b4382882760a
+      internalID: -373584589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack-Sheet (41x32)_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7112c734f759a4a8ac11599db72f63
+      internalID: -1477484795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack-Sheet (41x32)_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0f94c14d1fe4648893cb71ba9c02c4
+      internalID: -115438022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack-Sheet (41x32)_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041972c3dcfb9ea48989beab1b14f1d5
+      internalID: 1362615628
       vertices: []
       indices: 
       edges: []
@@ -222,11 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit_0: 1132754587
-      Hit_1: -1126222528
-      Hit_2: -520415372
-      Hit_3: 1390740544
-      Hit_4: -84990834
+      Lagarto Chefe Attack-Sheet (41x32)_0: -367667526
+      Lagarto Chefe Attack-Sheet (41x32)_1: 919331209
+      Lagarto Chefe Attack-Sheet (41x32)_2: -373584589
+      Lagarto Chefe Attack-Sheet (41x32)_3: -1477484795
+      Lagarto Chefe Attack-Sheet (41x32)_4: -115438022
+      Lagarto Chefe Attack-Sheet (41x32)_5: 1362615628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

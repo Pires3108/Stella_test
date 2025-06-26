@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2dbfa170cae80dc47872e2817dc01446
+guid: d53a1aa9185f73641819132db4304d83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -93,16 +93,68 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit_0
+      name: Lagarto Chefe Attack Combo-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea9a73677eace984c893252bb00ad290
-      internalID: -822972106
+      spriteID: 5aecd51000374f94bbdb6306bd285b90
+      internalID: -1496272251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_1
+      name: Lagarto Chefe Attack Combo-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 41
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5174907532a02b14b997ff66459e5471
-      internalID: -1896431223
+      spriteID: 7ffab4f68956e2d4487ce7812aaf49cf
+      internalID: -1993658891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_2
+      name: Lagarto Chefe Attack Combo-Sheet_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,8 +205,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df44e3ac96e008944afcdeac734bb62c
-      internalID: 760992755
+      spriteID: 2c3c4a62f9d26f5458cdd1546a30c737
+      internalID: -50088430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae9276be33b287468cf02f13705861a
+      internalID: 1115537267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lagarto Chefe Attack Combo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41086a4d6ca28b4eb4ec06179af2920
+      internalID: -296242781
       vertices: []
       indices: 
       edges: []
@@ -170,9 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit_0: -822972106
-      Hit_1: -1896431223
-      Hit_2: 760992755
+      Lagarto Chefe Attack Combo-Sheet_0: -1496272251
+      Lagarto Chefe Attack Combo-Sheet_1: -1993658891
+      Lagarto Chefe Attack Combo-Sheet_2: -50088430
+      Lagarto Chefe Attack Combo-Sheet_3: 1115537267
+      Lagarto Chefe Attack Combo-Sheet_4: -296242781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdaeccd398ef7024b8379a6af6f7fd5a
+guid: 0d77ed3e0951dd34eb3c7020fce41875
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,7 +137,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit_0
+      name: LenhadorBranco_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 56
-        height: 37
+        x: 160
+        y: 60
+        width: 181
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c393e2437e3c8a5498659c6a531b1d0d
-      internalID: 1132754587
+      spriteID: 4292c1b35223bbd4ea318781babb8e6c
+      internalID: 1499365084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit_1
+      name: LenhadorBranco_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 17
-        width: 56
-        height: 37
+        x: 660
+        y: 59
+        width: 181
+        height: 365
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,29 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87dd5064c42590243aea3f38b76c65dd
-      internalID: -1126222528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hit_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 17
-        width: 56
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a3b9480d68728445a371c4182eec9cc
-      internalID: -520415372
+      spriteID: 375841e15f87a784a96fcb6d73c55894
+      internalID: -2073552873
       vertices: []
       indices: 
       edges: []
@@ -222,11 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit_0: 1132754587
-      Hit_1: -1126222528
-      Hit_2: -520415372
-      Hit_3: 1390740544
-      Hit_4: -84990834
+      LenhadorBranco_0: 1499365084
+      LenhadorBranco_1: -2073552873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

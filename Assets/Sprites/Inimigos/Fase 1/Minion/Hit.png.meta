@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 702e63d7f23e13e41b0fd0c6a3016061
+guid: a1a65568457b4d84aabe0e7653ef826f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -93,16 +93,68 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lagarto caindo-Sheet_0
+      name: Hit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +163,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e4d2a832e0d6fe48acb9c25709bb9cc
-      internalID: 1655724805
+      spriteID: 2a8d933f01efa824cb88d5d51004e493
+      internalID: 357838599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lagarto caindo-Sheet_1
+      name: Hit_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 41
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 668c0c671175ba744aebd0f24ad0c43a
-      internalID: 540913167
+      spriteID: 9df9d2b5398c38e4e93994b9a4c46f15
+      internalID: -525243190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lagarto caindo-Sheet_2
+      name: Hit_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 82
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,19 +205,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e96f851d4fe9b4da84435ff753f0d4
-      internalID: 1371301893
+      spriteID: 6f1b2a1a2028a414eaf0fdeee8bb2db8
+      internalID: -2034076940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lagarto caindo-Sheet_3
+      name: Hit_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 123
         y: 0
-        width: 32
+        width: 41
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,29 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262caaf8ced2a11459deb93216803934
-      internalID: -818407698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lagarto caindo-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf7a088628b67934f8adc55aae6264d9
-      internalID: -416604849
+      spriteID: 18a40549abad606428b6d29eea6c1505
+      internalID: -989104229
       vertices: []
       indices: 
       edges: []
@@ -212,11 +243,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lagarto caindo-Sheet_0: 1655724805
-      Lagarto caindo-Sheet_1: 540913167
-      Lagarto caindo-Sheet_2: 1371301893
-      Lagarto caindo-Sheet_3: -818407698
-      Lagarto caindo-Sheet_4: -416604849
+      Hit_0: 357838599
+      Hit_1: -525243190
+      Hit_2: -2034076940
+      Hit_3: -989104229
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
