@@ -12,7 +12,7 @@ public class Personagem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && podeInteragir)
+        if (Input.GetKeyDown(KeyCode.E) && podeInteragir == true)
         {
             TelaDialogo.Instancia.Exibir(this.dialogo);
         }   

@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        gameCanvas = FindObjectOfType<Canvas>();
+        gameCanvas = GameObject.Find("TextoDano").GetComponent<Canvas>();
     }
 
     private void OnEnable()

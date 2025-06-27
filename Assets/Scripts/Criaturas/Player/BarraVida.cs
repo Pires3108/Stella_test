@@ -11,7 +11,7 @@ public class BarraVida : MonoBehaviour
     void Start()
     {
         //integrando ao codigo os valores do codigo Damageable
-        player = FindObjectOfType<Damageable>();
+        player = GameObject.Find("Stella").GetComponent<Damageable>();
     }
 
     // Update is called once per frame

@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection = GetComponent<TouchingDirection>();
         damageable = GetComponent<Damageable>();
+        NPCScript.podeInteragir = false;
     }
 
     private void FixedUpdate()

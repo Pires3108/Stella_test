@@ -19,6 +19,7 @@ public class TelaDialogo : MonoBehaviour
     private Dialogo dialogo;
 
     private static TelaDialogo instancia;
+    public GameController gameController;
 
 
     private void Awake()
@@ -37,6 +38,7 @@ public class TelaDialogo : MonoBehaviour
 
     public void Exibir(Dialogo dialogo)
     {
+        gameController.IsDialogActive = true;
         this.dialogo = dialogo;
         this.dialogo.Iniciar();
 
@@ -47,6 +49,7 @@ public class TelaDialogo : MonoBehaviour
     private void Esconder()
     {
         this.gameObject.SetActive(false);
+        gameController.IsDialogActive = false;
     }
 
     public void Avancar()
