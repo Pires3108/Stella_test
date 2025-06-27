@@ -6137,7 +6137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784.7179, y: 479.1}
+  m_AnchoredPosition: {x: -606, y: 398}
   m_SizeDelta: {x: 64.48, y: 32.5026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821158395
@@ -6524,7 +6524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -896.9, y: 479.1}
+  m_AnchoredPosition: {x: -752, y: 393}
   m_SizeDelta: {x: 111.6843, y: 90.5548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029172350
@@ -11707,8 +11707,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1769162266}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: jumpImpulse
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: airWalkSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: caixaDialogo
@@ -11718,6 +11726,10 @@ PrefabInstance:
       propertyPath: projectileLauncher
       value: 
       objectReference: {fileID: 1057826943}
+    - target: {fileID: 6397333244049082153, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

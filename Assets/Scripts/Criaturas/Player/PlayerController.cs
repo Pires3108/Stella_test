@@ -113,6 +113,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //bool da animação de movimento
     public bool CanMove
     {
         get
@@ -224,7 +225,6 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.CompareTag("NPC"))
         {
-            Debug.Log("Player entrou na área de interação com NPC");
             NPCScript.podeInteragir = true;
             projectileLauncher.canFire = false;
             canAttack = false;
@@ -236,7 +236,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.CompareTag("NPC"))
         {
-            Debug.Log("Player saiu da área de interação com NPC");
+
             NPCScript.podeInteragir = false;
             projectileLauncher.canFire = true;
             canAttack = true;

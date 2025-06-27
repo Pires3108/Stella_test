@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
+//set das animações dentro do jogo
 internal class AnimationStrings : MonoBehaviour
 {
     internal static string isMoving = "isMoving";

@@ -19,6 +19,7 @@ public class Inimigo : MonoBehaviour
     private WalkableDirection _walkDirection;
     public Vector2 walkDirectionVector = Vector2.right;
     
+    //define a direção que o inimigo pode andar
     public WalkableDirection WalkDirection
     {
         get {return _walkDirection;}
@@ -37,6 +38,8 @@ public class Inimigo : MonoBehaviour
             _walkDirection = value; }
         
     }
+
+    //aciona o target do inimigo
 
     public bool _HasTarget = false;
     public bool HasTarget { 
@@ -109,17 +112,16 @@ public class Inimigo : MonoBehaviour
         } else if(WalkDirection == WalkableDirection.Left)
         {
             WalkDirection = WalkableDirection.Right;
-        } else 
-        {
-            Debug.LogError("Current walkable direction is not set to legal valuer of right or left");
-        }
+        } 
     }
 
+    //dano + knockback
     public void OnHit(int damage, Vector2 KnockBack)
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
     }
 
+    //inverte a posição 
     public void OnCliffDetected(){
         if(touchingDirection.IsGround){
             FlipDirection();

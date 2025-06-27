@@ -75,6 +75,7 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
+    //Voo do Inimigo
     private void Flight()
     {
         Vector2 directionToWayPoint = (nextWaypoint.position - transform.position).normalized;
@@ -96,6 +97,7 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
+    //inverte a direção do inimigo
     private void UpdateDirection()
     {
         Vector3 locScale = transform.localScale;
@@ -116,6 +118,7 @@ public class FlyingEnemy : MonoBehaviour
         }
     }
 
+    //morte do inimigo
     public void OnDeath()
     {
         rb.gravityScale = 2f;

@@ -30,10 +30,6 @@ public class Projectile : MonoBehaviour
 
             bool gotHit = damageable.Hit(damage, deliveredKnockback);
 
-            if (gotHit)
-            {
-                Debug.Log(collision.name + "hit for" + damage);
-            }
         }
     }
 }
