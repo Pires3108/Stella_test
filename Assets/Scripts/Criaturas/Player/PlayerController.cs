@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
@@ -15,9 +16,12 @@ public class PlayerController : MonoBehaviour
     public float airWalkSpeed;
     public float jumpImpulse;
     public bool canAttack = true;
+    public float delayMorte;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     Damageable damageable;
+
+    Damageable isAlive;
     public ProjectileLauncher projectileLauncher;
     public Personagem NPCScript;
     public GameObject caixaDialogo;
@@ -139,7 +143,16 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection = GetComponent<TouchingDirection>();
         damageable = GetComponent<Damageable>();
+        isAlive = GetComponent<Damageable>();
         NPCScript.podeInteragir = false;
+    }
+
+    private void Update()
+    {
+        if (isAlive.IsAlive == false)
+        {
+            StartCoroutine(Morte());
+        }
     }
 
     private void FixedUpdate()
@@ -230,8 +243,14 @@ public class PlayerController : MonoBehaviour
             canAttack = false;
 
         }
+
+        if (coll.CompareTag("OutMap"))
+        {
+            isAlive.IsAlive = false;
+            Debug.Log("Player has left the map");
+        }
     }
-    
+
     void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.CompareTag("NPC"))
@@ -241,5 +260,11 @@ public class PlayerController : MonoBehaviour
             projectileLauncher.canFire = true;
             canAttack = true;
         }
+    }
+    
+    IEnumerator Morte()
+    {
+        yield return new WaitForSeconds(delayMorte);
+        SceneManager.LoadScene("GameOver_OutMap");
     }
 }

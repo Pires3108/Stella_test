@@ -16,16 +16,21 @@ public class Sair_Game : MonoBehaviour
     private void OnButtonPlayClickJogar()
     {
         Debug.Log("SAIR");
-        
+
     }
 
     public void QuitGame()
     {
-    
-    #if UNITY_EDITOR
+
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         Application.Quit();
-    #endif
+#endif
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

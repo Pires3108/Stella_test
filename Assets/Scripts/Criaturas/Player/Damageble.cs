@@ -27,8 +27,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private int _health = 100;
+    public int _health = 100;
 
     // vida do player
     public int Health
