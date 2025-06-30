@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float airWalkSpeed;
     public float jumpImpulse;
     public bool canAttack = true;
-    public float delayMorte;
+    public float delayMorte, delayWin;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     Damageable damageable;
@@ -252,6 +252,11 @@ public class PlayerController : MonoBehaviour
             isAlive.IsAlive = false;
             Debug.Log("Player has left the map");
         }
+
+        if (coll.CompareTag("Trofeu"))
+        {
+            StartCoroutine(Win());
+        }
     }
 
     void OnTriggerExit2D(Collider2D coll)
@@ -265,10 +270,16 @@ public class PlayerController : MonoBehaviour
             eKey.SetActive(false);
         }
     }
-    
+
     IEnumerator Morte()
     {
         yield return new WaitForSeconds(delayMorte);
         SceneManager.LoadScene("GameOver_OutMap");
+    }
+
+    IEnumerator Win()
+    {
+        yield return new WaitForSeconds(delayWin);
+        SceneManager.LoadScene("WinScreen");
     }
 }

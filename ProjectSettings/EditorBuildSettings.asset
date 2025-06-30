@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 72f1b485cce537648b0f104385e36340
   - enabled: 1
-    path: Assets/Scenes/Jogo.unity
+    path: Assets/Scenes/F1.unity
     guid: 817047eadef8d7540965410cb5ac8486
   - enabled: 1
     path: Assets/Scenes/GameOver_OutMap.unity
     guid: d9a1ed8e67cd47c40b626fe9991d65df
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 9985e7f3bb1ccde4e93f38906f4b8b17
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 9f5e8f56ce777ec499b1d6566af080d1

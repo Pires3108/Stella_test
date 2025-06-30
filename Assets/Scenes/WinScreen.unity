@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You crossed the line... and were swallowed by nothingness.
+  m_text: You challenged the abyss. And you won.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
@@ -440,7 +440,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Jogo
+          m_StringArgument: F1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &739866524
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 1053677553}
   - component: {fileID: 1053677552}
   m_Layer: 5
-  m_Name: GameOver_Text
+  m_Name: Win_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME OVER
+  m_text: YOU WIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7f714446b3adc94fa5e9684e989fa75, type: 2}
   m_sharedMaterial: {fileID: -6447529586649601203, guid: f7f714446b3adc94fa5e9684e989fa75, type: 2}
@@ -547,8 +547,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4278251775
+  m_fontColor: {r: 1, g: 0.9417832, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 1096163020}
   - component: {fileID: 1096163019}
   m_Layer: 5
-  m_Name: Quit_Text
+  m_Name: Replay_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defy fate again
+  m_text: Achieve victory once again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Return to the beginning of everything
+  m_text: End your career
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
@@ -975,7 +975,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: Meunu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1749013907
