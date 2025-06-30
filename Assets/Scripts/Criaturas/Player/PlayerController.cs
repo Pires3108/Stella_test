@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public ProjectileLauncher projectileLauncher;
     public Personagem NPCScript;
     public GameObject caixaDialogo;
+    public GameObject eKey;
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -145,6 +146,7 @@ public class PlayerController : MonoBehaviour
         damageable = GetComponent<Damageable>();
         isAlive = GetComponent<Damageable>();
         NPCScript.podeInteragir = false;
+        eKey.SetActive(false);
     }
 
     private void Update()
@@ -241,6 +243,7 @@ public class PlayerController : MonoBehaviour
             NPCScript.podeInteragir = true;
             projectileLauncher.canFire = false;
             canAttack = false;
+            eKey.SetActive(true);
 
         }
 
@@ -259,6 +262,7 @@ public class PlayerController : MonoBehaviour
             NPCScript.podeInteragir = false;
             projectileLauncher.canFire = true;
             canAttack = true;
+            eKey.SetActive(false);
         }
     }
     
