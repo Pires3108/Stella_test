@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You crossed the line... and were swallowed by nothingness.
+  m_text: "Voc\xEA cruzou a linha... e foi engolido pelo abismo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
@@ -440,7 +440,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Jogo
+          m_StringArgument: F1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &739866524
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defy fate again
+  m_text: Desafie o destino novamente
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Return to the beginning of everything
+  m_text: "Voltar ao come\xE7o de tudo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
   m_sharedMaterial: {fileID: -7070260086215124228, guid: 2dddf1ce12c1e6a47b6a2155745f78f7, type: 2}
