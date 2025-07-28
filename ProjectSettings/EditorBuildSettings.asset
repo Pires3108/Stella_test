@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/F1.unity
     guid: 817047eadef8d7540965410cb5ac8486
   - enabled: 1
+    path: Assets/Scenes/F2.unity
+    guid: 5ac935fbe9fc62f4794f1b3ce60f5150
+  - enabled: 1
+    path: Assets/Scenes/1 - Boss.unity
+    guid: bb61f2d862e838741a5f46860cfbc92f
+  - enabled: 1
     path: Assets/Scenes/GameOver_OutMap.unity
     guid: d9a1ed8e67cd47c40b626fe9991d65df
   - enabled: 1

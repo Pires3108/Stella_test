@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,6 +93,58 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -111,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b33d235e113521240885c62a6e6f93a5
-      internalID: 1187804152
+      spriteID: 487aad1209600444fbd7c2bd1bff0c8c
+      internalID: -1009633954
       vertices: []
       indices: 
       edges: []
@@ -122,7 +174,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -132,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d8501997c3dd2b4989d117d7fb9bf91
-      internalID: 2039541623
+      spriteID: e6e4ed95333fbe647b5c1c28258f61c2
+      internalID: 569385996
       vertices: []
       indices: 
       edges: []
@@ -143,7 +195,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -153,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62bcbc7c0f9c14640a98b960256c0160
-      internalID: -1565117508
+      spriteID: baa60d95c5bc55847a4f7a90c8514967
+      internalID: -944015428
       vertices: []
       indices: 
       edges: []
@@ -164,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -174,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59158edc14fd3ad49bbb33e5fef1c244
-      internalID: -1803044358
+      spriteID: 32b6f7ce93237634f991ba9314b849f6
+      internalID: -1661761948
       vertices: []
       indices: 
       edges: []
@@ -185,7 +237,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -195,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ecb7980e86ab454597fcabc74c17e1a
-      internalID: 356635687
+      spriteID: 8320be74be769d34e9587f2c8538dc66
+      internalID: -714390483
       vertices: []
       indices: 
       edges: []
@@ -206,7 +258,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -216,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5b60f2078ed69d4798bd0000984ec3b
-      internalID: 796638466
+      spriteID: 318112e517601384cab7b6d8af286792
+      internalID: 1407836032
       vertices: []
       indices: 
       edges: []
@@ -226,8 +278,8 @@ TextureImporter:
       name: TileMap - Fase 3_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -237,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f858cbac91abd41a1e9c927e6dc262
-      internalID: 350218355
+      spriteID: 2e2768db516e4ae46b86f48157bf9dc9
+      internalID: 1430999652
       vertices: []
       indices: 
       edges: []
@@ -247,8 +299,8 @@ TextureImporter:
       name: TileMap - Fase 3_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 0
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -258,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fac92844896517469a21e8bf032e147
-      internalID: 1316950205
+      spriteID: aed3b65210855a54580093791de92ea9
+      internalID: 18358859
       vertices: []
       indices: 
       edges: []
@@ -268,8 +320,8 @@ TextureImporter:
       name: TileMap - Fase 3_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -279,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d8a1861a12b0c44a3eafcc602c62db
-      internalID: -1617773798
+      spriteID: e24cb492273adab4ebd2b48ec6fc14f0
+      internalID: -1758285554
       vertices: []
       indices: 
       edges: []
@@ -289,8 +341,8 @@ TextureImporter:
       name: TileMap - Fase 3_9
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -300,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d497b5d6ed131ab47bad23d619b60bdc
-      internalID: -1617785379
+      spriteID: f1200fc45d7b62e47b480b311cd4648a
+      internalID: -1360409820
       vertices: []
       indices: 
       edges: []
@@ -310,8 +362,8 @@ TextureImporter:
       name: TileMap - Fase 3_10
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 160
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -321,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f4499a8de234d44d830e1d9b1119d96
-      internalID: -1214891422
+      spriteID: 83b70b0c447bf36419864b867ea6f711
+      internalID: 427803198
       vertices: []
       indices: 
       edges: []
@@ -331,8 +383,8 @@ TextureImporter:
       name: TileMap - Fase 3_11
       rect:
         serializedVersion: 2
-        x: 352
-        y: 0
+        x: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -342,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9fdfde336a78ec4ba0f7edd57a3faab
-      internalID: 98588663
+      spriteID: 0d83dd450b6e81042937d6111fb82ca2
+      internalID: 2134378619
       vertices: []
       indices: 
       edges: []
@@ -352,8 +404,8 @@ TextureImporter:
       name: TileMap - Fase 3_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 32
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -363,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fde64c13b8abe244994e00044117a3b0
-      internalID: -2121726727
+      spriteID: 961b97af9d864484c8caf777a7c2b505
+      internalID: -808437334
       vertices: []
       indices: 
       edges: []
@@ -373,8 +425,8 @@ TextureImporter:
       name: TileMap - Fase 3_13
       rect:
         serializedVersion: 2
-        x: 416
-        y: 0
+        x: 64
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -384,8 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 636cbb5ee2144e349b123dc91c9d68a8
-      internalID: -1484982636
+      spriteID: e68f5aa0bc82e70419714e79c338a2aa
+      internalID: 98739892
       vertices: []
       indices: 
       edges: []
@@ -394,8 +446,8 @@ TextureImporter:
       name: TileMap - Fase 3_14
       rect:
         serializedVersion: 2
-        x: 448
-        y: 0
+        x: 96
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -405,8 +457,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0087965c4febd95429d5ba581e9205cd
-      internalID: -681244769
+      spriteID: e28fab5e43dc76c48b3fbe82554e2e11
+      internalID: -178400241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap - Fase 3_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c961fc3d4d0b14695372a4af7ed6e1
+      internalID: 2117371382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap - Fase 3_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53609ab50419b0d4a8e4d6d92863d63d
+      internalID: -803036343
       vertices: []
       indices: 
       edges: []
@@ -422,21 +516,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileMap - Fase 3_0: 1187804152
-      TileMap - Fase 3_1: 2039541623
-      TileMap - Fase 3_10: -1214891422
-      TileMap - Fase 3_11: 98588663
-      TileMap - Fase 3_12: -2121726727
-      TileMap - Fase 3_13: -1484982636
-      TileMap - Fase 3_14: -681244769
-      TileMap - Fase 3_2: -1565117508
-      TileMap - Fase 3_3: -1803044358
-      TileMap - Fase 3_4: 356635687
-      TileMap - Fase 3_5: 796638466
-      TileMap - Fase 3_6: 350218355
-      TileMap - Fase 3_7: 1316950205
-      TileMap - Fase 3_8: -1617773798
-      TileMap - Fase 3_9: -1617785379
+      TileMap - Fase 3_0: -1009633954
+      TileMap - Fase 3_1: 569385996
+      TileMap - Fase 3_10: 427803198
+      TileMap - Fase 3_11: 2134378619
+      TileMap - Fase 3_12: -808437334
+      TileMap - Fase 3_13: 98739892
+      TileMap - Fase 3_14: -178400241
+      TileMap - Fase 3_15: 2117371382
+      TileMap - Fase 3_16: -803036343
+      TileMap - Fase 3_17: 966918434
+      TileMap - Fase 3_18: -781725885
+      TileMap - Fase 3_2: -944015428
+      TileMap - Fase 3_3: -1661761948
+      TileMap - Fase 3_4: -714390483
+      TileMap - Fase 3_5: 1407836032
+      TileMap - Fase 3_6: 1430999652
+      TileMap - Fase 3_7: 18358859
+      TileMap - Fase 3_8: -1758285554
+      TileMap - Fase 3_9: -1360409820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
