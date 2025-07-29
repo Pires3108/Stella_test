@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6bff04c4852deb478197f965ddd5698
+guid: a768c861eeaa5a04396766080a9d83b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 3
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -52,7 +52,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -69,11 +69,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
-    compressionQuality: 50
+    compressionQuality: 0
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -82,14 +82,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 29
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileMap - Fase 3_0
+      name: TileMap - Fase 3.1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -157,20 +157,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 487aad1209600444fbd7c2bd1bff0c8c
-      internalID: -1009633954
+      spriteID: 5109ce06a8a87ff4f8b3b0cb440a2106
+      internalID: -831685548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_1
+      name: TileMap - Fase 3.1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -178,20 +178,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6e4ed95333fbe647b5c1c28258f61c2
-      internalID: 569385996
+      spriteID: faad90249ed512143bef4468eb72110b
+      internalID: -1609492029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_2
+      name: TileMap - Fase 3.1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -199,20 +199,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baa60d95c5bc55847a4f7a90c8514967
-      internalID: -944015428
+      spriteID: 77b248918cfeae34b9ffb395a4f2e660
+      internalID: -1334665466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_3
+      name: TileMap - Fase 3.1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -220,20 +220,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b6f7ce93237634f991ba9314b849f6
-      internalID: -1661761948
+      spriteID: 4a84ffbd84a65d54bac813bf488b04e4
+      internalID: 413268767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_4
+      name: TileMap - Fase 3.1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -241,20 +241,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8320be74be769d34e9587f2c8538dc66
-      internalID: -714390483
+      spriteID: b6fcbee670365c848b0260139df95a83
+      internalID: -1779149719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_5
+      name: TileMap - Fase 3.1_5
       rect:
         serializedVersion: 2
         x: 160
@@ -262,20 +262,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 318112e517601384cab7b6d8af286792
-      internalID: 1407836032
+      spriteID: c8d8cd697dab41c419ec710464e6b249
+      internalID: 359060352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_6
+      name: TileMap - Fase 3.1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -283,20 +283,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e2768db516e4ae46b86f48157bf9dc9
-      internalID: 1430999652
+      spriteID: 7c808b55b99f33244b7d445f1132e853
+      internalID: 1020674067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_7
+      name: TileMap - Fase 3.1_7
       rect:
         serializedVersion: 2
         x: 32
@@ -304,20 +304,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aed3b65210855a54580093791de92ea9
-      internalID: 18358859
+      spriteID: d0c878d8d2dd21b40bc58e3443cb30dd
+      internalID: 925939952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_8
+      name: TileMap - Fase 3.1_8
       rect:
         serializedVersion: 2
         x: 64
@@ -325,20 +325,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e24cb492273adab4ebd2b48ec6fc14f0
-      internalID: -1758285554
+      spriteID: a9c44cd28b9964f42bb6a04f64350cf7
+      internalID: -786391450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_9
+      name: TileMap - Fase 3.1_9
       rect:
         serializedVersion: 2
         x: 96
@@ -346,20 +346,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1200fc45d7b62e47b480b311cd4648a
-      internalID: -1360409820
+      spriteID: e6a4100ff8c02d34fbcc25bf8a1b760c
+      internalID: -9319071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_10
+      name: TileMap - Fase 3.1_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6773a19a7f783da4da990d26b5627c01
+      internalID: -1348613808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap - Fase 3.1_11
       rect:
         serializedVersion: 2
         x: 160
@@ -367,20 +388,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b70b0c447bf36419864b867ea6f711
-      internalID: 427803198
+      spriteID: fa36f45867b42b241afe7d84ca36d14a
+      internalID: 998527218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_11
+      name: TileMap - Fase 3.1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -388,20 +409,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d83dd450b6e81042937d6111fb82ca2
-      internalID: 2134378619
+      spriteID: 33b51b0b59c7fce4e8c67796395ca275
+      internalID: -1095321120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_12
+      name: TileMap - Fase 3.1_13
       rect:
         serializedVersion: 2
         x: 32
@@ -409,20 +430,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961b97af9d864484c8caf777a7c2b505
-      internalID: -808437334
+      spriteID: d2e05dfcbe070164f92c547f093377e9
+      internalID: 314312398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_13
+      name: TileMap - Fase 3.1_14
       rect:
         serializedVersion: 2
         x: 64
@@ -430,20 +451,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e68f5aa0bc82e70419714e79c338a2aa
-      internalID: 98739892
+      spriteID: fb936f07191db684a966d4ab00b50256
+      internalID: -1875482621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_14
+      name: TileMap - Fase 3.1_15
       rect:
         serializedVersion: 2
         x: 96
@@ -451,20 +472,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e28fab5e43dc76c48b3fbe82554e2e11
-      internalID: -178400241
+      spriteID: 7290e0adac4371343929134ca64ce44c
+      internalID: 1741334219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_15
+      name: TileMap - Fase 3.1_16
       rect:
         serializedVersion: 2
         x: 128
@@ -472,20 +493,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54c961fc3d4d0b14695372a4af7ed6e1
-      internalID: 2117371382
+      spriteID: 2e680ed38af261d42a8775535d45703e
+      internalID: 99281658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileMap - Fase 3_16
+      name: TileMap - Fase 3.1_17
       rect:
         serializedVersion: 2
         x: 160
@@ -493,14 +514,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53609ab50419b0d4a8e4d6d92863d63d
-      internalID: -803036343
+      spriteID: 7cbcb29013a97b544a05119092139862
+      internalID: -896735241
       vertices: []
       indices: 
       edges: []
@@ -516,25 +537,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileMap - Fase 3_0: -1009633954
-      TileMap - Fase 3_1: 569385996
-      TileMap - Fase 3_10: 427803198
-      TileMap - Fase 3_11: 2134378619
-      TileMap - Fase 3_12: -808437334
-      TileMap - Fase 3_13: 98739892
-      TileMap - Fase 3_14: -178400241
-      TileMap - Fase 3_15: 2117371382
-      TileMap - Fase 3_16: -803036343
-      TileMap - Fase 3_17: 966918434
-      TileMap - Fase 3_18: -781725885
-      TileMap - Fase 3_2: -944015428
-      TileMap - Fase 3_3: -1661761948
-      TileMap - Fase 3_4: -714390483
-      TileMap - Fase 3_5: 1407836032
-      TileMap - Fase 3_6: 1430999652
-      TileMap - Fase 3_7: 18358859
-      TileMap - Fase 3_8: -1758285554
-      TileMap - Fase 3_9: -1360409820
+      TileMap - Fase 3.1_0: -831685548
+      TileMap - Fase 3.1_1: -1609492029
+      TileMap - Fase 3.1_10: -1348613808
+      TileMap - Fase 3.1_11: 998527218
+      TileMap - Fase 3.1_12: -1095321120
+      TileMap - Fase 3.1_13: 314312398
+      TileMap - Fase 3.1_14: -1875482621
+      TileMap - Fase 3.1_15: 1741334219
+      TileMap - Fase 3.1_16: 99281658
+      TileMap - Fase 3.1_17: -896735241
+      TileMap - Fase 3.1_18: -1745751150
+      TileMap - Fase 3.1_19: 850707580
+      TileMap - Fase 3.1_2: -1334665466
+      TileMap - Fase 3.1_3: 413268767
+      TileMap - Fase 3.1_4: -1779149719
+      TileMap - Fase 3.1_5: 359060352
+      TileMap - Fase 3.1_6: 1020674067
+      TileMap - Fase 3.1_7: 925939952
+      TileMap - Fase 3.1_8: -786391450
+      TileMap - Fase 3.1_9: -9319071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
