@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2522062497239966897}
   - component: {fileID: 3006697574237342194}
   - component: {fileID: 1855058472893588793}
+  - component: {fileID: 7342173670851621306}
   m_Layer: 7
   m_Name: Stella
   m_TagString: Player
@@ -264,7 +265,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -344,10 +345,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e1a9109b950c4c89388a2353eac0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7
+  walkSpeed: 10
   runSpeed: 0
-  airWalkSpeed: 3
-  jumpImpulse: 10
+  airWalkSpeed: 6
+  jumpImpulse: 11
+  canAttack: 1
+  delayMorte: 0.5
+  delayWin: 0.5
+  projectileLauncher: {fileID: 1855058472893588793}
+  NPCScript: {fileID: 0}
+  caixaDialogo: {fileID: 0}
+  eKey: {fileID: 0}
   _isMoving: 0
   _isrunning: 0
   _isFacingRight: 1
@@ -410,6 +418,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 100
   _health: 100
   _isAlive: 1
@@ -429,6 +440,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2037995309791125489, guid: 9d664cc6b8a481b49959f27929419c7c, type: 3}
   launchPoint: {fileID: 1473900355130956656}
+  canFire: 1
+--- !u!114 &7342173670851621306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057011621819967353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6691188393fba743bf5f9e60caad8cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &4046400460460066550
 GameObject:
   m_ObjectHideFlags: 0
