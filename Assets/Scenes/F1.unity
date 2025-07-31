@@ -121933,6 +121933,22 @@ PrefabInstance:
       propertyPath: caixaDialogo
       value: 
       objectReference: {fileID: 352923824}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: eKey.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: eKey.Array.data[0]
+      value: 
+      objectReference: {fileID: 2058319659}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: NPCScript.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: NPCScript.Array.data[0]
+      value: 
+      objectReference: {fileID: 252335063}
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.83

@@ -354,9 +354,15 @@ MonoBehaviour:
   delayMorte: 0.5
   delayWin: 0.5
   projectileLauncher: {fileID: 1855058472893588793}
-  NPCScript: {fileID: 0}
+  NPCScript:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   caixaDialogo: {fileID: 0}
-  eKey: {fileID: 0}
+  eKey:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _isMoving: 0
   _isrunning: 0
   _isFacingRight: 1

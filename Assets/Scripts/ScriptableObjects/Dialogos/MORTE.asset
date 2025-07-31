@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7af850522a0124e8fc1cb30598d3b4, type: 3}
+  m_Name: MORTE
+  m_EditorClassIdentifier: 
+  falasDialogo:
+  - identificador: '[Stella] : Que placa sinistra!'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: Que placa sinistra!
+  - identificador: "[CUIDADO!] : A verdade n\xE3o est\xE1 na queda\u2026 mas no salto.
+      Voc\xEA cr\xEA em sua f\xE9?"
+    ator: {fileID: 11400000, guid: c3828b39c4fa18b489569b2f9dcaa27f, type: 2}
+    texto: "A verdade n\xE3o est\xE1 na queda\u2026 mas no salto. Voc\xEA cr\xEA
+      em sua f\xE9?"
+  - identificador: "[Stella] : Um salto de f\xE9? Acho que j\xE1 vi isso em outro
+      lugar..."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Um salto de f\xE9? Acho que j\xE1 vi isso em outro lugar..."

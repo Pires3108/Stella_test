@@ -53,6 +53,12 @@ TagManager:
   - name: Cenario
     uniqueID: 4195431689
     locked: 0
+  - name: Player
+    uniqueID: 613358987
+    locked: 0
+  - name: Passagens
+    uniqueID: 2554604813
+    locked: 0
   - name: "Di\xE1logo"
     uniqueID: 418645843
     locked: 0

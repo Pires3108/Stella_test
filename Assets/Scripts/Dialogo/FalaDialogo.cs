@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [Serializable]
-public class FalaDialogo 
+public class FalaDialogo
 {
+    [SerializeField , HideInInspector]
+    private string identificador;
 
     [SerializeField]
     private Ator ator;
 
-    [SerializeField]
+    [SerializeField, TextArea(1, 5)]
     private string texto;
 
     public Ator Ator
@@ -27,6 +29,14 @@ public class FalaDialogo
         get
         {
             return this.texto;
+        }
+    }
+
+    public void AtualizarIdentificador()
+    {
+        if ((this.ator != null) && (this.texto != null))
+        {
+            this.identificador = "[" + this.ator.Nome + "] : " + this.texto;
         }
     }
 }

@@ -11,7 +11,13 @@ public class Dialogo : ScriptableObject
 
     private int indiceFalaAtual;
 
-
+    private void OnValidate()
+    {
+        foreach (FalaDialogo fala in this.falasDialogo)
+        {
+            fala.AtualizarIdentificador();
+        }
+    }
 
     public FalaDialogo FalaAtual
     {

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7af850522a0124e8fc1cb30598d3b4, type: 3}
+  m_Name: Placa Vazia
+  m_EditorClassIdentifier: 
+  falasDialogo:
+  - identificador: '[Stella] : Uma placa?'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: Uma placa?
+  - identificador: "[erro:31507] : Aqui, at\xE9 a sombra te observa..."
+    ator: {fileID: 11400000, guid: 77acc23c0125aeb4c84b6242a8ef3e01, type: 2}
+    texto: "Aqui, at\xE9 a sombra te observa..."
+  - identificador: "[Stella] : ... ( um sil\xEAncio tenso paira no ar)"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "... ( um sil\xEAncio tenso paira no ar)"
+  - identificador: "[erro:31507] : O esquecido nunca est\xE1 sozinho. Pois agora...
+      eu tenho voc\xEA!"
+    ator: {fileID: 11400000, guid: 77acc23c0125aeb4c84b6242a8ef3e01, type: 2}
+    texto: "O esquecido nunca est\xE1 sozinho. Pois agora... eu tenho voc\xEA!"
+  - identificador: "[Stella] : Vade retro, Satan\xE1s!"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Vade retro, Satan\xE1s!"
+  - identificador: "[erro:31507] : Aproveite enquanto h\xE1 tempo. Volte para sua
+      jornada. Cumpra o seu dever. E n\xE3o desvie mais do seu caminho."
+    ator: {fileID: 11400000, guid: 77acc23c0125aeb4c84b6242a8ef3e01, type: 2}
+    texto: "Aproveite enquanto h\xE1 tempo. Volte para sua jornada. Cumpra o seu
+      dever. E n\xE3o desvie mais do seu caminho."

@@ -23,9 +23,9 @@ public class PlayerController : MonoBehaviour
 
     Damageable isAlive;
     public ProjectileLauncher projectileLauncher;
-    public Personagem NPCScript;
+    public Personagem[] NPCScript;
     public GameObject caixaDialogo;
-    public GameObject eKey;
+    public GameObject[] eKey;
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -54,15 +54,14 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    //movement locked
                     return 0;
                 }
             }
             else
             {
-                //movement locked
                 return 0;
             }
-
         }
     }
 
@@ -85,7 +84,6 @@ public class PlayerController : MonoBehaviour
 
     // detecta se o player is running
     [SerializeField]
-
     private bool _isrunning = false;
     public bool IsRunning
     {
@@ -145,8 +143,14 @@ public class PlayerController : MonoBehaviour
         touchingDirection = GetComponent<TouchingDirection>();
         damageable = GetComponent<Damageable>();
         isAlive = GetComponent<Damageable>();
-        NPCScript.podeInteragir = false;
-        eKey.SetActive(false);
+        foreach (Personagem npc in NPCScript)
+        {
+            npc.podeInteragir = false;
+        }
+        foreach (GameObject key in eKey)
+        {
+            key.SetActive(false);
+        }
     }
 
     private void Update()
@@ -240,11 +244,17 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.CompareTag("NPC"))
         {
-            NPCScript.podeInteragir = true;
+            Personagem npc = coll.GetComponent<Personagem>();
+            if (npc != null)
+            {
+                npc.podeInteragir = true;
+            }
             projectileLauncher.canFire = false;
             canAttack = false;
-            eKey.SetActive(true);
-
+            foreach (GameObject key in eKey)
+            {
+                key.SetActive(true);
+            }
         }
 
         if (coll.CompareTag("OutMap"))
@@ -263,11 +273,17 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.CompareTag("NPC"))
         {
-
-            NPCScript.podeInteragir = false;
+            Personagem npc = coll.GetComponent<Personagem>();
+            if (npc != null)
+            {
+                npc.podeInteragir = false;
+            }
             projectileLauncher.canFire = true;
             canAttack = true;
-            eKey.SetActive(false);
+            foreach (GameObject key in eKey)
+            {
+                key.SetActive(false);
+            }
         }
     }
 
@@ -282,4 +298,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(delayWin);
         SceneManager.LoadScene("WinScreen");
     }
+
 }

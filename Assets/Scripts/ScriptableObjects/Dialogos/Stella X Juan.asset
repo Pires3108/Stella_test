@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: Stella X Juan
   m_EditorClassIdentifier: 
   falasDialogo:
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
-    texto: "Oloco que c\xE1cto maneiro."
-  - ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+  - identificador: '[Stella] : Oloco que cacto maneiro.'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: Oloco que cacto maneiro.
+  - identificador: '[Juan Pablo] : ...............'
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
     texto: ...............
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: '[Stella] : Oxi, fala algo maluco!'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: Oxi, fala algo maluco!
-  - ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+  - identificador: '[Juan Pablo] : ...............'
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
     texto: ...............
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: "[Stella] : Vou s\xF3 seguir em frente ent\xE3o."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: "Vou s\xF3 seguir em frente ent\xE3o."
-  - ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+  - identificador: '[Juan Pablo] : ...............'
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
     texto: ...............
