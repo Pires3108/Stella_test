@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3006697574237342194}
   - component: {fileID: 1855058472893588793}
   - component: {fileID: 7342173670851621306}
+  - component: {fileID: 3688576385400123513}
   m_Layer: 7
   m_Name: Stella
   m_TagString: Player
@@ -309,8 +310,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0034937859, y: -0.0208628}
-  m_Size: {x: 0.27734128, y: 0.5097768}
+  m_Offset: {x: -0.0034937859, y: -0.0087047815}
+  m_Size: {x: 0.27734128, y: 0.4854607}
   m_Direction: 0
 --- !u!95 &662326422550130300
 Animator:
@@ -442,6 +443,19 @@ MonoBehaviour:
   launchPoint: {fileID: 1473900355130956656}
   canFire: 1
 --- !u!114 &7342173670851621306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057011621819967353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6691188393fba743bf5f9e60caad8cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+--- !u!114 &3688576385400123513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -54,15 +54,18 @@ public class TelaDialogo : MonoBehaviour
 
     public void Avancar()
     {
+
         if (this.dialogo.TemProximaFala())
         {
             this.dialogo.AvancarFala();
             ExibirFalaAtual();
+            Debug.Log("Avançar diálogo");
         }
 
         else
         {
             Esconder();
+            Debug.Log("Dialogo finalizado");
         }
     }
 

@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Cenario
+    uniqueID: 4195431689
+    locked: 0
   - name: "Di\xE1logo"
     uniqueID: 418645843
     locked: 0
