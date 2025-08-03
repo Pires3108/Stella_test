@@ -212,12 +212,12 @@ GameObject:
   - component: {fileID: 3333474707410807244}
   - component: {fileID: 6615671687076429745}
   - component: {fileID: 3878732792161171274}
-  - component: {fileID: 7496233147912733060}
   - component: {fileID: 8314574341189047650}
   - component: {fileID: 6326664637123470527}
   - component: {fileID: 6038948401808689651}
+  - component: {fileID: 7496233147912733060}
   m_Layer: 8
-  m_Name: Lagarto Idle_0
+  m_Name: Lagarto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 367302804, guid: dea7074b0df582941a2913e3fcd417a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -355,27 +355,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0030306578, y: 0.00041409335}
   m_Size: {x: 0.17124915, y: 0.4197584}
   m_Direction: 0
---- !u!95 &7496233147912733060
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5457481640894214962}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 191ca56fef1a3d74195cab53a79ab542, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8314574341189047650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,11 +433,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 100
   _health: 100
   _isAlive: 1
   isInvincible: 0
   invicibilityTime: 0.25
+--- !u!95 &7496233147912733060
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457481640894214962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 191ca56fef1a3d74195cab53a79ab542, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7580963441702138272
 GameObject:
   m_ObjectHideFlags: 0

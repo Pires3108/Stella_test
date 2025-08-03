@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 6721834421166417351}
   - component: {fileID: 6155545273163363872}
   m_Layer: 0
-  m_Name: E_Key - Placa Vazia
+  m_Name: E_Key - Placa Perigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
