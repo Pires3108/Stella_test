@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     Damageable damageable;
-
+    public bool canFlip = true;
     Damageable isAlive;
     public ProjectileLauncher projectileLauncher;
     public Personagem[] NPCScript;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
         get { return _isFacingRight; }
         private set
         {
-            if (_isFacingRight != value)
+            if (_isFacingRight != value && canFlip)
             {
 
                 transform.localScale *= new Vector2(-1, 1);

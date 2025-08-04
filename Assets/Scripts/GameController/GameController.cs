@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public GameObject BarraDeVida;
     public GameObject Dialogo;
 
+
     public bool IsDialogActive;
 
     void Update()
@@ -25,4 +26,5 @@ public class GameController : MonoBehaviour
             playerInput.enabled = true;
         }
     }
+   
 }

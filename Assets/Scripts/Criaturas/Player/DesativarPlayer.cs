@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class DesativarPlayer : MonoBehaviour
+{
+    public PlayerController estellaController;
+    public GameObject stella;
+    public Animator playerAnimator;
+    void Start()
+    {
+        stella.transform.rotation = Quaternion.Euler(0, 0, 0);
+        estellaController.canFlip = false;
+        estellaController.enabled = false;
+        playerAnimator.enabled = false;
+    }
+
+    void AtivarPlayer()
+    {
+        Destroy(gameObject);
+        estellaController.canFlip = true;
+        estellaController.enabled = true;
+        playerAnimator.enabled = true;
+    }
+}
