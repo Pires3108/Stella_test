@@ -155,10 +155,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (isAlive.IsAlive == false)
-        {
-            StartCoroutine(Morte());
-        }
+
     }
 
     private void FixedUpdate()
@@ -257,16 +254,33 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (coll.CompareTag("OutMap"))
+        // FASE 1
+        if (coll.CompareTag("OutMap1"))
         {
             isAlive.IsAlive = false;
-            Debug.Log("Player has left the map");
+            Debug.Log("Player has left the map 1");
+            StartCoroutine(Death1());
+        }
+        if (coll.CompareTag("Trofeu1"))
+        {
+            StartCoroutine(Fase2());
+            Debug.Log("Player has completed fase 1");
         }
 
-        if (coll.CompareTag("Trofeu"))
+
+        // FASE 2
+        if (coll.CompareTag("OutMap2"))
+        {
+            isAlive.IsAlive = false;
+            Debug.Log("Player has left the map 2");
+            StartCoroutine(Death2());
+        }
+        if (coll.CompareTag("Trofeu2"))
         {
             StartCoroutine(Win());
+            Debug.Log("Player has completed the fase 2");
         }
+
     }
 
     void OnTriggerExit2D(Collider2D coll)
@@ -287,16 +301,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator Morte()
+    IEnumerator Death1()
     {
-        yield return new WaitForSeconds(delayMorte);
-        SceneManager.LoadScene("GameOver_OutMap");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("F1");
     }
 
+    IEnumerator Fase2()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("F2");
+    }
+    IEnumerator Death2()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("F2");
+    }
+
+
+    // WIN
     IEnumerator Win()
     {
-        yield return new WaitForSeconds(delayWin);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("WinScreen");
     }
-
 }

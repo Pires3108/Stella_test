@@ -86,12 +86,12 @@ AnimatorStateMachine:
   - {fileID: -208931013529260462}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 3686473660890910166}
-    second:
-    - {fileID: 4335217574843202299}
   - first: {fileID: 890053511764188317}
     second:
     - {fileID: -1612059063504143865}
+  - first: {fileID: 3686473660890910166}
+    second:
+    - {fileID: 4335217574843202299}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 310, y: 280, z: 0}
   m_EntryPosition: {x: -180, y: 200, z: 0}
@@ -313,7 +313,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cachorro_attack
-  m_Speed: 0.5
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7441921993816934729}
@@ -496,7 +496,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cachorro_hit
-  m_Speed: 1
+  m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3179312995672833676}

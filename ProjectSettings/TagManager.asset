@@ -5,8 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
-  - OutMap
-  - Trofeu
+  - Trofeu1
+  - Trofeu2
+  - Trofeu3
+  - Trofeu4
+  - OutMap1
+  - OutMap2
+  - OutMap3
+  - OutMap4
   layers:
   - Default
   - TransparentFX
