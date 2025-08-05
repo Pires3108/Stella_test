@@ -2599,6 +2599,7 @@ MonoBehaviour:
   playerInput: {fileID: 1128667380}
   BarraDeVida: {fileID: 869432938}
   Dialogo: {fileID: 1144876625}
+  CenaAtual: 
   IsDialogActive: 0
 --- !u!4 &524378555
 Transform:
@@ -4167,7 +4168,7 @@ GameObject:
   - component: {fileID: 978917609}
   m_Layer: 0
   m_Name: OutMap - 3
-  m_TagString: OutMap2
+  m_TagString: OutMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6789,7 +6790,7 @@ GameObject:
   - component: {fileID: 1449444450}
   m_Layer: 0
   m_Name: OutMap - 2
-  m_TagString: OutMap2
+  m_TagString: OutMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112082,6 +112083,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 524378554}
+    - target: {fileID: 8846406900435250082, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -114507,7 +114512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8381810506066833599, guid: ca684a6de41dba242b3b7d7a70c4c77e, type: 3}
       propertyPath: m_TagString
-      value: OutMap2
+      value: OutMap
       objectReference: {fileID: 0}
     - target: {fileID: 8882632930560892760, guid: ca684a6de41dba242b3b7d7a70c4c77e, type: 3}
       propertyPath: m_Size.x
@@ -114531,7 +114536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9167538765032399231, guid: ca684a6de41dba242b3b7d7a70c4c77e, type: 3}
       propertyPath: m_TagString
-      value: OutMap2
+      value: OutMap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114622,7 +114627,7 @@ GameObject:
   - component: {fileID: 1963141720}
   m_Layer: 0
   m_Name: OutMap - 6
-  m_TagString: OutMap2
+  m_TagString: OutMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115485,7 +115490,7 @@ GameObject:
   - component: {fileID: 2085407744}
   m_Layer: 0
   m_Name: OutMap - 4
-  m_TagString: OutMap2
+  m_TagString: OutMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115562,7 +115567,7 @@ GameObject:
   - component: {fileID: 2096151653}
   m_Layer: 0
   m_Name: OutMap - 5
-  m_TagString: OutMap2
+  m_TagString: OutMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116246,6 +116251,14 @@ PrefabInstance:
     - target: {fileID: 4127150419239136456, guid: 3ca8626331a2a444992009016271875a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155802306907304562, guid: 3ca8626331a2a444992009016271875a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.49165624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155802306907304562, guid: 3ca8626331a2a444992009016271875a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.033011638
       objectReference: {fileID: 0}
     - target: {fileID: 4614280463359705816, guid: 3ca8626331a2a444992009016271875a, type: 3}
       propertyPath: m_Name

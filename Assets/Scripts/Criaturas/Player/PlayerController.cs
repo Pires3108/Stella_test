@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public Personagem[] NPCScript;
     public GameObject caixaDialogo;
     public GameObject[] eKey;
+    public string cenaAtual;
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -155,7 +156,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
+        cenaAtual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (!isAlive.IsAlive)
+        {
+            StartCoroutine(GoCena(cenaAtual));
+        }
     }
 
     private void FixedUpdate()
@@ -254,58 +259,50 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // FASE 1
-        if (coll.CompareTag("OutMap1"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has left the map 1");
-            StartCoroutine(Death1());
-        }
         if (coll.CompareTag("Trofeu1"))
         {
-            StartCoroutine(GoBoss1());
+            StartCoroutine(GoFase2());
             Debug.Log("Player has completed fase 1");
         }
-        if (coll.CompareTag("WinBoss1"))
-        {
-            StartCoroutine(GoFase2());
-            Debug.Log("Player has won the boss 1");
-        }
+        // if (coll.CompareTag("WinBoss1"))
+        // {
+        //     StartCoroutine(GoFase2());
+        //     Debug.Log("Player has won the boss 1");
+        // }
 
 
         // FASE 2
-        if (coll.CompareTag("OutMap2"))
+        if (coll.CompareTag("OutMap"))
         {
             isAlive.IsAlive = false;
             Debug.Log("Player has left the map 2");
-            StartCoroutine(Death2());
         }
         if (coll.CompareTag("Trofeu2"))
         {
-            StartCoroutine(GoBoss2());
+            StartCoroutine(GoMenu());
             Debug.Log("Player has completed the fase 2");
         }
-        if (coll.CompareTag("WinBoss2"))
-        {
-            StartCoroutine(Win());
-            Debug.Log("Player has won the game");
-        }
+        // if (coll.CompareTag("WinBoss2"))
+        // {
+        //     StartCoroutine(Win());
+        //     Debug.Log("Player has won the game");
+        // }
 
 
-        // BOSSES
-        if (coll.CompareTag("Boss1"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has died by the boss 1");
-            StartCoroutine(Death1());
-        }
+        // // BOSSES
+        // if (coll.CompareTag("Boss1"))
+        // {
+        //     isAlive.IsAlive = false;
+        //     Debug.Log("Player has died by the boss 1");
+        //     StartCoroutine(Death1());
+        // }
 
-        if (coll.CompareTag("Boss2"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has died by the boss 2");
-            StartCoroutine(Death2());
-        }
+        // if (coll.CompareTag("Boss2"))
+        // {
+        //     isAlive.IsAlive = false;
+        //     Debug.Log("Player has died by the boss 2");
+        //     StartCoroutine(Death2());
+        // }
 
 
         /*
@@ -349,20 +346,29 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("F2");
     }
+    IEnumerator GoMenu()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Menu");
+    }
 
 
     // Ir para os bosses
-    IEnumerator GoBoss1()
+    // IEnumerator GoBoss1()
+    // {
+    //     yield return new WaitForSeconds(2f);
+    //     SceneManager.LoadScene("F1 - Boss");
+    // }
+    // IEnumerator GoBoss2()
+    // {
+    //     yield return new WaitForSeconds(2f);
+    //     SceneManager.LoadScene("F2 - Boss");
+    // }
+    IEnumerator GoCena(string cena)
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("F1 - Boss");
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(cena);
     }
-    IEnumerator GoBoss2()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("F2 - Boss");
-    }
-
 
     // WIN
     IEnumerator Win()
@@ -372,16 +378,16 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    // Mortes
-    IEnumerator Death1()
-    {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("F1");
-    }
+    // // Mortes
+    // IEnumerator Death1()
+    // {
+    //     yield return new WaitForSeconds(1f);
+    //     SceneManager.LoadScene("F1");
+    // }
 
-    IEnumerator Death2()
-    {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("F2");
-    }
+    // IEnumerator Death2()
+    // {
+    //     yield return new WaitForSeconds(1f);
+    //     SceneManager.LoadScene("F2");
+    // }
 }

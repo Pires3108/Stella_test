@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,10 @@ public class GameController : MonoBehaviour
     public PlayerInput playerInput;
     public GameObject BarraDeVida;
     public GameObject Dialogo;
+    public String CenaAtual;
 
 
     public bool IsDialogActive;
-
     void Update()
     {
         if (IsDialogActive)
@@ -25,6 +26,8 @@ public class GameController : MonoBehaviour
             BarraDeVida.SetActive(true);
             playerInput.enabled = true;
         }
+        
+
     }
    
 }

@@ -167,8 +167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -322,15 +322,15 @@ RectTransform:
   m_GameObject: {fileID: 1049241308516380049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 26.275686, y: 20.388163, z: 6.853164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6885934410293089416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00003549, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9143413032489399197
 CanvasRenderer:
@@ -638,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6885934410293089416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 284562182604607846}
   - component: {fileID: 8846406900435250082}
   - component: {fileID: 3736057057075945573}
+  - component: {fileID: 4222832586475201601}
   m_Layer: 0
   m_Name: TextoDano
   m_TagString: Untagged
@@ -769,7 +770,7 @@ Canvas:
   m_GameObject: {fileID: 2603346394740921609}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -780,7 +781,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 418645843
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &8846406900435250082
@@ -823,6 +824,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4222832586475201601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2603346394740921609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42ce6d657a95f44b891e5913a4cfde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTextPrefab: {fileID: 2933273920907485412, guid: b64d360c8f1b74e4bb8c2c1ed14e55c8, type: 3}
+  healthTextPrefab: {fileID: 2933273920907485412, guid: 9a30d03943fd25f4d89e61d1d931a743, type: 3}
+  gameCanvas: {fileID: 284562182604607846}
 --- !u!1 &2900021811771795406
 GameObject:
   m_ObjectHideFlags: 0
