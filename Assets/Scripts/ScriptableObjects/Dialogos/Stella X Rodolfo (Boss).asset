@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7af850522a0124e8fc1cb30598d3b4, type: 3}
+  m_Name: Stella X Rodolfo (Boss)
+  m_EditorClassIdentifier: 
+  falasDialogo:
+  - identificador: '[Desconhecido] : Ei, garota... espere um instante.'
+    ator: {fileID: 11400000, guid: 2341d7a2a928edc46b6978e52b82fb6e, type: 2}
+    texto: Ei, garota... espere um instante.
+  - identificador: "[Stella] : De novo, voc\xEA?\nQuem \xE9, afinal?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "De novo, voc\xEA?\nQuem \xE9, afinal?"
+  - identificador: "[Rodolfo] : Ah, claro... onde est\xE3o meus modos?\nMe chamo
+      Rodolfo.\nFui guardi\xE3o deste parque... antes dele apodrecer por dentro."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Ah, claro... onde est\xE3o meus modos?\nMe chamo Rodolfo.\nFui guardi\xE3o
+      deste parque... antes dele apodrecer por dentro."
+  - identificador: "[Stella] : E ainda est\xE1 aqui?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "E ainda est\xE1 aqui?"
+  - identificador: "[Rodolfo] : Algu\xE9m precisa lembrar o que ele j\xE1 foi.\nE
+      avisar os teimosos sobre o que se esconde nas ra\xEDzes."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Algu\xE9m precisa lembrar o que ele j\xE1 foi.\nE avisar os teimosos
+      sobre o que se esconde nas ra\xEDzes."
+  - identificador: "[Stella] : Ent\xE3o fala. O que me espera?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Ent\xE3o fala. O que me espera?"
+  - identificador: "[Rodolfo] : Se seguir pela trilha... vai sentir.\nA terra ali
+      queima. O ar \xE9 pesado, denso.\nAlgo antigo se remexe debaixo do solo."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Se seguir pela trilha... vai sentir.\nA terra ali queima. O ar \xE9 pesado,
+      denso.\nAlgo antigo se remexe debaixo do solo."
+  - identificador: "[Stella] : Voc\xEA viu?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Voc\xEA viu?"
+  - identificador: "[Rodolfo] : N\xE3o com os olhos.\nMas h\xE1 sinais. Sulcos fundos,
+      pedras rachadas.\nE o som... escamas, arrastando. Um sussurro quente como vapor."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "N\xE3o com os olhos.\nMas h\xE1 sinais. Sulcos fundos, pedras rachadas.\nE
+      o som... escamas, arrastando. Um sussurro quente como vapor."
+  - identificador: "[Stella] : O qu\xEA \xE9 isso?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "O qu\xEA \xE9 isso?"
+  - identificador: "[Rodolfo] : O Calango Rei.\nCriatura feita de sol e desespero.\nEra
+      apenas um lagarto comum... mas a radia\xE7\xE3o e a gan\xE2ncia o moldaram
+      em algo monstruoso."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "O Calango Rei.\nCriatura feita de sol e desespero.\nEra apenas um lagarto
+      comum... mas a radia\xE7\xE3o e a gan\xE2ncia o moldaram em algo monstruoso."
+  - identificador: "[Stella] : Onde ele est\xE1?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Onde ele est\xE1?"
+  - identificador: "[Rodolfo] : Escondido. Abaixo.\nVoc\xEA vai precisar cair para
+      encontr\xE1-lo."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Escondido. Abaixo.\nVoc\xEA vai precisar cair para encontr\xE1-lo."
+  - identificador: '[Stella] : Cair?'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: Cair?
+  - identificador: "[Rodolfo] : Uma queda na escurid\xE3o.\nProfunda, silenciosa.\nS\xF3
+      os que n\xE3o tremem voltam de l\xE1."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Uma queda na escurid\xE3o.\nProfunda, silenciosa.\nS\xF3 os que n\xE3o
+      tremem voltam de l\xE1."
+  - identificador: "[Stella] : E se eu n\xE3o voltar?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "E se eu n\xE3o voltar?"
+  - identificador: "[Rodolfo] : Ent\xE3o o parque continuar\xE1 morrendo.\nMas se
+      o enfrentar... se resistir...\nTalvez as ra\xEDzes respirem outra vez."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Ent\xE3o o parque continuar\xE1 morrendo.\nMas se o enfrentar... se resistir...\nTalvez
+      as ra\xEDzes respirem outra vez."
+  - identificador: "[Stella] : Ent\xE3o que venha a queda. Estou pronta."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Ent\xE3o que venha a queda. Estou pronta."
+  - identificador: "[Rodolfo] : Boa sorte, Stella.\nE lembre-se... nem todo abismo
+      quer te engolir.\nAlguns s\xF3 querem saber se voc\xEA \xE9 digna de atravess\xE1-los."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Boa sorte, Stella.\nE lembre-se... nem todo abismo quer te engolir.\nAlguns
+      s\xF3 querem saber se voc\xEA \xE9 digna de atravess\xE1-los."

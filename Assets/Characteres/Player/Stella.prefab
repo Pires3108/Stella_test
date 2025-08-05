@@ -346,13 +346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e1a9109b950c4c89388a2353eac0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 10
+  walkSpeed: 15
   runSpeed: 0
   airWalkSpeed: 6
   jumpImpulse: 11
   canAttack: 1
   delayMorte: 0.5
   delayWin: 0.5
+  canFlip: 1
   projectileLauncher: {fileID: 1855058472893588793}
   NPCScript:
   - {fileID: 0}

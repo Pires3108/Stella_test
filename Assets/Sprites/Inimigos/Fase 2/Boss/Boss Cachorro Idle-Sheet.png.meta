@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6fa511d0ff57cd341b2faf33517a4827
+guid: ce2ddf0c89227924ebf96349b66eaec0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,63 +93,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Boss Cachorro Idle-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f23e689ca30e2614f8121ca62b271f63
-      internalID: 861539120
+      spriteID: f83c422b3b349114ab9ed5b1798f1808
+      internalID: -2062056427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: Boss Cachorro Idle-Sheet_1
       rect:
         serializedVersion: 2
         x: 96
@@ -184,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef363421fc96e02479c482310f3eae76
-      internalID: -1717737238
+      spriteID: a490791393734a44999eef0f995e22fd
+      internalID: 269199607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: Boss Cachorro Idle-Sheet_2
       rect:
         serializedVersion: 2
         x: 192
@@ -205,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b49f3eb0e6089b245811cf79a72ef63d
-      internalID: 1604566002
+      spriteID: f34905679a979a84c8515973580fc72c
+      internalID: -1519577661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: Boss Cachorro Idle-Sheet_3
       rect:
         serializedVersion: 2
         x: 288
@@ -226,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0535f3332ac2b6c468ca6b4022b2349f
-      internalID: -148815042
+      spriteID: fd9f0587b4faf744aadb9027f2f721d6
+      internalID: 1003664325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: Boss Cachorro Idle-Sheet_4
       rect:
         serializedVersion: 2
         x: 384
@@ -247,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d8a2cc79f02b64f92ed4c2244a91c3
-      internalID: -1663186374
+      spriteID: 4d69d72bb6a08f045b76c5c45986cf4a
+      internalID: 2059251531
       vertices: []
       indices: 
       edges: []
@@ -264,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: 861539120
-      Idle_1: -1717737238
-      Idle_2: 1604566002
-      Idle_3: -148815042
-      Idle_4: -1663186374
+      Boss Cachorro Idle-Sheet_0: -2062056427
+      Boss Cachorro Idle-Sheet_1: 269199607
+      Boss Cachorro Idle-Sheet_2: -1519577661
+      Boss Cachorro Idle-Sheet_3: 1003664325
+      Boss Cachorro Idle-Sheet_4: 2059251531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

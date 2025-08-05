@@ -13,6 +13,12 @@ TagManager:
   - OutMap2
   - OutMap3
   - OutMap4
+  - Trofeu
+  - OutMap
+  - Boss1
+  - Boss2
+  - WinBoss1
+  - WinBoss2
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b61113aed1330442a783c3b9f0c43b4, type: 3}
-  m_Name: Stella
+  m_Name: Desconhecido - Rodolfo
   m_EditorClassIdentifier: 
-  nome: Stella
-  foto: {fileID: 109275903, guid: 0dc620a919b567048b77f21ddda9a258, type: 3}
+  nome: Desconhecido
+  foto: {fileID: -952479668, guid: 0d2eefefa1c452642a2b7b2892ce30b7, type: 3}

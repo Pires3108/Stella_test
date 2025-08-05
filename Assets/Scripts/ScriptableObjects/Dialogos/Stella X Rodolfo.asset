@@ -13,26 +13,42 @@ MonoBehaviour:
   m_Name: Stella X Rodolfo
   m_EditorClassIdentifier: 
   falasDialogo:
-  - ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+  - identificador: "[Desconhecido] : Ei, garota... faz tempo que n\xE3o vejo algu\xE9m
+      com coragem por aqui."
+    ator: {fileID: 11400000, guid: 2341d7a2a928edc46b6978e52b82fb6e, type: 2}
     texto: "Ei, garota... faz tempo que n\xE3o vejo algu\xE9m com coragem por aqui."
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: "[Stella] : O que aconteceu com esse lugar? Est\xE1 tudo... morto."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: "O que aconteceu com esse lugar? Est\xE1 tudo... morto."
-  - ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+  - identificador: "[Desconhecido] : O parque j\xE1 foi cheio de vida... \xC1rvores,
+      animais, riachos limpos. Mas algumas pessoas m\xE1 intencionadas... trouxeram
+      lixo, polui\xE7\xE3o... e depois, o Lenhador."
+    ator: {fileID: 11400000, guid: 2341d7a2a928edc46b6978e52b82fb6e, type: 2}
     texto: "O parque j\xE1 foi cheio de vida... \xC1rvores, animais, riachos limpos.
       Mas algumas pessoas m\xE1 intencionadas... trouxeram lixo, polui\xE7\xE3o...
       e depois, o Lenhador."
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: '[Stella] : Lenhador?'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: Lenhador?
-  - ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+  - identificador: "[Desconhecido] : Ele deveria proteger o parque, mas foi corrompido
+      pela gan\xE2ncia e pela radia\xE7\xE3o. Agora, ele destr\xF3i tudo. As plantas
+      murcham, os bichos mudaram... o verde virou cinza."
+    ator: {fileID: 11400000, guid: 2341d7a2a928edc46b6978e52b82fb6e, type: 2}
     texto: "Ele deveria proteger o parque, mas foi corrompido pela gan\xE2ncia e
       pela radia\xE7\xE3o. Agora, ele destr\xF3i tudo. As plantas murcham, os bichos
       mudaram... o verde virou cinza."
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: "[Stella] : Ent\xE3o \xE9 por isso que estou aqui... preciso trazer
+      o parque de volta \xE0 vida."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: "Ent\xE3o \xE9 por isso que estou aqui... preciso trazer o parque de volta
       \xE0 vida."
-  - ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+  - identificador: "[Desconhecido] : Se conseguir purificar as \xE1reas e enfrentar
+      as criaturas corrompidas, talvez ainda haja esperan\xE7a. Mas tome cuidado...
+      o Lenhador vai tentar te parar."
+    ator: {fileID: 11400000, guid: 2341d7a2a928edc46b6978e52b82fb6e, type: 2}
     texto: "Se conseguir purificar as \xE1reas e enfrentar as criaturas corrompidas,
       talvez ainda haja esperan\xE7a. Mas tome cuidado... o Lenhador vai tentar te
       parar."
-  - ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+  - identificador: '[Stella] : Pode deixar. Esse parque ainda vai florescer de novo...'
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
     texto: Pode deixar. Esse parque ainda vai florescer de novo...
