@@ -11,6 +11,7 @@ public class DesativarPlayer : MonoBehaviour
     void Start()
     {
         stella.transform.rotation = Quaternion.Euler(0, 0, 0);
+        estellaController._isFacingRight = true;
         estellaController.canFlip = false;
         estellaController.enabled = false;
         playerAnimator.enabled = false;

@@ -6,6 +6,7 @@ public class ProjectileLauncher : MonoBehaviour
 {
     [SerializeField] public GameObject projectilePrefab;
     public Transform launchPoint;
+    public GameObject
     public bool canFire = true;
     public void FireProjectile()
     {
@@ -19,9 +20,20 @@ public class ProjectileLauncher : MonoBehaviour
         // Adjust the projectile's scale based on the player's facing direction
         // If the parent (player) is facing right, set scale to positive; if left, set to negative
         projectile.transform.localScale = new Vector3(
+
+            if (player.transform.eulerAngles == new Vector2(0, 0))
+            {
+                projectile.transform.localScale = new Vector3(
+                    originalScale.x * transform.localScale.x > 0 ? 1 : -1, // Adjust scale based on parent scale
+                    originalScale.y,
+                    originalScale.z);
+            }
+            else
+            {
+                projectile.transform.localScale = new Vector3(
             originalScale.x * transform.localScale.x > 0 ? 1 : -1, // Adjust scale based on parent scale
             originalScale.y,
             originalScale.z);
-    }
+    })
 
 }

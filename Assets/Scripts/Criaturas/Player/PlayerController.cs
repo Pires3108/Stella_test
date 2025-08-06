@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
-
+    public SpriteRenderer spriteRenderer;
     public float walkSpeed;
     public float runSpeed;
     public float airWalkSpeed;
@@ -108,10 +108,10 @@ public class PlayerController : MonoBehaviour
         {
             if (_isFacingRight != value && canFlip)
             {
-
-                transform.localScale *= new Vector2(-1, 1);
+                gameObject.transform.eulerAngles = new Vector2(180, 0);
             }
             _isFacingRight = value;
+            gameObject.transform.eulerAngles = new Vector2(0, _isFacingRight ? 0 : 180);
 
 
         }
@@ -161,6 +161,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(GoCena(cenaAtual));
         }
+        
     }
 
     private void FixedUpdate()

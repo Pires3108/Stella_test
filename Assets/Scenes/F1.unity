@@ -19695,6 +19695,10 @@ CompositeCollider2D:
       - X: 2449999872
         Y: 70000000
       - X: 2449999872
+        Y: -110000000
+      - X: 2400000000
+        Y: -110000000
+      - X: 2400000000
         Y: -120000000
       - X: 2220000000
         Y: -120000000
@@ -19756,7 +19760,9 @@ CompositeCollider2D:
       - {x: 28, y: -14}
     - - {x: 260, y: 7}
       - {x: 244.99998, y: 7}
-      - {x: 244.99998, y: -12}
+      - {x: 244.99998, y: -11}
+      - {x: 240, y: -11}
+      - {x: 240, y: -12}
       - {x: 222, y: -12}
       - {x: 222, y: -4}
       - {x: 187, y: -4}
@@ -53901,6 +53907,56 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 2147483649
+  - first: {x: 240, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483649
+  - first: {x: 241, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483649
+  - first: {x: 242, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483649
+  - first: {x: 243, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483649
+  - first: {x: 244, y: -12, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 2147483649
   - first: {x: 245, y: -12, z: 0}
     second:
       serializedVersion: 2
@@ -77189,7 +77245,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 5730
+  - m_RefCount: 5735
     m_Data: {fileID: 11400000, guid: 4dd327e24e779c145a23205e630b1497, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -77252,10 +77308,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 5730
+  - m_RefCount: 5735
     m_Data: {fileID: 925939952, guid: a768c861eeaa5a04396766080a9d83b9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 5730
+  - m_RefCount: 5735
     m_Data:
       e00: 1
       e01: 0
@@ -77274,7 +77330,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5730
+  - m_RefCount: 5735
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 0
@@ -136992,6 +137048,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 352923824}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 805973034307760609}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: eKey.Array.data[0]
       value: 
       objectReference: {fileID: 2058319659}
@@ -137051,6 +137111,11 @@ PrefabInstance:
 --- !u!1 &805973034307760608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3057011621819967353, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+  m_PrefabInstance: {fileID: 805973034307760607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &805973034307760609 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6843314381859428517, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
   m_PrefabInstance: {fileID: 805973034307760607}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3758705004643111879
