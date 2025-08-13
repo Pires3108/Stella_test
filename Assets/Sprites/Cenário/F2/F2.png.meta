@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07788f9dfcdfc3f499941553349e6b41
+guid: fe1054fb30dc1c34db5a927b3e7b494b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -149,22 +149,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dunas_0
+      name: F2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 480
-        height: 270
+        width: 319
+        height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ccb736ecd156a458a297ba183ada61
-      internalID: -36323793
+      spriteID: 89dffd5e6852c934ca8de0db7f037142
+      internalID: 1284397045
       vertices: []
       indices: 
       edges: []
@@ -180,7 +180,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dunas_0: -36323793
+      F2_0: 1284397045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
