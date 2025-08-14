@@ -19,6 +19,7 @@ TagManager:
   - Boss2
   - WinBoss1
   - WinBoss2
+  - BossFight
   layers:
   - Default
   - TransparentFX

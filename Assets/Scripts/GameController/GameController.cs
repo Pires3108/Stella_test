@@ -4,16 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class GameController : MonoBehaviour
 {
     public PlayerController playerscript;
     public PlayerInput playerInput;
     public GameObject BarraDeVida;
+    public GameObject BarraBoss;
     public GameObject Dialogo;
+    public GameObject BossFight;
     public String CenaAtual;
+
+    public bool IsInFight;
 
 
     public bool IsDialogActive;
+
+    void Awake()
+    {
+        BarraDeVida.SetActive(false);
+        BarraBoss.SetActive(false);
+        IsInFight = false;
+    }
     void Update()
     {
         if (IsDialogActive)
@@ -21,13 +33,23 @@ public class GameController : MonoBehaviour
             BarraDeVida.SetActive(false);
             playerInput.enabled = false;
         }
-        else
+        else if (!IsInFight)
         {
             BarraDeVida.SetActive(true);
             playerInput.enabled = true;
         }
-        
+
+        if (IsInFight)
+        {
+            // LutaBoss();
+        }
 
     }
-   
+
+    // public void LutaBoss()
+    // {
+        
+    // }
+
+
 }
