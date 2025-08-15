@@ -154,10 +154,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
+        width: 13
         height: 32
       alignment: 9
-      pivot: {x: 0.17181033, y: 0.4836702}
+      pivot: {x: 0.5436281, y: 0.51632977}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,10 +175,10 @@ TextureImporter:
         serializedVersion: 2
         x: 41
         y: 0
-        width: 41
+        width: 12
         height: 32
       alignment: 9
-      pivot: {x: 0.16543774, y: 0.47142285}
+      pivot: {x: 0.5682408, y: 0.50408256}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,10 +196,10 @@ TextureImporter:
         serializedVersion: 2
         x: 82
         y: 0
-        width: 41
+        width: 15
         height: 32
       alignment: 9
-      pivot: {x: 0.24828172, y: 0.46325788}
+      pivot: {x: 0.6837438, y: 0.47550523}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: Lagarto Chefe Attack Combo 2-Sheet_3
       rect:
         serializedVersion: 2
-        x: 123
+        x: 122
         y: 0
-        width: 41
+        width: 37
         height: 32
       alignment: 9
-      pivot: {x: 0.46495092, y: 0.5285771}
+      pivot: {x: 0.53909713, y: 0.53265953}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,10 +238,10 @@ TextureImporter:
         serializedVersion: 2
         x: 164
         y: 0
-        width: 41
+        width: 30
         height: 32
       alignment: 9
-      pivot: {x: 0.17181024, y: 0.37752625}
+      pivot: {x: 0.2197113, y: 0.44284552}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,10 +259,10 @@ TextureImporter:
         serializedVersion: 2
         x: 205
         y: 0
-        width: 41
+        width: 31
         height: 32
       alignment: 9
-      pivot: {x: 0.1495071, y: 0.36936128}
+      pivot: {x: 0.20429106, y: 0.4061034}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,10 +280,10 @@ TextureImporter:
         serializedVersion: 2
         x: 246
         y: 0
-        width: 41
+        width: 17
         height: 32
       alignment: 9
-      pivot: {x: 0.22279134, y: 0.37752625}
+      pivot: {x: 0.5032833, y: 0.39385602}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

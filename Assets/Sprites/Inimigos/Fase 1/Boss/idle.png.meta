@@ -154,10 +154,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
+        width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: Lagarto Chefe Idle-Sheet_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 42
         y: 0
-        width: 41
+        width: 12
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,10 +196,10 @@ TextureImporter:
         serializedVersion: 2
         x: 82
         y: 0
-        width: 41
+        width: 15
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,10 +217,10 @@ TextureImporter:
         serializedVersion: 2
         x: 123
         y: 0
-        width: 41
+        width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -154,10 +154,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
+        width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.23235007, y: 0.45450974}
+      pivot: {x: 0.5682778, y: 0.46150798}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,10 +175,10 @@ TextureImporter:
         serializedVersion: 2
         x: 41
         y: 0
-        width: 41
+        width: 19
         height: 32
       alignment: 9
-      pivot: {x: 0.22688787, y: 0.45800894}
+      pivot: {x: 0.50388074, y: 0.4545096}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,10 +217,10 @@ TextureImporter:
         serializedVersion: 2
         x: 123
         y: 0
-        width: 41
+        width: 33
         height: 32
       alignment: 9
-      pivot: {x: 0.5027306, y: 0.30054274}
+      pivot: {x: 0.61809933, y: 0.34603292}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,10 +238,10 @@ TextureImporter:
         serializedVersion: 2
         x: 164
         y: 0
-        width: 41
+        width: 29
         height: 32
       alignment: 9
-      pivot: {x: 0.5027306, y: 0.3845247}
+      pivot: {x: 0.6764863, y: 0.36002988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,9 +257,9 @@ TextureImporter:
       name: Lagarto Chefe Attack-Sheet (41x32)_5
       rect:
         serializedVersion: 2
-        x: 205
+        x: 217
         y: 0
-        width: 41
+        width: 14
         height: 32
       alignment: 9
       pivot: {x: 0.4781509, y: 0.41951716}

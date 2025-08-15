@@ -39,17 +39,6 @@ public class GameController : MonoBehaviour
             playerInput.enabled = true;
         }
 
-        if (IsInFight)
-        {
-            // LutaBoss();
-        }
-
     }
-
-    // public void LutaBoss()
-    // {
-        
-    // }
-
 
 }
