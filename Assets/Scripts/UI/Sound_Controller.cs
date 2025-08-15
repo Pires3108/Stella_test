@@ -13,6 +13,7 @@ public class Sound_Controller : MonoBehaviour
     public TextMeshProUGUI EfeitoText;
 
     public GameObject Opcoes;
+    public GameObject BloqueioMenu;
     public Animator OpcoesAnim;
 
     public Button AbrirOpcoesButton;
@@ -33,6 +34,8 @@ public class Sound_Controller : MonoBehaviour
 
         Musicas.onValueChanged.AddListener(delegate { AtualizarMusicaSlider(); });
         Efeitos.onValueChanged.AddListener(delegate { AtualizarEfeitoSlider(); });
+
+        BloqueioMenu.SetActive(false);
     }
 
     public void AtualizarMusicaSlider()
@@ -55,5 +58,17 @@ public class Sound_Controller : MonoBehaviour
     public void FecharOpcoes()
     {
         OpcoesAnim.SetBool("isActivate", false);
+    }
+
+    void Update()
+    {
+        if (OpcoesAnim.GetBool("isActivate") == true)
+        {
+            BloqueioMenu.SetActive(true);
+        }
+        else
+        {
+            BloqueioMenu.SetActive(false);
+        }
     }
 }
