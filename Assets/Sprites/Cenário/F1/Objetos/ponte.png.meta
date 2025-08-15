@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec79c3e5d720e8c4a9686c284af22389
+guid: 739e7703385389c4cafa6175bab74beb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,43 +149,40 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores de Longe_0
+      name: ponte_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 22
-        width: 54
-        height: 61
+        x: 20
+        y: 0
+        width: 1001
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 439.5, y: -227}
+        - {x: 313.5, y: -223}
+        - {x: 319.5, y: -144}
+        - {x: 189.5, y: -165}
+        - {x: 0.5, y: -170}
+        - {x: -345.5, y: -138}
+        - {x: -315.5, y: -225}
+        - {x: -438.5, y: -228}
+        - {x: -443.5, y: -66}
+        - {x: -315.5, y: -67}
+        - {x: -274.5, y: -81}
+        - {x: -41.5, y: -95}
+        - {x: 218.5, y: -86}
+        - {x: 439.5, y: -67}
+      - - {x: 188.5, y: -170}
+        - {x: 188.5, y: -162}
+        - {x: 190.5, y: -162}
+        - {x: 190.5, y: -170}
       tessellationDetail: 0
       bones: []
-      spriteID: 3c45381ee24ff5047b653d1ae4e51589
-      internalID: 1440530644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Arvores de Longe_1
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 22
-        width: 46
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d9814beae1ddbb499673b17b79599e6
-      internalID: -1109887223
+      spriteID: 083eff714b6629e468b6950f62cf3537
+      internalID: -55458660
       vertices: []
       indices: 
       edges: []
@@ -201,8 +198,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores de Longe_0: 1440530644
-      Arvores de Longe_1: -1109887223
+      ponte_0: -55458660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
