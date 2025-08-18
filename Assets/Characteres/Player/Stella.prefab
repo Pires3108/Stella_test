@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 3006697574237342194}
   - component: {fileID: 1855058472893588793}
   - component: {fileID: 7342173670851621306}
-  - component: {fileID: 3688576385400123513}
   m_Layer: 7
   m_Name: Stella
   m_TagString: Player
@@ -346,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e1a9109b950c4c89388a2353eac0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   walkSpeed: 15
   runSpeed: 0
   airWalkSpeed: 6
@@ -360,6 +360,13 @@ MonoBehaviour:
   caixaDialogo: {fileID: 0}
   eKey:
   - {fileID: 0}
+  cenaAtual: 
+  estamina: {fileID: 0}
+  staminaRunDrain: 10
+  staminaAttackDrain: 25
+  staminaRangedDrain: 10
+  staminaRecoverRate: 15
+  acceleration: 5
   _isMoving: 0
   _isrunning: 0
   _isFacingRight: 1
@@ -458,19 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
---- !u!114 &3688576385400123513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3057011621819967353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6691188393fba743bf5f9e60caad8cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  sliderEstamina: {fileID: 0}
 --- !u!1 &4046400460460066550
 GameObject:
   m_ObjectHideFlags: 0

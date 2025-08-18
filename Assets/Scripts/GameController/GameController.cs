@@ -22,8 +22,15 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        BarraDeVida.SetActive(false);
-        BarraBoss.SetActive(false);
+        if(BarraBoss != null)
+        {
+            BarraBoss.SetActive(false);
+        }
+        if(BarraDeVida != null)
+        {
+            BarraDeVida.SetActive(false);
+        }
+        
         IsInFight = false;
     }
     void Update()

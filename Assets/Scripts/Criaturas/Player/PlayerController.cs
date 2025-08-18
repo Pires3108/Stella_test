@@ -27,6 +27,17 @@ public class PlayerController : MonoBehaviour
     public GameObject caixaDialogo;
     public GameObject[] eKey;
     public string cenaAtual;
+    public Estamina estamina; // Referência ao script de estamina
+
+    [Header("Estamina")]
+    public float staminaRunDrain = 10f; // Consumo por segundo ao correr
+    public float staminaAttackDrain = 25f; // Consumo por ataque de espada (alterado para 25)
+    public float staminaRangedDrain = 10f; // Consumo por ataque de arco (alterado para 10)
+    public float staminaRecoverRate = 15f; // Recuperação por segundo parado
+    [Range(1f, 20f)]
+    public float acceleration = 5f; // Aceleração gradual ao andar (editável pelo Inspector)
+
+    private float currentSpeed = 0f; // Velocidade atual para aceleração
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -144,6 +155,7 @@ public class PlayerController : MonoBehaviour
         touchingDirection = GetComponent<TouchingDirection>();
         damageable = GetComponent<Damageable>();
         isAlive = GetComponent<Damageable>();
+        estamina = GetComponent<Estamina>();
         foreach (Personagem npc in NPCScript)
         {
             npc.podeInteragir = false;
@@ -161,6 +173,13 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(GoCena(cenaAtual));
         }
+
+        // Recuperação de estamina quando parado
+        if (!IsMoving && estamina.Energy < estamina.MaxEnergy)
+        {
+            estamina.Energy += staminaRecoverRate * Time.deltaTime;
+            estamina.Energy = Mathf.Min(estamina.Energy, estamina.MaxEnergy);
+        }
         
     }
 
@@ -168,7 +187,28 @@ public class PlayerController : MonoBehaviour
     {
         if (!damageable.LockVelocity)
         {
-            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+            // Aceleração gradual ao andar
+            if (IsMoving && estamina.Energy > 0)
+            {
+                currentSpeed = Mathf.MoveTowards(currentSpeed, CurrentMoveSpeed, acceleration * Time.fixedDeltaTime);
+                rb.velocity = new Vector2(moveInput.x * currentSpeed, rb.velocity.y);
+
+                // Consome estamina ao correr
+                if (IsRunning)
+                {
+                    estamina.Energy -= staminaRunDrain * Time.fixedDeltaTime;
+                    if (estamina.Energy <= 0)
+                    {
+                        estamina.Energy = 0;
+                        IsRunning = false; // Para de correr se acabar estamina
+                    }
+                }
+            }
+            else
+            {
+                currentSpeed = 0f;
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
         }
 
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
@@ -226,7 +266,12 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started && caixaDialogo.activeSelf == false && canAttack)
         {
-            animator.SetTrigger(AnimationStrings.attackTrigger);
+            if (estamina.Energy >= staminaAttackDrain)
+            {
+                estamina.Energy -= staminaAttackDrain;
+                animator.SetTrigger(AnimationStrings.attackTrigger);
+            }
+            // else: sem estamina, não ataca
         }
     }
     //Area de attack
@@ -234,7 +279,12 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started && projectileLauncher.canFire)
         {
-            animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+            if (estamina.Energy >= staminaRangedDrain)
+            {
+                estamina.Energy -= staminaRangedDrain;
+                animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+            }
+            // else: sem estamina, não ataca
         }
     }
     //set the movimentation in relation of the HIT
