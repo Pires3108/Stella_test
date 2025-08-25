@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7dcf4bdcfd3158f4d8a0806400c24ed3
+guid: 7ad57876d03ae2f4199bff3e6d02714b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 96
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,34 +149,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Barras de sa\xFAde Stella_0"
+      name: VidaBoss_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 32
+        x: 7
+        y: 7
+        width: 370
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff2155fe70f46ba4b97c50f9332ddce9
-      internalID: 869166272
+      spriteID: 55939cdb1a7f5814b9898664e02c4352
+      internalID: -368281439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Barras de sa\xFAde Stella_1"
+      name: VidaBoss_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 384
         y: 0
-        width: 96
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9206ea6e1bfae4ea8cd5694f6ca3ee
-      internalID: 1690520606
+      spriteID: b0877b9c12bb5ad468e209a13801bc95
+      internalID: 153797907
       vertices: []
       indices: 
       edges: []
@@ -201,8 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Barras de sa\xFAde Stella_0": 869166272
-      "Barras de sa\xFAde Stella_1": 1690520606
+      VidaBoss_0: -368281439
+      VidaBoss_1: 153797907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

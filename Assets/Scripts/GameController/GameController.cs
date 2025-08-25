@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public PlayerController playerscript;
     public PlayerInput playerInput;
     public GameObject BarraDeVida;
+    public GameObject BarradeEstamina;
     public GameObject BarraBoss;
     public GameObject Dialogo;
     public GameObject BossFight;

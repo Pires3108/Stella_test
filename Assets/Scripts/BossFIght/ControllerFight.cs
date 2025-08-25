@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class ControllerFight : MonoBehaviour
 {
     public Slider barraBoss;
+    public Animator AnimBarraBoss;
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             barraBoss.gameObject.SetActive(true);
+            AnimBarraBoss.Play("BarraDeVidaBoss");
         }
     }
 }
