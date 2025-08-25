@@ -2683,8 +2683,11 @@ MonoBehaviour:
   playerscript: {fileID: 1128667379}
   playerInput: {fileID: 1128667380}
   BarraDeVida: {fileID: 869432938}
+  BarraBoss: {fileID: 0}
   Dialogo: {fileID: 1144876625}
+  BossFight: {fileID: 0}
   CenaAtual: 
+  IsInFight: 0
   IsDialogActive: 0
 --- !u!4 &524378555
 Transform:
@@ -113460,10 +113463,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 124486788}
+    - target: {fileID: 883705129937562432, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 953428357654520347, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 124486788}
+    - target: {fileID: 1081936220691851771, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170573642079041417, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2486400708125830558, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_text
       value: "PR\xD3XIMO"
