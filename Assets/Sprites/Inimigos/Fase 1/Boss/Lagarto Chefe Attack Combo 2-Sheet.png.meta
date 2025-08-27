@@ -153,9 +153,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 2
         width: 13
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.5436281, y: 0.51632977}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,9 +174,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 0
+        y: 2
         width: 12
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.5682408, y: 0.50408256}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,9 +195,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 82
-        y: 0
+        y: 2
         width: 15
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.6837438, y: 0.47550523}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,9 +216,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 122
-        y: 0
+        y: 2
         width: 37
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.53909713, y: 0.53265953}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,9 +237,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 164
-        y: 0
+        y: 2
         width: 30
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.2197113, y: 0.44284552}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,9 +258,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 0
+        y: 2
         width: 31
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.20429106, y: 0.4061034}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,9 +279,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 246
-        y: 0
+        y: 2
         width: 17
-        height: 32
+        height: 30
       alignment: 9
       pivot: {x: 0.5032833, y: 0.39385602}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,6 +313,7 @@ TextureImporter:
       Lagarto Chefe Attack Combo 2-Sheet_4: 829648329
       Lagarto Chefe Attack Combo 2-Sheet_5: 574327208
       Lagarto Chefe Attack Combo 2-Sheet_6: -1373431348
+      Lagarto Chefe Attack Combo 2-Sheet_7: 194831266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

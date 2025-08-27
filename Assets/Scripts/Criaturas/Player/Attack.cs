@@ -11,11 +11,17 @@ public class Attack : MonoBehaviour
     {
         //see if it can be hit
         Damageable damageable = collision.GetComponent<Damageable>();
-        if(damageable != null)
+
+        if (damageable != null)
         {
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? KnockBack : new Vector2(-KnockBack.x, KnockBack.y);
 
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
+        }
+
+        if (collision.CompareTag("Boss"))
+        {
+            
         }
     }
 }
