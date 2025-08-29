@@ -10,34 +10,53 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Component References")]
     public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rb;
+    public Animator animator;
+    public TouchingDirection touchingDirection;
+    public Damageable damageable;
+    public Damageable isAlive;
+    public ProjectileLauncher projectileLauncher;
+    public Estamina estamina; // Referência ao script de estamina
+
+    [Header("Movement Settings")]
     public float walkSpeed;
     public float runSpeed;
     public float airWalkSpeed;
     public float jumpImpulse;
-    public bool canAttack = true;
+    [Range(1f, 20f)]
+    public float acceleration = 5f; // Aceleração gradual ao andar (editável pelo Inspector)
+    private float currentSpeed = 0f; // Velocidade atual para aceleração
+    public Vector2 moveInput;
+
+    [Header("Attack Settings")]
+    public float delayBow;
     public float delayMorte, delayWin;
-    Vector2 moveInput;
-    TouchingDirection touchingDirection;
-    Damageable damageable;
+    public float staminaAttackDrain = 25f; // Consumo por ataque de espada
+    public float staminaRangedDrain = 10f; // Consumo por ataque de arco
+    public float staminaRunDrain = 10f; // Consumo por segundo ao correr
+
+    [Header("Stamina Settings")]
+    public float staminaRecoverRate = 15f; // Recuperação por segundo parado
+
+    [Header("State Bools")]
+    public bool isInDelayBow;
+    public bool canAttack = true;
     public bool canFlip = true;
-    Damageable isAlive;
-    public ProjectileLauncher projectileLauncher;
+
+    [SerializeField]
+    private bool _isMoving = false;
+    [SerializeField]
+    private bool _isrunning = false;
+    public bool _isFacingRight = true;
+
+    [Header("NPC & UI")]
     public Personagem[] NPCScript;
     public GameObject caixaDialogo;
     public GameObject[] eKey;
     public string cenaAtual;
-    public Estamina estamina; // Referência ao script de estamina
 
-    [Header("Estamina")]
-    public float staminaRunDrain = 10f; // Consumo por segundo ao correr
-    public float staminaAttackDrain = 25f; // Consumo por ataque de espada (alterado para 25)
-    public float staminaRangedDrain = 10f; // Consumo por ataque de arco (alterado para 10)
-    public float staminaRecoverRate = 15f; // Recuperação por segundo parado
-    [Range(1f, 20f)]
-    public float acceleration = 5f; // Aceleração gradual ao andar (editável pelo Inspector)
-
-    private float currentSpeed = 0f; // Velocidade atual para aceleração
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -77,9 +96,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private bool _isMoving = false;
-
     //detecta movimentação
     public bool IsMoving
     {
@@ -95,8 +111,6 @@ public class PlayerController : MonoBehaviour
     }
 
     // detecta se o player is running
-    [SerializeField]
-    private bool _isrunning = false;
     public bool IsRunning
     {
         get
@@ -108,8 +122,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(AnimationStrings.isRunning, value);
         }
     }
-
-    public bool _isFacingRight = true;
 
     //faz o player inverter de lado
     public bool IsFacingRight
@@ -123,8 +135,6 @@ public class PlayerController : MonoBehaviour
             }
             _isFacingRight = value;
             gameObject.transform.eulerAngles = new Vector2(0, _isFacingRight ? 0 : 180);
-
-
         }
     }
 
@@ -144,9 +154,6 @@ public class PlayerController : MonoBehaviour
             return animator.GetBool(AnimationStrings.isAlive);
         }
     }
-
-    Rigidbody2D rb;
-    Animator animator;
 
     private void Awake()
     {
@@ -277,16 +284,25 @@ public class PlayerController : MonoBehaviour
     //Area de attack
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
-        if (context.started && projectileLauncher.canFire)
+        if (context.started && projectileLauncher.canFire && !isInDelayBow)
         {
             if (estamina.Energy >= staminaRangedDrain)
             {
                 estamina.Energy -= staminaRangedDrain;
                 animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+                StartCoroutine(BowDelayCoroutine());
             }
             // else: sem estamina, não ataca
         }
     }
+
+    private IEnumerator BowDelayCoroutine()
+    {
+        isInDelayBow = true;
+        yield return new WaitForSeconds(delayBow);
+        isInDelayBow = false;
+    }
+
     //set the movimentation in relation of the HIT
     public void OnHit(int damage, Vector2 KnockBack)
     {

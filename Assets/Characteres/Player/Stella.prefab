@@ -345,31 +345,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6e1a9109b950c4c89388a2353eac0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 6843314381859428517}
+  rb: {fileID: 6397333244049082153}
+  animator: {fileID: 662326422550130300}
+  touchingDirection: {fileID: 2522062497239966897}
+  damageable: {fileID: 3006697574237342194}
+  isAlive: {fileID: 3006697574237342194}
+  projectileLauncher: {fileID: 1855058472893588793}
+  estamina: {fileID: 0}
   walkSpeed: 15
   runSpeed: 0
   airWalkSpeed: 6
   jumpImpulse: 11
-  canAttack: 1
+  acceleration: 10
+  moveInput: {x: 0, y: 0}
+  delayBow: 0.5
   delayMorte: 0.5
   delayWin: 0.5
+  staminaAttackDrain: 25
+  staminaRangedDrain: 10
+  staminaRunDrain: 0
+  staminaRecoverRate: 15
+  isInDelayBow: 0
+  canAttack: 1
   canFlip: 1
-  projectileLauncher: {fileID: 1855058472893588793}
+  _isMoving: 0
+  _isrunning: 0
+  _isFacingRight: 1
   NPCScript:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   caixaDialogo: {fileID: 0}
   eKey:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cenaAtual: 
-  estamina: {fileID: 0}
-  staminaRunDrain: 10
-  staminaAttackDrain: 25
-  staminaRangedDrain: 10
-  staminaRecoverRate: 15
-  acceleration: 5
-  _isMoving: 0
-  _isrunning: 0
-  _isFacingRight: 1
 --- !u!114 &2522062497239966897
 MonoBehaviour:
   m_ObjectHideFlags: 0
