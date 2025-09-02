@@ -7,6 +7,7 @@ public class DesativarPlayer : MonoBehaviour
 {
     public PlayerController estellaController;
     public GameObject stella;
+    public GameObject Transicao;
     public Animator playerAnimator;
     void Start()
     {
@@ -19,7 +20,7 @@ public class DesativarPlayer : MonoBehaviour
 
     void AtivarPlayer()
     {
-        Destroy(gameObject);
+        Transicao.SetActive(false);
         estellaController.canFlip = true;
         estellaController.enabled = true;
         playerAnimator.enabled = true;

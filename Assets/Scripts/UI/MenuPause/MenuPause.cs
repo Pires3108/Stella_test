@@ -5,18 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject Transicao;
 
+    void Awake()
+    {
+        // Garante que o menu de pause esteja desativado ao iniciar
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(false);
 
-    // Update is called once per frame
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Só permite pausar se não houver transição ativa
+        if (Input.GetKeyDown(KeyCode.Escape) && (Transicao == null || Transicao.activeSelf == false))
         {
-            Debug.Log("Escape pressionado!"); // Adiciona este log
+            Debug.Log("Tecla ESC pressionada"); // Adicionado para depuração
 
             if (GameIsPaused)
             {
@@ -29,17 +38,20 @@ public class MenuPause : MonoBehaviour
         }
     }
 
-    // Torna Resume público para garantir acesso externo se necessário
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(false);
+
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(true);
+
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -48,6 +60,7 @@ public class MenuPause : MonoBehaviour
     {
         Debug.Log("Carregando Menu...");
         Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame()
@@ -67,5 +80,4 @@ public class MenuPause : MonoBehaviour
         Debug.Log("Carregando Opções...");
         Time.timeScale = 1f;
     }
-    
 }

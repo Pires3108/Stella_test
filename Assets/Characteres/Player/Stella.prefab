@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3006697574237342194}
   - component: {fileID: 1855058472893588793}
   - component: {fileID: 7342173670851621306}
+  - component: {fileID: 2951389687776629354}
   m_Layer: 7
   m_Name: Stella
   m_TagString: Player
@@ -352,12 +353,12 @@ MonoBehaviour:
   damageable: {fileID: 3006697574237342194}
   isAlive: {fileID: 3006697574237342194}
   projectileLauncher: {fileID: 1855058472893588793}
-  estamina: {fileID: 0}
+  estamina: {fileID: 2951389687776629354}
   walkSpeed: 15
   runSpeed: 0
   airWalkSpeed: 6
   jumpImpulse: 11
-  acceleration: 10
+  acceleration: 20
   moveInput: {x: 0, y: 0}
   delayBow: 0.5
   delayMorte: 0.5
@@ -365,7 +366,7 @@ MonoBehaviour:
   staminaAttackDrain: 25
   staminaRangedDrain: 10
   staminaRunDrain: 0
-  staminaRecoverRate: 15
+  staminaRecoverRate: 20
   isInDelayBow: 0
   canAttack: 1
   canFlip: 1
@@ -374,14 +375,8 @@ MonoBehaviour:
   _isFacingRight: 1
   NPCScript:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   caixaDialogo: {fileID: 0}
   eKey:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   cenaAtual: 
 --- !u!114 &2522062497239966897
@@ -480,6 +475,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   sliderEstamina: {fileID: 0}
+--- !u!114 &2951389687776629354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057011621819967353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c27dc23885bd54d8091f46fa2afbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 100
+  MaxEnergy: 100
 --- !u!1 &4046400460460066550
 GameObject:
   m_ObjectHideFlags: 0

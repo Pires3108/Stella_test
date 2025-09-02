@@ -370,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   estellaController: {fileID: 0}
   stella: {fileID: 0}
+  Transicao: {fileID: 2170573642079041417}
   playerAnimator: {fileID: 0}
 --- !u!1 &1081936220691851771
 GameObject:
@@ -433,7 +434,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 418645843
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &3345152551214550913
@@ -958,7 +959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6812846836048269044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -976,7 +977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960.00006, y: 539.90094}
+  m_AnchoredPosition: {x: 960.0001, y: 539.90094}
   m_SizeDelta: {x: 1920.0001, y: 1079.8019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7683764131211328379
@@ -1311,7 +1312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -887.21027, y: 390.89996}
+  m_AnchoredPosition: {x: -866, y: 414}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &748364299121624706
@@ -1848,7 +1849,7 @@ RectTransform:
   m_Father: {fileID: 852004231334773141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 4.23999, y: 0.8100014}
   m_SizeDelta: {x: -84.15, y: -70.29}
   m_Pivot: {x: 0.5, y: 0.5}
