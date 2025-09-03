@@ -465,19 +465,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127430752}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1679992777}
-  m_Father: {fileID: 879393837}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 539.9513}
-  m_SizeDelta: {x: 1920, y: 1079.9026}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &269198091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2179,7 @@ GameObject:
   - component: {fileID: 879393834}
   - component: {fileID: 879393833}
   - component: {fileID: 879393838}
+  - component: {fileID: 879393840}
   - component: {fileID: 879393839}
   m_Layer: 5
   m_Name: Menu
@@ -2279,7 +2280,6 @@ RectTransform:
   - {fileID: 1119280751}
   - {fileID: 1526853453}
   - {fileID: 923524610}
-  - {fileID: 127430756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2317,16 +2317,16 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 45db86a4db369114fab6f3a9da1524c6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
+  Priority: 0
+  DopplerLevel: 1.83
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -2375,7 +2375,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.76944447
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2390,7 +2390,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2400,6 +2400,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &879393840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879393832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14453442faecb6c449a1bd04ea9dd1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuvemPerto: {fileID: 1678935661}
+  nuvemDistante: {fileID: 1478622007}
+  velocidadePerto: 50
+  velocidadeDistante: 20
 --- !u!1 &923524607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,7 +3283,7 @@ GameObject:
   - component: {fileID: 1478622008}
   - component: {fileID: 1478622007}
   m_Layer: 5
-  m_Name: Longes
+  m_Name: Longe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,8 +3305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -823.7601, y: 279}
-  m_SizeDelta: {x: 1783.8, y: 343.75}
+  m_AnchoredPosition: {x: -7, y: 279}
+  m_SizeDelta: {x: 1000, y: 337.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478622007
 MonoBehaviour:
@@ -3313,7 +3329,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -1723404970, guid: bbc16f609000d924a9423f043b76046d, type: 3}
-  m_Type: 2
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3828,8 +3844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00010109, y: 231}
-  m_SizeDelta: {x: 960, y: 343.75}
+  m_AnchoredPosition: {x: 11, y: 260}
+  m_SizeDelta: {x: 1000, y: 343.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678935661
 MonoBehaviour:
@@ -3852,7 +3868,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -1559083091, guid: 6a0187306aaa4e14eab9190472ee10d1, type: 3}
-  m_Type: 2
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3984,6 +4000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb58a83da26094840ae66365d2955c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OpcoesAnim: {fileID: 1679992780}
   sliderMusica: {fileID: 1607602343}
   sliderEfeitos: {fileID: 1415311592}
   audioMusica: {fileID: 879393839}
@@ -4712,4 +4729,5 @@ SceneRoots:
   - {fileID: 945221546}
   - {fileID: 550893413}
   - {fileID: 879393837}
+  - {fileID: 127430756}
   - {fileID: 16764183}
