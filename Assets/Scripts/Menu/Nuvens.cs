@@ -22,13 +22,21 @@ public class Nuvens : MonoBehaviour
         if (nuvemPerto != null)
         {
             nuvemPertoClone = Instantiate(nuvemPerto, nuvemPerto.transform.parent);
-            nuvemPertoClone.rectTransform.anchoredPosition = nuvemPerto.rectTransform.anchoredPosition + new Vector2(nuvemPerto.rectTransform.rect.width, 0);
+            Vector2 posOriginal = nuvemPerto.rectTransform.anchoredPosition;
+            nuvemPertoClone.rectTransform.anchoredPosition = new Vector2(
+                posOriginal.x + nuvemPerto.rectTransform.rect.width,
+                posOriginal.y // mantém o Y igual ao original
+            );
             nuvemPertoClone.transform.SetSiblingIndex(nuvemPerto.transform.GetSiblingIndex()); // Garante que fique atrás
         }
         if (nuvemDistante != null)
         {
             nuvemDistanteClone = Instantiate(nuvemDistante, nuvemDistante.transform.parent);
-            nuvemDistanteClone.rectTransform.anchoredPosition = nuvemDistante.rectTransform.anchoredPosition + new Vector2(nuvemDistante.rectTransform.rect.width, 0);
+            Vector2 posOriginal = nuvemDistante.rectTransform.anchoredPosition;
+            nuvemDistanteClone.rectTransform.anchoredPosition = new Vector2(
+                posOriginal.x + nuvemDistante.rectTransform.rect.width,
+                posOriginal.y // mantém o Y igual ao original
+            );
             nuvemDistanteClone.transform.SetSiblingIndex(nuvemDistante.transform.GetSiblingIndex());
         }
     }

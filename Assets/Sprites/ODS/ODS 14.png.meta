@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a6e43884b53b4a94780f6c4be992b9c7
+guid: de02abaf0c42bf84cb06219f2d799fec
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: voltar_0
+      name: ODS 14_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 23
-        height: 29
+        x: 2
+        y: 0
+        width: 1022
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96b8fa8da23876842b26010dd05025dd
-      internalID: -2050018496
+      spriteID: 08f7bdaa0dc47bd40a188bdf831996a8
+      internalID: 236428744
       vertices: []
       indices: 
       edges: []
@@ -180,7 +180,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      voltar_0: -2050018496
+      ODS 14_0: 236428744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
