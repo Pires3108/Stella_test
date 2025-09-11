@@ -19,9 +19,20 @@ public class Attack : MonoBehaviour
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
         }
 
-        if (collision.CompareTag("Boss"))
+        // Verifica se é um boss e causa dano
+        if (collision.CompareTag("Boss1") || collision.CompareTag("Boss2") || 
+            collision.CompareTag("Boss3") || collision.CompareTag("Boss4"))
         {
-            
+            BossFightSystem bossFightSystem = collision.GetComponent<BossFightSystem>();
+            if (bossFightSystem != null)
+            {
+                // Calcula knockback baseado na direção do player
+                Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+                Vector2 knockback = knockbackDirection * KnockBack.magnitude;
+                
+                bossFightSystem.TakeDamageFromPlayer(attackDamage, knockback);
+                Debug.Log($"Player causou {attackDamage} de dano ao boss!");
+            }
         }
     }
 }

@@ -109,6 +109,7 @@ public class Damageable : MonoBehaviour
     // Função de Hit com knockback, player para inimigo
     public bool Hit(int damage, Vector2 KnockBack)
     {
+        Debug.Log($"PLAYER HIT! Dano: {damage}, Vida restante: {Health - damage}");
         if (IsAlive && !isInvincible)
         {
             Health -= damage;

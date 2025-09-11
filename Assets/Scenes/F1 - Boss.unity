@@ -266,6 +266,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6447145126319376803, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
   m_PrefabInstance: {fileID: 948984366}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &190981964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190981961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3e40a78924c814ea294791eb8fd2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barraBoss: {fileID: 2071787956}
+  AnimBarraBoss: {fileID: 2071787957}
 --- !u!1001 &215940803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,6 +405,10 @@ MonoBehaviour:
   rb: {fileID: 387928965}
   spriteRenderer: {fileID: 387928967}
   victoryReward: {fileID: 1555158924}
+  attackColliders:
+  - {fileID: 2082815483}
+  - {fileID: 1358762315}
+  - {fileID: 1282097270}
   bossPreset: {fileID: 0}
   chaseSpeed: 3
   attackDistance: 1.19
@@ -428,6 +446,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   stunChance: 0.3
+  isFacingRight: 1
 --- !u!95 &387928964 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6612271201943342354, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
@@ -230240,7 +230259,10 @@ PrefabInstance:
     - {fileID: 2522262388562548521, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6447145126319376803, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 190981964}
   m_SourcePrefab: {fileID: 100100000, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
 --- !u!1001 &1057461267
 PrefabInstance:
@@ -230427,40 +230449,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1545135167}
   m_SourcePrefab: {fileID: 100100000, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
---- !u!1 &1155920815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1155920816}
-  m_Layer: 8
-  m_Name: HitboxDano
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1155920816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155920815}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2082815481}
-  - {fileID: 1358762313}
-  - {fileID: 1282097268}
-  m_Father: {fileID: 387928961}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226416466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5244345275206834814, guid: cc24e83e012487d47a63856a70c7160a, type: 3}
@@ -230507,6 +230495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282097268}
   - component: {fileID: 1282097269}
+  - component: {fileID: 1282097270}
   m_Layer: 8
   m_Name: Giro
   m_TagString: Untagged
@@ -230522,12 +230511,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282097267}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1155920816}
+  m_Father: {fileID: 387928961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1282097269
 PolygonCollider2D:
@@ -230558,7 +230547,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -230579,6 +230568,22 @@ PolygonCollider2D:
       - {x: 0.31856, y: -0.16571866}
       - {x: 0.33293894, y: 0.0845344}
   m_UseDelaunayMesh: 0
+--- !u!114 &1282097270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282097267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b97d09246f8f0948ba950ed8faae21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
+  attackName: ComboGiro
+  bossFightSystem: {fileID: 387928963}
 --- !u!1 &1311038800
 GameObject:
   m_ObjectHideFlags: 0
@@ -230631,6 +230636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358762313}
   - component: {fileID: 1358762314}
+  - component: {fileID: 1358762315}
   m_Layer: 8
   m_Name: PunchL
   m_TagString: Untagged
@@ -230646,12 +230652,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358762312}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1155920816}
+  m_Father: {fileID: 387928961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1358762314
 PolygonCollider2D:
@@ -230682,7 +230688,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -230705,6 +230711,22 @@ PolygonCollider2D:
       - {x: 0.22871947, y: 0.12387699}
       - {x: 0.15588059, y: 0.15756601}
   m_UseDelaunayMesh: 0
+--- !u!114 &1358762315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358762312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b97d09246f8f0948ba950ed8faae21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
+  attackName: PunchLeft
+  bossFightSystem: {fileID: 387928963}
 --- !u!1001 &1496294823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231310,6 +231332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082815481}
   - component: {fileID: 2082815482}
+  - component: {fileID: 2082815483}
   m_Layer: 8
   m_Name: PunchR
   m_TagString: Untagged
@@ -231325,12 +231348,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082815480}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1155920816}
+  m_Father: {fileID: 387928961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2082815482
 PolygonCollider2D:
@@ -231361,7 +231384,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -231385,6 +231408,22 @@ PolygonCollider2D:
       - {x: 0.22625057, y: -0.043810993}
       - {x: 0.25679383, y: 0.11312937}
   m_UseDelaunayMesh: 0
+--- !u!114 &2082815483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082815480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b97d09246f8f0948ba950ed8faae21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
+  attackName: PunchRight
+  bossFightSystem: {fileID: 387928963}
 --- !u!1001 &7306955164671979339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231396,6 +231435,10 @@ PrefabInstance:
     - target: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_Name
       value: BossLagarto
+      objectReference: {fileID: 0}
+    - target: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: m_TagString
+      value: Boss1
       objectReference: {fileID: 0}
     - target: {fileID: 1584789375432147835, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_Size.x
@@ -231474,7 +231517,13 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1155920816}
+      addedObject: {fileID: 2082815481}
+    - targetCorrespondingSourceObject: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1358762313}
+    - targetCorrespondingSourceObject: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1282097268}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       insertIndex: -1
