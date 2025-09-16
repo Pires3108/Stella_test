@@ -371,23 +371,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
   m_PrefabInstance: {fileID: 7306955164671979339}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &387928962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387928950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c648f91710f92af43a0959a704c1c694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossFightSystem: {fileID: 387928963}
-  showDebugInfo: 1
-  logStateChanges: 1
-  logDistance: 1
-  debugUpdateInterval: 0.5
 --- !u!114 &387928963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +388,8 @@ MonoBehaviour:
   rb: {fileID: 387928965}
   spriteRenderer: {fileID: 387928967}
   victoryReward: {fileID: 1555158924}
+  healthBar: {fileID: 2071787956}
+  healthBarAnimator: {fileID: 2071787957}
   attackColliders:
   - {fileID: 2082815483}
   - {fileID: 1358762315}
@@ -414,21 +399,20 @@ MonoBehaviour:
   attackDistance: 1.19
   maxChaseDistance: 20
   restDistance: 5
-  restDuration: 3
   stunDuration: 2
   retreatDistance: 3
   retreatSpeed: 2
   availableAttacks:
   - attackName: SocoDireita
     animationTrigger: PunchRight
-    attackDuration: 1
+    attackDuration: 0.7
     cooldown: 20
     damage: 10
     range: 15
     requiresCloseRange: 0
   - attackName: SocoEsquerda
     animationTrigger: PunchLeft
-    attackDuration: 1
+    attackDuration: 0.75
     cooldown: 20
     damage: 10
     range: 15
@@ -446,7 +430,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   stunChance: 0.3
-  isFacingRight: 1
+  restDuration: 3
 --- !u!95 &387928964 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6612271201943342354, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
@@ -230496,7 +230480,7 @@ GameObject:
   - component: {fileID: 1282097268}
   - component: {fileID: 1282097269}
   - component: {fileID: 1282097270}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Giro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230637,7 +230621,7 @@ GameObject:
   - component: {fileID: 1358762313}
   - component: {fileID: 1358762314}
   - component: {fileID: 1358762315}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: PunchL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231213,6 +231197,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4401671831255316891, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401671831255316891, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4735209092092803838, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -231333,7 +231325,7 @@ GameObject:
   - component: {fileID: 2082815481}
   - component: {fileID: 2082815482}
   - component: {fileID: 2082815483}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: PunchR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231528,9 +231520,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       insertIndex: -1
       addedObject: {fileID: 387928963}
-    - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 387928962}
   m_SourcePrefab: {fileID: 100100000, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -86,15 +86,15 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.2
-    functionName: EnableAttackColliderByName
-    data: PunchRight
+    functionName: EnableAttackCollider
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.4
-    functionName: DisableAttackColliderByName
-    data: PunchRight
+    functionName: DisableAttackCollider
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

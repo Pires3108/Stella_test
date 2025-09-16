@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossFightSystem : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class BossFightSystem : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public GameObject victoryReward; // Troféu ou recompensa
+    
+    [Header("UI e Efeitos")]
+    public Slider healthBar; // Barra de vida do boss
+    public Animator healthBarAnimator; // Animator da barra de vida (opcional)
     
     [Header("Colliders de Ataque")]
     public List<BossAttackCollider> attackColliders = new List<BossAttackCollider>();
@@ -47,6 +52,9 @@ public class BossFightSystem : MonoBehaviour
     public bool isFacingRight = true;
     private Vector2 startPosition;
     private bool isDead = false;
+    
+    // Controle de interrupção
+    private bool isInterrupted = false;
 
     // Eventos
     public System.Action<BossAttack> OnAttackStart;
@@ -66,6 +74,7 @@ public class BossFightSystem : MonoBehaviour
 
         UpdateState();
         UpdateAnimations();
+        UpdateHealthBar();
     }
 
     void InitializeBoss()
@@ -88,6 +97,9 @@ public class BossFightSystem : MonoBehaviour
 
         // Inicializa os colliders de ataque
         InitializeAttackColliders();
+
+        // Inicializa a barra de vida
+        InitializeHealthBar();
 
         // Inicia o ciclo de combate
         StartCoroutine(BossFightCycle());
@@ -165,6 +177,29 @@ public class BossFightSystem : MonoBehaviour
             {
                 Debug.Log($"🔧 BOSS ATTACK: Collider final: {collider.attackName} - Enabled: {collider.GetComponent<Collider2D>().enabled}, IsTrigger: {collider.GetComponent<Collider2D>().isTrigger}");
             }
+        }
+    }
+
+    void InitializeHealthBar()
+    {
+        // Configura a barra de vida inicial
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth; // Valor máximo = vida máxima do boss
+            healthBar.value = health; // Valor atual = vida atual do boss
+            healthBar.gameObject.SetActive(false); // Começa desativada (será ativada pelo ControllerFight)
+            Debug.Log($"Boss: Barra de vida inicializada - Max: {maxHealth}, Atual: {health}");
+        }
+        else
+        {
+            Debug.LogWarning("Boss: Barra de vida não configurada!");
+        }
+
+        // Desativa o troféu inicialmente
+        if (victoryReward != null)
+        {
+            victoryReward.SetActive(false);
+            Debug.Log("Boss: Troféu de vitória desativado inicialmente");
         }
     }
 
@@ -350,6 +385,9 @@ public class BossFightSystem : MonoBehaviour
     {
         Debug.Log("Boss: Recuando após ataque");
         
+        // Reseta flag de interrupção
+        isInterrupted = false;
+        
         if (animator != null)
         {
             animator.SetBool("isWalking", true);
@@ -357,15 +395,38 @@ public class BossFightSystem : MonoBehaviour
 
         float retreatTime = 0f;
         float maxRetreatTime = 2f; // Tempo máximo de recuo
-        Vector2 retreatDirection = -transform.right; // Recua na direção oposta ao que está olhando
+        
+        // Calcula direção de recuo baseada na posição do player
+        Vector2 retreatDirection;
+        if (player != null)
+        {
+            retreatDirection = (transform.position - player.transform.position).normalized;
+        }
+        else
+        {
+            // Fallback: recua na direção oposta ao que está olhando
+            retreatDirection = isFacingRight ? Vector2.left : Vector2.right;
+        }
 
         Debug.Log($"🔄 RETREAT AFTER ATTACK: Direção de recuo: {retreatDirection}, FacingRight: {isFacingRight}");
 
-        while (retreatTime < maxRetreatTime && currentState == BossState.Attacking)
+        while (retreatTime < maxRetreatTime && currentState == BossState.Attacking && !isInterrupted)
         {
+            // Vira o boss na direção que está se movendo
+            if (retreatDirection.x > 0.1f && !isFacingRight)
+            {
+                Debug.Log($"🔄 RETREAT AFTER ATTACK: Virando para DIREITA (recuando para direita)");
+                FlipSprite(true);
+            }
+            else if (retreatDirection.x < -0.1f && isFacingRight)
+            {
+                Debug.Log($"🔄 RETREAT AFTER ATTACK: Virando para ESQUERDA (recuando para esquerda)");
+                FlipSprite(false);
+            }
+
             if (rb != null)
             {
-                // Move para trás
+                // Move na direção calculada
                 Vector2 newPosition = new Vector2(
                     rb.position.x + retreatDirection.x * retreatSpeed * Time.fixedDeltaTime,
                     rb.position.y
@@ -383,12 +444,22 @@ public class BossFightSystem : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        Debug.Log($"Boss: Recuo terminado após {retreatTime:F2} segundos");
+        if (isInterrupted)
+        {
+            Debug.Log("Boss: Recuo interrompido por dano!");
+        }
+        else
+        {
+            Debug.Log($"Boss: Recuo terminado após {retreatTime:F2} segundos");
+        }
     }
 
     IEnumerator RestAndRetreat()
     {
         Debug.Log("Boss: Iniciando descanso e afastamento");
+        
+        // Reseta flag de interrupção
+        isInterrupted = false;
         
         if (animator != null)
         {
@@ -399,7 +470,7 @@ public class BossFightSystem : MonoBehaviour
         float maxRetreatTime = 3f; // Tempo máximo de afastamento
 
         // Afasta até atingir a distância de descanso ou tempo máximo
-        while (retreatTime < maxRetreatTime && currentState == BossState.Resting)
+        while (retreatTime < maxRetreatTime && currentState == BossState.Resting && !isInterrupted)
         {
             if (player != null)
             {
@@ -421,43 +492,15 @@ public class BossFightSystem : MonoBehaviour
                 // Se está muito perto do player, força afastamento
                 if (distanceToPlayer < restDistance)
                 {
-                    // Vira o boss na direção que está recuando
-                    if (directionAwayFromPlayer.x > 0.1f)
-                    {
-                        if (!isFacingRight)
-                        {
-                            Debug.Log($"🔄 RETREAT: Virando para DIREITA (recuando para direita)");
-                            FlipSprite(true); // Vira para direita quando recua para direita
-                        }
-                        else
-                        {
-                            Debug.Log($"🔄 RETREAT: Já está virado para direita (recuando para direita)");
-                        }
-                    }
-                    else if (directionAwayFromPlayer.x < -0.1f)
-                    {
-                        if (isFacingRight)
-                        {
-                            Debug.Log($"🔄 RETREAT: Virando para ESQUERDA (recuando para esquerda)");
-                            FlipSprite(false); // Vira para esquerda quando recua para esquerda
-                        }
-                        else
-                        {
-                            Debug.Log($"🔄 RETREAT: Já está virado para esquerda (recuando para esquerda)");
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log($"🔄 RETREAT: Não precisa virar - Direção: {directionAwayFromPlayer.x:F2}, FacingRight: {isFacingRight}");
-                    }
-                    
-                    // Força o flip a cada frame durante o recuo para garantir que não seja sobrescrito pela animação
+                    // Vira o boss na direção que está se movendo
                     if (directionAwayFromPlayer.x > 0.1f && !isFacingRight)
                     {
+                        Debug.Log($"🔄 RETREAT: Virando para DIREITA (recuando para direita)");
                         FlipSprite(true);
                     }
                     else if (directionAwayFromPlayer.x < -0.1f && isFacingRight)
                     {
+                        Debug.Log($"🔄 RETREAT: Virando para ESQUERDA (recuando para esquerda)");
                         FlipSprite(false);
                     }
                     
@@ -483,9 +526,18 @@ public class BossFightSystem : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        Debug.Log($"Boss: Afastamento terminado após {retreatTime:F2} segundos");
+        if (isInterrupted)
+        {
+            Debug.Log("Boss: Afastamento interrompido por dano! Pulando tempo de descanso...");
+            // Se foi interrompido, não aguarda o tempo de descanso
+            yield break;
+        }
+        else
+        {
+            Debug.Log($"Boss: Afastamento terminado após {retreatTime:F2} segundos");
+        }
         
-        // Aguarda o tempo de descanso
+        // Aguarda o tempo de descanso apenas se não foi interrompido
         Debug.Log($"Boss: Aguardando {restDuration} segundos de descanso");
         yield return new WaitForSeconds(restDuration);
         
@@ -537,6 +589,27 @@ public class BossFightSystem : MonoBehaviour
         // Aguarda a duração do ataque
         Debug.Log($"Boss: Aguardando {currentAttack.attackDuration} segundos para ataque: {currentAttack.attackName}");
         yield return new WaitForSeconds(currentAttack.attackDuration);
+
+        // Verifica se foi interrompido durante o ataque
+        if (isInterrupted)
+        {
+            Debug.Log("Boss: Ataque interrompido por dano! Pulando recuo e descanso...");
+            
+            // Desativa o collider de ataque se ainda estiver ativo
+            if (attackCollider != null)
+            {
+                attackCollider.DisableAttackCollider();
+            }
+            
+            // Reseta o trigger da animação
+            if (animator != null)
+            {
+                animator.ResetTrigger(currentAttack.animationTrigger);
+            }
+            
+            OnAttackEnd?.Invoke(currentAttack);
+            yield break; // Sai do método sem fazer recuo ou descanso
+        }
 
         // Desativa o trigger após o ataque
         if (animator != null)
@@ -602,7 +675,18 @@ public class BossFightSystem : MonoBehaviour
             }
         }
         
-        // Se não encontrou, retorna o primeiro collider disponível
+        // Se não encontrou por nome exato, tenta correspondência parcial
+        foreach (var collider in attackColliders)
+        {
+            if (collider.attackName.ToLower().Contains(attackName.ToLower()) || 
+                attackName.ToLower().Contains(collider.attackName.ToLower()))
+            {
+                Debug.Log($"✅ BOSS ATTACK: Collider encontrado por correspondência parcial: {collider.attackName} para {attackName}");
+                return collider;
+            }
+        }
+        
+        // Se ainda não encontrou, retorna o primeiro collider disponível
         if (attackColliders.Count > 0)
         {
             Debug.Log($"⚠️ BOSS ATTACK: Collider específico não encontrado, usando primeiro disponível: {attackColliders[0].attackName}");
@@ -681,6 +765,22 @@ public class BossFightSystem : MonoBehaviour
         }
     }
 
+    void UpdateHealthBar()
+    {
+        // Atualiza a barra de vida do boss apenas se estiver ativa
+        if (healthBar != null && healthBar.gameObject.activeInHierarchy)
+        {
+            // O value da barra é igual à variável health do boss
+            healthBar.value = health;
+            
+            // Ativa animação da barra de vida se disponível (usando porcentagem)
+            if (healthBarAnimator != null)
+            {
+                float healthPercentage = health / maxHealth;
+            }
+        }
+    }
+
     void FlipSprite(bool faceRight)
     {
         isFacingRight = faceRight;
@@ -703,6 +803,10 @@ public class BossFightSystem : MonoBehaviour
         OnHealthChanged?.Invoke(health / maxHealth);
 
         Debug.Log($"Boss recebeu {damage} de dano! Vida restante: {health}/{maxHealth}");
+
+        // Interrompe qualquer movimento em andamento
+        isInterrupted = true;
+        Debug.Log("Boss: Movimento interrompido por dano!");
 
         // Ativa animação de hit
         if (animator != null)
@@ -748,11 +852,18 @@ public class BossFightSystem : MonoBehaviour
         animator.SetTrigger("Death");
         OnBossDeath?.Invoke();
 
-        // Spawna recompensa
+        // Desativa a barra de vida quando o boss morre
+        if (healthBar != null)
+        {
+            Debug.Log("Boss: Desativando barra de vida...");
+            healthBar.gameObject.SetActive(false);
+        }
+
+        // Ativa o troféu de vitória
         if (victoryReward != null)
         {
-            Debug.Log("Boss: Spawnando recompensa...");
-            Instantiate(victoryReward, transform.position, Quaternion.identity);
+            Debug.Log("Boss: Ativando troféu de vitória...");
+            victoryReward.SetActive(true);
         }
 
         // Desabilita o sistema de combate
@@ -760,11 +871,13 @@ public class BossFightSystem : MonoBehaviour
         Debug.Log("Boss: Sistema de combate desabilitado");
     }
 
-    void DealDamageToPlayer(float damage)
+    public void DealDamageToPlayer(float damage)
     {
         // Implementa interface de dano do player usando o sistema Damageable
         if (player != null)
         {
+            Debug.Log($"🎯 BOSS DAMAGE: Tentando causar {damage} de dano ao player: {player.name}");
+            
             Damageable playerDamageable = player.GetComponent<Damageable>();
             if (playerDamageable != null)
             {
@@ -772,21 +885,27 @@ public class BossFightSystem : MonoBehaviour
                 Vector2 knockbackDirection = (player.transform.position - transform.position).normalized;
                 Vector2 knockback = knockbackDirection * 5f; // Força do knockback
                 
-                Debug.Log($"Boss: Tentando causar {damage} de dano ao player, knockback: {knockback}");
+                Debug.Log($"🎯 BOSS DAMAGE: Knockback calculado: {knockback}, Direção: {knockbackDirection}");
+                Debug.Log($"🎯 BOSS DAMAGE: Player posição: {player.transform.position}, Boss posição: {transform.position}");
+                
                 bool hitSuccess = playerDamageable.Hit(Mathf.RoundToInt(damage), knockback);
                 if (hitSuccess)
                 {
-                    Debug.Log($"Boss causou {damage} de dano ao player!");
+                    Debug.Log($"✅ BOSS DAMAGE: SUCESSO! Boss causou {damage} de dano ao player!");
                 }
                 else
                 {
-                    Debug.Log("Boss tentou atacar mas o player está invulnerável!");
+                    Debug.Log($"❌ BOSS DAMAGE: FALHOU - Player invulnerável ou morto");
                 }
             }
             else
             {
-                Debug.LogWarning("Player não possui componente Damageable!");
+                Debug.LogError($"❌ BOSS DAMAGE: Player não possui componente Damageable! Player: {player.name}");
             }
+        }
+        else
+        {
+            Debug.LogError($"❌ BOSS DAMAGE: Referência do player é nula!");
         }
     }
 
@@ -956,6 +1075,17 @@ public class BossFightSystem : MonoBehaviour
         }
     }
 
+    // Método público para configurar a barra de vida (chamado pelo ControllerFight)
+    public void SetupHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth;
+            healthBar.value = health;
+            Debug.Log($"Boss: Barra de vida configurada pelo ControllerFight - Max: {maxHealth}, Atual: {health}");
+        }
+    }
+
     // Método para debug
     void OnDrawGizmosSelected()
     {
@@ -984,5 +1114,83 @@ public class BossFightSystem : MonoBehaviour
                 Gizmos.DrawWireCube(collider.transform.position, Vector3.one * 0.5f);
             }
         }
+    }
+
+    // Método público para debug dos colliders
+    public void DebugColliders()
+    {
+        Debug.Log($"🔍 DEBUG COLLIDERS: Total de colliders: {attackColliders.Count}");
+        Debug.Log($"🔍 DEBUG COLLIDERS: Total de ataques: {availableAttacks.Count}");
+        
+        Debug.Log("🔍 DEBUG COLLIDERS: === COLLIDERS DISPONÍVEIS ===");
+        for (int i = 0; i < attackColliders.Count; i++)
+        {
+            var collider = attackColliders[i];
+            if (collider != null)
+            {
+                var col2D = collider.GetComponent<Collider2D>();
+                Debug.Log($"🔍 DEBUG COLLIDERS: Collider {i}: {collider.attackName} - Enabled: {col2D.enabled}, IsTrigger: {col2D.isTrigger}, Posição: {collider.transform.position}");
+            }
+            else
+            {
+                Debug.LogError($"🔍 DEBUG COLLIDERS: Collider {i} é nulo!");
+            }
+        }
+        
+        Debug.Log("🔍 DEBUG COLLIDERS: === ATAQUES DISPONÍVEIS ===");
+        for (int i = 0; i < availableAttacks.Count; i++)
+        {
+            var attack = availableAttacks[i];
+            Debug.Log($"🔍 DEBUG COLLIDERS: Ataque {i}: {attack.attackName} (Dano: {attack.damage}, Duração: {attack.attackDuration})");
+        }
+        
+        Debug.Log("🔍 DEBUG COLLIDERS: === CORRESPONDÊNCIAS ===");
+        foreach (var attack in availableAttacks)
+        {
+            var collider = GetAttackCollider(attack.attackName);
+            if (collider != null)
+            {
+                Debug.Log($"🔍 DEBUG COLLIDERS: ✅ {attack.attackName} -> {collider.attackName}");
+            }
+            else
+            {
+                Debug.LogError($"🔍 DEBUG COLLIDERS: ❌ {attack.attackName} -> NENHUM COLLIDER");
+            }
+        }
+    }
+
+    // Método para corrigir automaticamente os nomes dos colliders
+    public void FixColliderNames()
+    {
+        Debug.Log("🔧 FIX COLLIDERS: Corrigindo nomes dos colliders...");
+        
+        if (availableAttacks.Count == 0 || attackColliders.Count == 0)
+        {
+            Debug.LogWarning("🔧 FIX COLLIDERS: Não há ataques ou colliders para corrigir!");
+            return;
+        }
+        
+        // Se há mais ataques que colliders, não pode corrigir automaticamente
+        if (availableAttacks.Count > attackColliders.Count)
+        {
+            Debug.LogWarning($"🔧 FIX COLLIDERS: Mais ataques ({availableAttacks.Count}) que colliders ({attackColliders.Count})!");
+            return;
+        }
+        
+        // Atribui cada ataque a um collider disponível
+        for (int i = 0; i < availableAttacks.Count && i < attackColliders.Count; i++)
+        {
+            var attack = availableAttacks[i];
+            var collider = attackColliders[i];
+            
+            if (collider != null)
+            {
+                string oldName = collider.attackName;
+                collider.attackName = attack.attackName;
+                Debug.Log($"🔧 FIX COLLIDERS: Collider {i} renomeado de '{oldName}' para '{attack.attackName}'");
+            }
+        }
+        
+        Debug.Log("🔧 FIX COLLIDERS: Correção concluída!");
     }
 }
