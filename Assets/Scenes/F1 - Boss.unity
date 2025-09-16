@@ -429,8 +429,8 @@ MonoBehaviour:
   maxComboLength: 3
   timeBetweenAttacks: 1
   aggressiveMode: 1
-  health: 100
-  maxHealth: 100
+  health: 400
+  maxHealth: 400
   stunChance: 0.3
   isFacingRight: 1
 --- !u!95 &387928964 stripped
