@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barraBoss: {fileID: 2071787956}
   AnimBarraBoss: {fileID: 2071787957}
+  bossFightSystem: {fileID: 387928963}
 --- !u!1001 &215940803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,6 +400,7 @@ MonoBehaviour:
   attackDistance: 1.19
   maxChaseDistance: 20
   restDistance: 5
+  restDuration: 3
   stunDuration: 2
   retreatDistance: 3
   retreatSpeed: 2
@@ -430,7 +432,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   stunChance: 0.3
-  restDuration: 3
+  isFacingRight: 1
 --- !u!95 &387928964 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6612271201943342354, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
