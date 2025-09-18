@@ -88,3 +88,26 @@ MonoBehaviour:
     ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
     texto: "Boa sorte, Stella.\nE lembre-se... nem todo abismo quer te engolir.\nAlguns
       s\xF3 querem saber se voc\xEA \xE9 digna de atravess\xE1-los."
+  - identificador: "[Stella] : ...Espere. Se vou cair, preciso de for\xE7as."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "...Espere. Se vou cair, preciso de for\xE7as."
+  - identificador: "[Rodolfo] : Ent\xE3o prove da ma\xE7\xE3. Ela nasceu mesmo em
+      meio ao apodrecimento. Se resistiu at\xE9 aqui, tamb\xE9m pode te sustentar."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Ent\xE3o prove da ma\xE7\xE3. Ela nasceu mesmo em meio ao apodrecimento.
+      Se resistiu at\xE9 aqui, tamb\xE9m pode te sustentar."
+  - identificador: "[Rodolfo] : Ator: Rodolfo \xC9 o \xFAltimo fruto do jardim. Doce
+      e amargo ao mesmo tempo. Quem o come sente o peso da terra... mas tamb\xE9m
+      sua f\xFAria."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Ator: Rodolfo \xC9 o \xFAltimo fruto do jardim. Doce e amargo ao mesmo
+      tempo. Quem o come sente o peso da terra... mas tamb\xE9m sua f\xFAria."
+  - identificador: "[Rodolfo] : Ent\xE3o siga. O abismo a chama. Agora, n\xE3o h\xE1
+      volta."
+    ator: {fileID: 11400000, guid: ca1ac6a24d9c8f5459415ff892cec44f, type: 2}
+    texto: "Ent\xE3o siga. O abismo a chama. Agora, n\xE3o h\xE1 volta."
+  - identificador: "[Stella] : Que assim seja. Se o parque precisa de mim... que
+      a queda me leve at\xE9 ele."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Que assim seja. Se o parque precisa de mim... que a queda me leve at\xE9
+      ele."
