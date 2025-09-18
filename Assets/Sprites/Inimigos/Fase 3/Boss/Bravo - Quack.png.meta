@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a0187306aaa4e14eab9190472ee10d1
+guid: 6e94e26c2b2e0004cbeb754858d007af
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -149,22 +149,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuvens -Perto_0
+      name: Bravo - Quack_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 70
-        width: 320
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5173286, y: 0.35443953}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 452ccba0a7eb86e4a890609a1160334b
-      internalID: -1559083091
+      spriteID: ba4bdb2208ce3aa459b3b3b7a44a5d58
+      internalID: 2000657460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Quack_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.50346565, y: 0.33017942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96df5dc82aa0774690a5323289614e2
+      internalID: -1889653128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Quack_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5034653, y: 0.29552224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50676ab5f225f642ab5d0421a0808dc
+      internalID: -1179621020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Quack_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5034653, y: 0.29898793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1562e355de3b614195cf030ec3e4070
+      internalID: -540886855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Quack_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.50346565, y: 0.35443953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cad65697f7363949b9336648b1691fd
+      internalID: -1036678343
       vertices: []
       indices: 
       edges: []
@@ -180,7 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nuvens -Perto_0: -1559083091
+      Bravo - Quack_0: 2000657460
+      Bravo - Quack_1: -1889653128
+      Bravo - Quack_2: -1179621020
+      Bravo - Quack_3: -540886855
+      Bravo - Quack_4: -1036678343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

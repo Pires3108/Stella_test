@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bbc16f609000d924a9423f043b76046d
+guid: 3071f18d43f6d6f4c938c2988e06381c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -149,22 +149,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuvens - Longe_0
+      name: Bravo - Jato_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 72
-        width: 320
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.31700975}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 600f0ba584d02cf4f9e8c8e8b46678aa
-      internalID: -1723404970
+      spriteID: f341da24cbfea0648b0c8476b3399a5d
+      internalID: -1784440572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Jato_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5041591, y: 0.34820125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d524d2e953a8ad34794973b809515ca3
+      internalID: -2106774881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bravo - Jato_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5000002, y: 0.33988354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07202eb352e07f46b5bb9dd8598329a
+      internalID: 519694199
       vertices: []
       indices: 
       edges: []
@@ -180,15 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nuvens - Longe_0: -1723404970
-      Nuvens - Longe_1: -1611546343
-      Nuvens - Longe_2: 1586487625
-      Nuvens - Longe_3: -1859728761
-      Nuvens - Longe_4: -1965185199
-      Nuvens - Longe_5: 370075131
-      Nuvens - Longe_6: -488652891
-      Nuvens - Longe_7: 1619279023
-      Nuvens - Longe_8: -1571510647
+      Bravo - Jato_0: -1784440572
+      Bravo - Jato_1: -2106774881
+      Bravo - Jato_2: 519694199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
