@@ -15,4 +15,8 @@ public class CharacterEvents
 
     // character healed and amount healed  
     public static UnityEvent<GameObject, int> characterHealed = new UnityEvent<GameObject, int>();
+
+    public static UnityEvent<GameObject, int> staminaAdded = new UnityEvent<GameObject, int>();
+    public static UnityEvent<GameObject, int> healthAdded = new UnityEvent<GameObject, int>();
+    public static UnityEvent<GameObject, int> damageAdded = new UnityEvent<GameObject, int>();
 }
