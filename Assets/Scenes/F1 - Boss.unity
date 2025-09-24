@@ -261,6 +261,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108815332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/Cancel
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: ebc5d206-eed6-4a5b-a4c8-1e9aaf99e8b0
 --- !u!1 &130399956
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,51 +433,8 @@ MonoBehaviour:
   animator: {fileID: 387928964}
   rb: {fileID: 387928965}
   spriteRenderer: {fileID: 387928967}
-  victoryReward: {fileID: 1555158924}
-  healthBar: {fileID: 2071787956}
-  healthBarAnimator: {fileID: 2071787957}
-  attackColliders:
-  - {fileID: 2082815483}
-  - {fileID: 1358762315}
-  - {fileID: 1282097270}
   bossPreset: {fileID: 0}
-  chaseSpeed: 3
-  attackDistance: 1.19
-  maxChaseDistance: 20
-  restDistance: 5
-  restDuration: 3
-  stunDuration: 2
-  retreatDistance: 3
-  retreatSpeed: 2
-  availableAttacks:
-  - attackName: SocoDireita
-    animationTrigger: PunchRight
-    attackDuration: 0.7
-    cooldown: 20
-    damage: 10
-    range: 15
-    requiresCloseRange: 0
-  - attackName: SocoEsquerda
-    animationTrigger: PunchLeft
-    attackDuration: 0.75
-    cooldown: 20
-    damage: 10
-    range: 15
-    requiresCloseRange: 0
-  - attackName: SocoGiro
-    animationTrigger: ComboGiro
-    attackDuration: 1
-    cooldown: 20
-    damage: 20
-    range: 15
-    requiresCloseRange: 0
-  maxComboLength: 3
-  timeBetweenAttacks: 1
-  aggressiveMode: 1
-  health: 400
-  maxHealth: 400
-  stunChance: 0.3
-  isFacingRight: 1
+  aggressiveMode: 0
 --- !u!95 &387928964 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6612271201943342354, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
@@ -479,6 +450,81 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6731691326706622045, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
   m_PrefabInstance: {fileID: 7306955164671979339}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &387928969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387928950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235b1b6145499b24d9d8a7c0b9af20f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  stunChance: 0.3
+  healthBar: {fileID: 2071787956}
+  healthBarAnimator: {fileID: 2071787957}
+  victoryReward: {fileID: 1555158924}
+  player: {fileID: 0}
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+--- !u!114 &387928970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387928950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e48f6d6880886d48966720cd5ca22bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableAttacks: []
+  maxComboLength: 3
+  timeBetweenAttacks: 1
+  attackColliders: []
+  player: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!114 &387928971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387928950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3619ab8ca998a49a1d4a04c5d8ea2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 3
+  attackDistance: 2
+  maxChaseDistance: 10
+  restDistance: 5
+  restDuration: 3
+  retreatDistance: 3
+  retreatSpeed: 2
+  player: {fileID: 0}
+  rb: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!114 &387928972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387928950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1932c6f960eacd44b5c3a85523ca86d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stunDuration: 2
 --- !u!1 &451474427
 GameObject:
   m_ObjectHideFlags: 0
@@ -219113,6 +219159,20 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4628621830592502235, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
   m_PrefabInstance: {fileID: 1746287048}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &699034375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/Point
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 89763e6f-23ca-4832-a5fe-c8b047002084
 --- !u!1 &788885700
 GameObject:
   m_ObjectHideFlags: 0
@@ -230107,6 +230167,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &836755277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/Click
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 24e98231-e332-4a91-8e26-0e04637fb66d
 --- !u!1 &863218754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4181613769623931318, guid: 13218af54fb894d4caf598e9e72b742a, type: 3}
@@ -230281,6 +230355,20 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 190981964}
   m_SourcePrefab: {fileID: 100100000, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
+--- !u!114 &971099836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/ScrollWheel
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: bc5e95d3-8390-4dc2-b1c1-2259588a2451
 --- !u!1001 &1057461267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230374,6 +230462,10 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1226416467}
+    - target: {fileID: 3418717661317170759, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: f1c0aecc-2e8b-47b4-b588-b6ed201f8c27
+      objectReference: {fileID: 0}
     - target: {fileID: 3688576385400123513, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: slider
       value: 
@@ -230491,17 +230583,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_PointAction: {fileID: 699034375}
+  m_MoveAction: {fileID: 1715533109}
+  m_SubmitAction: {fileID: 1453342256}
+  m_CancelAction: {fileID: 108815332}
+  m_LeftClickAction: {fileID: 836755277}
+  m_MiddleClickAction: {fileID: 1616511312}
+  m_RightClickAction: {fileID: 1611006282}
+  m_ScrollWheelAction: {fileID: 971099836}
+  m_TrackedDevicePositionAction: {fileID: 1977910800}
+  m_TrackedDeviceOrientationAction: {fileID: 1348079834}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -230605,6 +230697,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   attackName: ComboGiro
   bossFightSystem: {fileID: 387928963}
+  bossHealthSystem: {fileID: 0}
 --- !u!1 &1311038800
 GameObject:
   m_ObjectHideFlags: 0
@@ -230636,6 +230729,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348079834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/TrackedDeviceOrientation
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: c53b1491-d370-4d9e-bc7e-1adb102ae1f3
 --- !u!114 &1354044574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
@@ -230748,6 +230855,21 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   attackName: PunchLeft
   bossFightSystem: {fileID: 387928963}
+  bossHealthSystem: {fileID: 0}
+--- !u!114 &1453342256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/Submit
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 8a007de9-f35b-44d8-8722-57e62badd3ce
 --- !u!1001 &1496294823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230900,6 +231022,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4185377323445658833, guid: a8a937979c8732848b171f570181a2a2, type: 3}
   m_PrefabInstance: {fileID: 1057461267}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611006282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/RightClick
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 610d818c-b725-4772-9e52-8335c816643c
+--- !u!114 &1616511312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/MiddleClick
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 62f9096a-6815-4bab-abb1-8b45613c98e0
 --- !u!1001 &1635799250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230977,6 +231127,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca684a6de41dba242b3b7d7a70c4c77e, type: 3}
+--- !u!114 &1715533109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/Navigate
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 1939d0fc-6a62-4316-aabd-77b530a5ec56
 --- !u!1 &1733547622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 883705129937562432, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
@@ -231191,7 +231355,7 @@ PrefabInstance:
       objectReference: {fileID: 541252645}
     - target: {fileID: 1623429428228404570, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1623429428228404570, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.y
@@ -231215,11 +231379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2749141193560895350, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2749141193560895350, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3293987411017932628, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_IsActive
@@ -231251,7 +231415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4012870563422982904, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4222832586475201601, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: damageable
@@ -231319,11 +231483,11 @@ PrefabInstance:
       objectReference: {fileID: 1354044574}
     - target: {fileID: 6252174024599257495, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6252174024599257495, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6812846836048269044, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -231341,6 +231505,20 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2071787957}
   m_SourcePrefab: {fileID: 100100000, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+--- !u!114 &1977910800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: UI/TrackedDevicePosition
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 812eb7a16a2afd74a80ee10cfc571cb2, type: 3}
+  m_ActionId: 8aaf988f-378d-4a9b-b6e9-c750455e1453
 --- !u!1 &2071787954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3343103080968276196, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
@@ -231480,6 +231658,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   attackName: PunchRight
   bossFightSystem: {fileID: 387928963}
+  bossHealthSystem: {fileID: 0}
 --- !u!1001 &2301467204093451251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231649,6 +231828,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       insertIndex: -1
       addedObject: {fileID: 387928963}
+    - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 387928972}
+    - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 387928971}
+    - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 387928970}
+    - targetCorrespondingSourceObject: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 387928969}
   m_SourcePrefab: {fileID: 100100000, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

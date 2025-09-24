@@ -11,15 +11,21 @@ public class BossAttackCollider : MonoBehaviour
     
     [Header("Referências")]
     public BossFightSystem bossFightSystem;
+    public BossHealthSystem bossHealthSystem;
     
     private bool hasHit = false; // Evita múltiplos hits do mesmo ataque
     
     void Start()
     {
-        // Se não foi atribuído manualmente, tenta encontrar o BossFightSystem no pai
+        // Se não foi atribuído manualmente, tenta encontrar os sistemas no pai
         if (bossFightSystem == null)
         {
             bossFightSystem = GetComponentInParent<BossFightSystem>();
+        }
+        
+        if (bossHealthSystem == null)
+        {
+            bossHealthSystem = GetComponentInParent<BossHealthSystem>();
         }
         
         // Desabilita o collider por padrão
@@ -40,15 +46,21 @@ public class BossAttackCollider : MonoBehaviour
         {
             if (!hasHit)
             {
-                // Usa o método DealDamageToPlayer do BossFightSystem para consistência
-                if (bossFightSystem != null)
+                // Usa o método DealDamageToPlayer do BossHealthSystem para consistência
+                if (bossHealthSystem != null)
                 {
-                    bossFightSystem.DealDamageToPlayer(attackDamage);
+                    bossHealthSystem.DealDamageToPlayer(attackDamage);
                     hasHit = true; // Evita múltiplos hits
+                }
+                else if (bossFightSystem != null)
+                {
+                    // Fallback para compatibilidade
+                    bossFightSystem.DealDamageToPlayer(attackDamage);
+                    hasHit = true;
                 }
                 else
                 {
-                    // Fallback: método direto se BossFightSystem não estiver disponível
+                    // Fallback: método direto se nenhum sistema estiver disponível
                     Damageable damageable = collision.GetComponent<Damageable>();
                     if (damageable != null)
                     {

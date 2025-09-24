@@ -30,6 +30,24 @@ public class Projectile : MonoBehaviour
 
             bool gotHit = damageable.Hit(damage, deliveredKnockback);
 
+            if (gotHit)
+            {
+                Destroy(gameObject); // Destroy the projectile after hitting
+            }
+        }
+        
+        // Verifica se é um boss e causa dano
+        BossFightSystem bossFightSystem = collision.GetComponent<BossFightSystem>();
+        if (bossFightSystem != null)
+        {
+            // Calcula knockback baseado na direção da flecha
+            Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+            Vector2 knockback = knockbackDirection * KnockBack.magnitude;
+            
+            bossFightSystem.TakeDamageFromPlayer(damage, knockback);
+            Debug.Log($"Flecha causou {damage} de dano ao boss!");
+            
+            Destroy(gameObject); // Destroy the projectile after hitting boss
         }
     }
 }
