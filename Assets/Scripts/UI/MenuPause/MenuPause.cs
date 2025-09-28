@@ -9,6 +9,7 @@ public class MenuPause : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject Transicao;
+    public GameObject HUDS;
 
     void Awake()
     {
@@ -42,6 +43,7 @@ public class MenuPause : MonoBehaviour
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
+            HUDS.SetActive(true);
 
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -51,6 +53,7 @@ public class MenuPause : MonoBehaviour
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
+            HUDS.SetActive(false);
 
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -58,26 +61,7 @@ public class MenuPause : MonoBehaviour
 
     public void LoadMenu()
     {
-        Debug.Log("Carregando Menu...");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("Saindo do Jogo...");
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void LoadCredits()
-    {
-        Debug.Log("Carregando Créditos...");
-        SceneManager.LoadScene("Creditos");
-    }
-
-    public void LoadOptions()
-    {
-        Debug.Log("Carregando Opções...");
-        Time.timeScale = 1f;
     }
 }

@@ -805,9 +805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42ce6d657a95f44b891e5913a4cfde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameCanvas: {fileID: 284562182604607846}
   damageTextPrefab: {fileID: 2933273920907485412, guid: b64d360c8f1b74e4bb8c2c1ed14e55c8, type: 3}
   healthTextPrefab: {fileID: 2933273920907485412, guid: 9a30d03943fd25f4d89e61d1d931a743, type: 3}
-  gameCanvas: {fileID: 284562182604607846}
 --- !u!1 &2900021811771795406
 GameObject:
   m_ObjectHideFlags: 0

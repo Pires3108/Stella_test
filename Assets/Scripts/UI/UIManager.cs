@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject damageTextPrefab;
     public GameObject healthTextPrefab;
 
-    [Header("PUP´s")]
+/*    [Header("PUP´s")]
     public GameObject staminaAddedTextPrefab;
     public GameObject healthAddedTextPrefab;
     public GameObject damageAddedTextPrefab;
@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
 
     [Header("GameObjects")]
     public GameObject Pup;
-
+*/
 
 
     void Awake()
@@ -46,9 +46,12 @@ public class UIManager : MonoBehaviour
         CharacterEvents.characterDamaged.AddListener(CharacterTookDamage);
         CharacterEvents.characterHealed.AddListener(CharacterHealed);
 
+        /*
         CharacterEvents.staminaAdded.AddListener(StaminaAdded);
         CharacterEvents.healthAdded.AddListener(HealthAdded);
         CharacterEvents.damageAdded.AddListener(DamageAdded);
+
+        */
     }
 
     private void OnDisable()
@@ -56,9 +59,11 @@ public class UIManager : MonoBehaviour
         CharacterEvents.characterDamaged.RemoveListener(CharacterTookDamage);
         CharacterEvents.characterHealed.RemoveListener(CharacterHealed);
 
+        /*
         CharacterEvents.staminaAdded.RemoveListener(StaminaAdded);
         CharacterEvents.healthAdded.RemoveListener(HealthAdded);
         CharacterEvents.damageAdded.RemoveListener(DamageAdded);
+        */
     }
 
     void CharacterTookDamage(GameObject character, int damageReceived)
@@ -93,6 +98,7 @@ public class UIManager : MonoBehaviour
         Destroy(tmp_Text.gameObject, 1.0f); // Destroy after 1 second
     }
 
+    /*
     void StaminaAdded(GameObject character, int staminaAdded)
     {
         Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
@@ -139,10 +145,6 @@ public class UIManager : MonoBehaviour
 
         tmp_Text.text = damageAdded.ToString();
         Destroy(tmp_Text.gameObject, 1.0f); // Destroy after 1 second
-    }
-
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(1.0f);
-    }
+    } 
+    */
 }
