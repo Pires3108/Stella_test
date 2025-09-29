@@ -173022,17 +173022,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1604030899}
     m_Modifications:
-    - target: {fileID: 257596098745351151, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
-      propertyPath: m_Name
-      value: Panel
+    - target: {fileID: 1393470809211760840, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393470809211760840, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393470809211760840, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393470809211760840, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1714711175525179486, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
       propertyPath: m_Name
       value: Pausa
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119666282067204036, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0073242188
       objectReference: {fileID: 0}
     - target: {fileID: 4202074257484336491, guid: e11e325e1dcdb8b41bb5f3eaf2baab12, type: 3}
       propertyPath: m_Pivot.x
