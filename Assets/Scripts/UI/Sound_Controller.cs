@@ -6,36 +6,46 @@ using TMPro;
 
 public class Sound_Controller : MonoBehaviour
 {
+    [Header("Musica - Slider")]
     public Slider Musicas;
-    public Slider Efeitos;
-
     public TextMeshProUGUI MusicaText;
+
+    [Header("Efeito - Slider")]
+    public Slider Efeitos;
     public TextMeshProUGUI EfeitoText;
 
-    public GameObject Opcoes;
-    public GameObject BloqueioMenu;
-    public Animator OpcoesAnim;
-
+    [Header("Botões")]
     public Button AbrirOpcoesButton;
     public Button FecharOpcoesButton;
+    public Button SalvarOpcoesButton;
 
+
+    [Header("Opcoes Painel")]
+    public GameObject Opcoes;
+
+
+    private float musicaSalva;
+    private float efeitoSalvo;
 
     public void Awake()
     {
-        Opcoes.transform.position = new Vector3(1921, 0, 0);
+        Opcoes.SetActive(false);
 
-        Musicas.value = 50;
-        Efeitos.value = 50;
+        // Carrega valores salvos ou usa 50 como padrão
+        musicaSalva = PlayerPrefs.GetFloat("MusicaVolume", 50);
+        efeitoSalvo = PlayerPrefs.GetFloat("EfeitoVolume", 50);
+
+        Musicas.value = musicaSalva;
+        Efeitos.value = efeitoSalvo;
         AtualizarMusicaSlider();
         AtualizarEfeitoSlider();
 
         AbrirOpcoesButton.onClick.AddListener(AbrirOpcoes);
         FecharOpcoesButton.onClick.AddListener(FecharOpcoes);
+        SalvarOpcoesButton.onClick.AddListener(SalvarOpcoes);
 
         Musicas.onValueChanged.AddListener(delegate { AtualizarMusicaSlider(); });
         Efeitos.onValueChanged.AddListener(delegate { AtualizarEfeitoSlider(); });
-
-        BloqueioMenu.SetActive(false);
     }
 
     public void AtualizarMusicaSlider()
@@ -52,23 +62,40 @@ public class Sound_Controller : MonoBehaviour
 
     public void AbrirOpcoes()
     {
-        OpcoesAnim.SetBool("isActivate", true);
+        // Carrega valores salvos ao abrir
+        musicaSalva = PlayerPrefs.GetFloat("MusicaVolume", 50);
+        efeitoSalvo = PlayerPrefs.GetFloat("EfeitoVolume", 50);
+
+        Musicas.value = musicaSalva;
+        Efeitos.value = efeitoSalvo;
+        AtualizarMusicaSlider();
+        AtualizarEfeitoSlider();
+
+        Opcoes.SetActive(true);
     }
 
     public void FecharOpcoes()
     {
-        OpcoesAnim.SetBool("isActivate", false);
+        // Restaura valores antigos ao fechar sem salvar
+        Musicas.value = musicaSalva;
+        Efeitos.value = efeitoSalvo;
+        AtualizarMusicaSlider();
+        AtualizarEfeitoSlider();
+
+        Opcoes.SetActive(false);
     }
 
-    void Update()
+    public void SalvarOpcoes()
     {
-        if (OpcoesAnim.GetBool("isActivate") == true)
-        {
-            BloqueioMenu.SetActive(true);
-        }
-        else
-        {
-            BloqueioMenu.SetActive(false);
-        }
+        // Salva os valores atuais
+        PlayerPrefs.SetFloat("MusicaVolume", Musicas.value);
+        PlayerPrefs.SetFloat("EfeitoVolume", Efeitos.value);
+        PlayerPrefs.Save();
+
+        // Atualiza os valores salvos
+        musicaSalva = Musicas.value;
+        efeitoSalvo = Efeitos.value;
+
+        Opcoes.SetActive(false);
     }
 }
