@@ -57,6 +57,13 @@ public class PlayerController : MonoBehaviour
     public GameObject[] eKey;
     public string cenaAtual;
 
+    [Header("Audios")]
+    public AudioSource Andar;
+    public AudioSource Pulo;
+    public AudioSource Ataque;
+    public AudioSource Hit;
+
+
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -119,7 +126,7 @@ public class PlayerController : MonoBehaviour
         }
         set
         {
-            animator.SetBool(AnimationStrings.isRunning, value);
+            animator.SetBool(AnimationStrings.isRunning, value);   
         }
     }
 
@@ -221,6 +228,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
 
+    #region Audio Camolezed
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -229,12 +237,18 @@ public class PlayerController : MonoBehaviour
             IsMoving = moveInput != Vector2.zero;
 
             SetFacingDirection(moveInput);
+
+            Andar.Play();
+            Andar.loop = true;
         }
         else
         {
             IsMoving = false;
+            Andar.loop = false;
+            Andar.Stop();
         }
     }
+
 
     private void SetFacingDirection(Vector2 moveInput)
     {
@@ -266,6 +280,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger(AnimationStrings.jump);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            Pulo.PlayOneShot(Pulo.clip);
         }
     }
     //attack
@@ -277,10 +292,13 @@ public class PlayerController : MonoBehaviour
             {
                 estamina.Energy -= staminaAttackDrain;
                 animator.SetTrigger(AnimationStrings.attackTrigger);
+                Ataque.PlayOneShot(Ataque.clip);
             }
             // else: sem estamina, não ataca
         }
     }
+
+    #endregion
     //Area de attack
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
@@ -307,6 +325,7 @@ public class PlayerController : MonoBehaviour
     public void OnHit(int damage, Vector2 KnockBack)
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
+        Hit.Play();
     }
 
     void OnTriggerEnter2D(Collider2D coll)

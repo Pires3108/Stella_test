@@ -11,6 +11,8 @@ public class MenuPause : MonoBehaviour
     public GameObject Transicao;
     public GameObject HUDS;
 
+    public GameObject OpcoesMenuUI;
+
     void Awake()
     {
         // Garante que o menu de pause esteja desativado ao iniciar
@@ -19,6 +21,7 @@ public class MenuPause : MonoBehaviour
 
         Time.timeScale = 1f;
         GameIsPaused = false;
+        OpcoesMenuUI.SetActive(false);
     }
 
     void Update()
@@ -43,7 +46,7 @@ public class MenuPause : MonoBehaviour
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
-            HUDS.SetActive(true);
+        HUDS.SetActive(true);
 
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -53,7 +56,7 @@ public class MenuPause : MonoBehaviour
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
-            HUDS.SetActive(false);
+        HUDS.SetActive(false);
 
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -63,5 +66,10 @@ public class MenuPause : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Opcoes()
+    {
+        OpcoesMenuUI.SetActive(true);
     }
 }
