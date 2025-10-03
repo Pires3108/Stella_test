@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e56925877f61bc443aa4f255a237fe60
+guid: b49d07bac60962443985501330678d5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -149,64 +149,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slider_0
+      name: "Bot\xE3o Salvar_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
+        y: 0
         width: 96
-        height: 8
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40f237258841924f9097c52a6f6816a
-      internalID: 1161477954
+      spriteID: a04bed8c95d9e3544ba646d9a5555edc
+      internalID: 592936181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slider_1
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 9
-        width: 6
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54e5b28218a84f54fb35c8c2ec04e48b
-      internalID: 594919293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slider_2
+      name: "Bot\xE3o Salvar_1"
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
+        width: 96
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 089be248cda167e449032b171d55ed10
-      internalID: 1931313161
+      spriteID: 718a2f795dbf8d54a931c8c34ee3e573
+      internalID: 798455848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bot\xE3o Salvar_2"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f015f7486a065428d7bcc91b1640c4
+      internalID: 75809969
       vertices: []
       indices: 
       edges: []
@@ -222,9 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slider_0: 1161477954
-      Slider_1: 594919293
-      Slider_2: 1931313161
+      "Bot\xE3o Salvar_0": 592936181
+      "Bot\xE3o Salvar_1": 798455848
+      "Bot\xE3o Salvar_2": 75809969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

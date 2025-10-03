@@ -194,6 +194,15 @@ public class PlayerController : MonoBehaviour
             estamina.Energy += staminaRecoverRate * Time.deltaTime;
             estamina.Energy = Mathf.Min(estamina.Energy, estamina.MaxEnergy);
         }
+
+        if (IsMoving && touchingDirection.IsGround && !Andar.isPlaying)
+        {
+            Andar.PlayOneShot(Andar.clip);
+        }
+        else if ((!IsMoving || !touchingDirection.IsGround) && Andar.isPlaying)
+        {
+            Andar.Stop();
+        }
         
     }
 
@@ -237,15 +246,10 @@ public class PlayerController : MonoBehaviour
             IsMoving = moveInput != Vector2.zero;
 
             SetFacingDirection(moveInput);
-
-            Andar.Play();
-            Andar.loop = true;
         }
         else
         {
             IsMoving = false;
-            Andar.loop = false;
-            Andar.Stop();
         }
     }
 
