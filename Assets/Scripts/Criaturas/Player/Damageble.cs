@@ -136,4 +136,15 @@ public class Damageable : MonoBehaviour
         }
         return false;
     }
+    
+    /// <summary>
+    /// Aumenta a vida máxima do player e restaura a vida atual
+    /// </summary>
+    /// <param name="increaseAmount">Quantidade a ser aumentada</param>
+    public void IncreaseMaxHealth(int increaseAmount)
+    {
+        MaxHealth += increaseAmount;
+        Health += increaseAmount; // Restaura vida atual também
+        Debug.Log($"Vida máxima aumentada para {MaxHealth}");
+    }
 }

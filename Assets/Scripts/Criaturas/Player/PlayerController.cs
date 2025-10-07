@@ -39,6 +39,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stamina Settings")]
     public float staminaRecoverRate = 15f; // Recuperação por segundo parado
+    
+    [Header("Damage Settings")]
+    public int baseMeleeDamage = 10; // Dano base do ataque corpo a corpo
+    public int baseProjectileDamage = 10; // Dano base dos projéteis
+    public int currentMeleeDamage = 10; // Dano atual do ataque corpo a corpo
+    public int currentProjectileDamage = 10; // Dano atual dos projéteis
 
     [Header("State Bools")]
     public bool isInDelayBow;
@@ -178,6 +184,14 @@ public class PlayerController : MonoBehaviour
         {
             key.SetActive(false);
         }
+    }
+    
+    void Start()
+    {
+        // Inicializa os valores de dano
+        currentMeleeDamage = baseMeleeDamage;
+        currentProjectileDamage = baseProjectileDamage;
+        Debug.Log($"Dano inicializado - Melee: {currentMeleeDamage}, Projétil: {currentProjectileDamage}");
     }
 
     private void Update()
@@ -323,6 +337,50 @@ public class PlayerController : MonoBehaviour
         isInDelayBow = true;
         yield return new WaitForSeconds(delayBow);
         isInDelayBow = false;
+    }
+    
+    /// <summary>
+    /// Aumenta o dano de todos os ataques do player
+    /// </summary>
+    /// <param name="increaseAmount">Quantidade a ser aumentada</param>
+    public void IncreaseAllDamage(int increaseAmount)
+    {
+        Debug.Log($"IncreaseAllDamage chamado com {increaseAmount}");
+        
+        // Aumenta dano de todos os ataques corpo a corpo
+        Attack[] attacks = FindObjectsOfType<Attack>();
+        foreach (Attack attack in attacks)
+        {
+            attack.IncreaseDamage(increaseAmount);
+        }
+        
+        // Aumenta dano de todos os projéteis
+        PlayerProjectile[] projectiles = FindObjectsOfType<PlayerProjectile>();
+        foreach (PlayerProjectile projectile in projectiles)
+        {
+            projectile.IncreaseDamage(increaseAmount);
+        }
+        
+        // Atualiza os valores globais para referência
+        currentMeleeDamage += increaseAmount;
+        currentProjectileDamage += increaseAmount;
+        
+        Debug.Log($"Dano global aumentado! Melee: {currentMeleeDamage}, Projétil: {currentProjectileDamage}");
+    }
+    
+    /// <summary>
+    /// Desbloqueia movimento após animação de comer maçã
+    /// </summary>
+    public IEnumerator UnlockMovementAfterAnimation()
+    {
+        // Aguarda um tempo para a animação de comer maçã terminar
+        yield return new WaitForSeconds(1.5f); // Ajuste este valor conforme a duração da animação
+        
+        // Desbloqueia o movimento
+        if (damageable != null)
+        {
+            damageable.LockVelocity = false;
+        }
     }
 
     //set the movimentation in relation of the HIT
