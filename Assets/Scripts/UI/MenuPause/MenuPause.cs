@@ -15,6 +15,7 @@ public class MenuPause : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("MenuPause Awake chamado");
         // Garante que o menu de pause esteja desativado ao iniciar
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
