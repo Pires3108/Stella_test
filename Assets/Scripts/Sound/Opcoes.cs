@@ -5,10 +5,6 @@ using UnityEngine.UI;
 
 public class Opcoes : MonoBehaviour
 {
-    [Header("Animações")]
-
-    public Animator OpcoesAnim;
-
     [Header("Slider Canvas")]
     public Slider sliderMusica;
     public Slider sliderEfeitos;
@@ -43,12 +39,5 @@ public class Opcoes : MonoBehaviour
         audioEfeitos.volume = vEfeitos;
         audioEfeitos.PlayOneShot(somClip);
         PlayerPrefs.SetFloat("volEfeitos", vEfeitos);
-    }
-
-    public void SalvarOpcoes()
-    {
-        PlayerPrefs.Save();
-        Debug.Log("Opções salvas!");
-        OpcoesAnim.SetBool("isActivate", false);
     }
 }

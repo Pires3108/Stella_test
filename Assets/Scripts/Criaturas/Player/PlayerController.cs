@@ -35,15 +35,22 @@ public class PlayerController : MonoBehaviour
     public float delayMorte, delayWin;
     public float staminaAttackDrain = 25f; // Consumo por ataque de espada
     public float staminaRangedDrain = 10f; // Consumo por ataque de arco
-    public float staminaRunDrain = 10f; // Consumo por segundo ao correr
+    public float staminaRunDrain; // Consumo por segundo ao correr
 
     [Header("Stamina Settings")]
     public float staminaRecoverRate = 15f; // Recuperação por segundo parado
+    
+    [Header("Damage Settings")]
+    public int baseMeleeDamage = 10; // Dano base do ataque corpo a corpo
+    public int baseProjectileDamage = 10; // Dano base dos projéteis
+    public int currentMeleeDamage = 10; // Dano atual do ataque corpo a corpo
+    public int currentProjectileDamage = 10; // Dano atual dos projéteis
 
     [Header("State Bools")]
     public bool isInDelayBow;
     public bool canAttack = true;
     public bool canFlip = true;
+    public bool IsGrounded;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -56,6 +63,16 @@ public class PlayerController : MonoBehaviour
     public GameObject caixaDialogo;
     public GameObject[] eKey;
     public string cenaAtual;
+
+    [Header("Audios")]
+    public AudioSource Andar;
+    public AudioSource Pulo;
+    public AudioSource Ataque;
+    public AudioSource Hit;
+
+    [Header("Imports")]
+    public GameObject MenudePausa;
+
 
 
     // codigo que define o movimento do player true or false
@@ -119,7 +136,7 @@ public class PlayerController : MonoBehaviour
         }
         set
         {
-            animator.SetBool(AnimationStrings.isRunning, value);
+            animator.SetBool(AnimationStrings.isRunning, value);   
         }
     }
 
@@ -172,6 +189,14 @@ public class PlayerController : MonoBehaviour
             key.SetActive(false);
         }
     }
+    
+    void Start()
+    {
+        // Inicializa os valores de dano
+        currentMeleeDamage = baseMeleeDamage;
+        currentProjectileDamage = baseProjectileDamage;
+        Debug.Log($"Dano inicializado - Melee: {currentMeleeDamage}, Projétil: {currentProjectileDamage}");
+    }
 
     private void Update()
     {
@@ -181,11 +206,23 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(GoCena(cenaAtual));
         }
 
-        // Recuperação de estamina quando parado
-        if (!IsMoving && estamina.Energy < estamina.MaxEnergy)
+        // Pausa animações se o menu de pausa estiver ativo
+        animator.speed = MenudePausa.activeSelf ? 0f : 1f;
+
+        // Recuperação de estamina sempre que estiver abaixo do máximo
+        if (estamina.Energy < estamina.MaxEnergy)
         {
             estamina.Energy += staminaRecoverRate * Time.deltaTime;
             estamina.Energy = Mathf.Min(estamina.Energy, estamina.MaxEnergy);
+        }
+
+        if (IsMoving && touchingDirection.IsGround && !Andar.isPlaying)
+        {
+            Andar.PlayOneShot(Andar.clip);
+        }
+        else if ((!IsMoving || !touchingDirection.IsGround) && Andar.isPlaying)
+        {
+            Andar.Stop();
         }
         
     }
@@ -199,17 +236,7 @@ public class PlayerController : MonoBehaviour
             {
                 currentSpeed = Mathf.MoveTowards(currentSpeed, CurrentMoveSpeed, acceleration * Time.fixedDeltaTime);
                 rb.velocity = new Vector2(moveInput.x * currentSpeed, rb.velocity.y);
-
-                // Consome estamina ao correr
-                if (IsRunning)
-                {
-                    estamina.Energy -= staminaRunDrain * Time.fixedDeltaTime;
-                    if (estamina.Energy <= 0)
-                    {
-                        estamina.Energy = 0;
-                        IsRunning = false; // Para de correr se acabar estamina
-                    }
-                }
+                // Não consome estamina ao andar ou correr
             }
             else
             {
@@ -221,6 +248,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
 
+    #region Audio Camolezed
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -235,6 +263,7 @@ public class PlayerController : MonoBehaviour
             IsMoving = false;
         }
     }
+
 
     private void SetFacingDirection(Vector2 moveInput)
     {
@@ -266,24 +295,32 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger(AnimationStrings.jump);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            Pulo.PlayOneShot(Pulo.clip);
         }
     }
     //attack
     public void OnAttack(InputAction.CallbackContext context)
     {
+        // Bloqueia ataque se o menu de pausa estiver ativo
+        if (MenudePausa.activeSelf) return;
         if (context.started && caixaDialogo.activeSelf == false && canAttack)
         {
             if (estamina.Energy >= staminaAttackDrain)
             {
                 estamina.Energy -= staminaAttackDrain;
                 animator.SetTrigger(AnimationStrings.attackTrigger);
+                Ataque.PlayOneShot(Ataque.clip);
             }
             // else: sem estamina, não ataca
         }
     }
+
+    #endregion
     //Area de attack
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
+        // Bloqueia ataque se o menu de pausa estiver ativo
+        if (MenudePausa.activeSelf) return;
         if (context.started && projectileLauncher.canFire && !isInDelayBow)
         {
             if (estamina.Energy >= staminaRangedDrain)
@@ -302,11 +339,56 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(delayBow);
         isInDelayBow = false;
     }
+    
+    /// <summary>
+    /// Aumenta o dano de todos os ataques do player
+    /// </summary>
+    /// <param name="increaseAmount">Quantidade a ser aumentada</param>
+    public void IncreaseAllDamage(int increaseAmount)
+    {
+        Debug.Log($"IncreaseAllDamage chamado com {increaseAmount}");
+        
+        // Aumenta dano de todos os ataques corpo a corpo
+        Attack[] attacks = FindObjectsOfType<Attack>();
+        foreach (Attack attack in attacks)
+        {
+            attack.IncreaseDamage(increaseAmount);
+        }
+        
+        // Aumenta dano de todos os projéteis
+        PlayerProjectile[] projectiles = FindObjectsOfType<PlayerProjectile>();
+        foreach (PlayerProjectile projectile in projectiles)
+        {
+            projectile.IncreaseDamage(increaseAmount);
+        }
+        
+        // Atualiza os valores globais para referência
+        currentMeleeDamage += increaseAmount;
+        currentProjectileDamage += increaseAmount;
+        
+        Debug.Log($"Dano global aumentado! Melee: {currentMeleeDamage}, Projétil: {currentProjectileDamage}");
+    }
+    
+    /// <summary>
+    /// Desbloqueia movimento após animação de comer maçã
+    /// </summary>
+    public IEnumerator UnlockMovementAfterAnimation()
+    {
+        // Aguarda um tempo para a animação de comer maçã terminar
+        yield return new WaitForSeconds(1.5f); // Ajuste este valor conforme a duração da animação
+        
+        // Desbloqueia o movimento
+        if (damageable != null)
+        {
+            damageable.LockVelocity = false;
+        }
+    }
 
     //set the movimentation in relation of the HIT
     public void OnHit(int damage, Vector2 KnockBack)
     {
         rb.velocity = new Vector2(KnockBack.x, rb.velocity.y + KnockBack.y);
+        Hit.Play();
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -331,12 +413,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(GoFase2());
             Debug.Log("Player has completed fase 1");
         }
-        // if (coll.CompareTag("WinBoss1"))
-        // {
-        //     StartCoroutine(GoFase2());
-        //     Debug.Log("Player has won the boss 1");
-        // }
-
 
         // FASE 2
         if (coll.CompareTag("OutMap"))
@@ -349,44 +425,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(GoMenu());
             Debug.Log("Player has completed the fase 2");
         }
-        // if (coll.CompareTag("WinBoss2"))
-        // {
-        //     StartCoroutine(Win());
-        //     Debug.Log("Player has won the game");
-        // }
-
-
-        // // BOSSES
-        // if (coll.CompareTag("Boss1"))
-        // {
-        //     isAlive.IsAlive = false;
-        //     Debug.Log("Player has died by the boss 1");
-        //     StartCoroutine(Death1());
-        // }
-
-        // if (coll.CompareTag("Boss2"))
-        // {
-        //     isAlive.IsAlive = false;
-        //     Debug.Log("Player has died by the boss 2");
-        //     StartCoroutine(Death2());
-        // }
-
-
-        /*
-        if (coll.CompareTag("Boss3"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has died by the boss 3");
-            StartCoroutine(Death3());
-        }
-        if (coll.CompareTag("Boss4"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has died by the boss 4");
-            StartCoroutine(Death4());
-        }
-        */
-        
     }
 
     void OnTriggerExit2D(Collider2D coll)
@@ -408,6 +446,25 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.collider.CompareTag("Ground"))
+        {
+            IsGrounded = true;
+            animator.SetBool(AnimationStrings.isGrounded, true);
+            animator.ResetTrigger(AnimationStrings.jump);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.collider.CompareTag("Ground"))
+        {
+            IsGrounded = false;
+            animator.SetBool(AnimationStrings.isGrounded, false);
+        }
+    }
+
     IEnumerator GoFase2()
     {
         yield return new WaitForSeconds(2f);
@@ -419,18 +476,6 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-
-    // Ir para os bosses
-    // IEnumerator GoBoss1()
-    // {
-    //     yield return new WaitForSeconds(2f);
-    //     SceneManager.LoadScene("F1 - Boss");
-    // }
-    // IEnumerator GoBoss2()
-    // {
-    //     yield return new WaitForSeconds(2f);
-    //     SceneManager.LoadScene("F2 - Boss");
-    // }
     IEnumerator GoCena(string cena)
     {
         yield return new WaitForSeconds(0.5f);
@@ -443,18 +488,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("WinScreen");
     }
-
-
-    // // Mortes
-    // IEnumerator Death1()
-    // {
-    //     yield return new WaitForSeconds(1f);
-    //     SceneManager.LoadScene("F1");
-    // }
-
-    // IEnumerator Death2()
-    // {
-    //     yield return new WaitForSeconds(1f);
-    //     SceneManager.LoadScene("F2");
-    // }
 }

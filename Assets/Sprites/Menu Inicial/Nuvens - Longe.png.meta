@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bbc16f609000d924a9423f043b76046d
+guid: c3badaa0679f1b04398e901cfdf2cc7a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nuvens - Longe_0
+      name: Nuvens MENU 3_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 72
+        y: 41
         width: 320
-        height: 108
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 600f0ba584d02cf4f9e8c8e8b46678aa
-      internalID: -1723404970
+      spriteID: 3f884c7c27de16942bb42a2d4ea26a78
+      internalID: -852710061
       vertices: []
       indices: 
       edges: []
@@ -180,15 +180,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nuvens - Longe_0: -1723404970
-      Nuvens - Longe_1: -1611546343
-      Nuvens - Longe_2: 1586487625
-      Nuvens - Longe_3: -1859728761
-      Nuvens - Longe_4: -1965185199
-      Nuvens - Longe_5: 370075131
-      Nuvens - Longe_6: -488652891
-      Nuvens - Longe_7: 1619279023
-      Nuvens - Longe_8: -1571510647
+      Nuvens MENU 3_0: -852710061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

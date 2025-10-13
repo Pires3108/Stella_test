@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-//set das animações dentro do jogo
+//set das animaï¿½ï¿½es dentro do jogo
 internal class AnimationStrings : MonoBehaviour
 {
     internal static string isMoving = "isMoving";
@@ -24,4 +24,5 @@ internal class AnimationStrings : MonoBehaviour
     internal static string hitTrigger = "hit";
     internal static string AttackCooldown = "attackCooldown";
     internal static string rangedAttackTrigger = "rangedAttack";
+    internal static string eatingApple = "ComendoMaca";
 }

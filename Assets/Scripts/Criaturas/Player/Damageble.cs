@@ -109,6 +109,7 @@ public class Damageable : MonoBehaviour
     // Função de Hit com knockback, player para inimigo
     public bool Hit(int damage, Vector2 KnockBack)
     {
+        Debug.Log($"PLAYER HIT! Dano: {damage}, Vida restante: {Health - damage}");
         if (IsAlive && !isInvincible)
         {
             Health -= damage;
@@ -134,5 +135,16 @@ public class Damageable : MonoBehaviour
             return true;
         }
         return false;
+    }
+    
+    /// <summary>
+    /// Aumenta a vida máxima do player e restaura a vida atual
+    /// </summary>
+    /// <param name="increaseAmount">Quantidade a ser aumentada</param>
+    public void IncreaseMaxHealth(int increaseAmount)
+    {
+        MaxHealth += increaseAmount;
+        Health += increaseAmount; // Restaura vida atual também
+        Debug.Log($"Vida máxima aumentada para {MaxHealth}");
     }
 }

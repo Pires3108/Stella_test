@@ -9,15 +9,20 @@ public class MenuPause : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject Transicao;
+    public GameObject HUDS;
+
+    public GameObject OpcoesMenuUI;
 
     void Awake()
     {
+        Debug.Log("MenuPause Awake chamado");
         // Garante que o menu de pause esteja desativado ao iniciar
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
         GameIsPaused = false;
+        OpcoesMenuUI.SetActive(false);
     }
 
     void Update()
@@ -42,15 +47,23 @@ public class MenuPause : MonoBehaviour
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
+        HUDS.SetActive(true);
 
-        Time.timeScale = 1f;
+        StartCoroutine(ResumeWithDelay());
         GameIsPaused = false;
+    }
+
+    private IEnumerator ResumeWithDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1f;
     }
 
     public void Pause()
     {
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
+        HUDS.SetActive(false);
 
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -58,26 +71,12 @@ public class MenuPause : MonoBehaviour
 
     public void LoadMenu()
     {
-        Debug.Log("Carregando Menu...");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
-    public void QuitGame()
+    public void Opcoes()
     {
-        Debug.Log("Saindo do Jogo...");
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void LoadCredits()
-    {
-        Debug.Log("Carregando Créditos...");
-        SceneManager.LoadScene("Creditos");
-    }
-
-    public void LoadOptions()
-    {
-        Debug.Log("Carregando Opções...");
-        Time.timeScale = 1f;
+        OpcoesMenuUI.SetActive(true);
     }
 }
