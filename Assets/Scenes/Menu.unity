@@ -2529,6 +2529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opcoes
       objectReference: {fileID: 0}
+    - target: {fileID: 5690073590396141269, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6405185761959939709, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

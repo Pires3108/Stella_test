@@ -15749,6 +15749,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1529987813891422201, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1653378194}
+    - target: {fileID: 1529987813891422201, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolumeMusica
+      objectReference: {fileID: 0}
     - target: {fileID: 2907913597376317770, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15761,13 +15769,21 @@ PrefabInstance:
       propertyPath: AbrirOpcoesButton
       value: 
       objectReference: {fileID: 1928457506}
+    - target: {fileID: 5004546284333673637, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1653378194}
+    - target: {fileID: 5004546284333673637, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolumeEfeitos
+      objectReference: {fileID: 0}
     - target: {fileID: 5690073590396141269, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_Name
       value: Opcoes
       objectReference: {fileID: 0}
     - target: {fileID: 5690073590396141269, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6405185761959939709, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
@@ -115967,6 +115983,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4628621830592502235, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
   m_PrefabInstance: {fileID: 4094940226340830427}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1653378194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6883145264791959753, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+  m_PrefabInstance: {fileID: 4094940226340830427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb58a83da26094840ae66365d2955c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663139012
 GameObject:
   m_ObjectHideFlags: 0
@@ -172858,13 +172885,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1653378193}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: delayBow
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: caixaDialogo
       value: 
       objectReference: {fileID: 352923824}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: baseMeleeDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: eKey.Array.data[0]
       value: 
       objectReference: {fileID: 2058319659}
+    - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: staminaRangedDrain
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3908998003450680338, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: NPCScript.Array.data[0]
       value: 
@@ -173605,12 +173644,24 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1653378193}
+    - target: {fileID: 1039963441026040676, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039963441026040676, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2749141193560895350, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2749141193560895350, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813041658983182355, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683248022885815627, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
