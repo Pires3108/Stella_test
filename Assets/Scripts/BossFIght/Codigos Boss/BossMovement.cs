@@ -269,17 +269,17 @@ public class BossMovement : MonoBehaviour
     }
     
     /// <summary>
-    /// Vira o sprite do boss
+    /// Vira o sprite do boss usando scale negativa
     /// </summary>
     public void FlipSprite(bool faceRight)
     {
         isFacingRight = faceRight;
         if (spriteRenderer != null)
         {
-            spriteRenderer.flipX = faceRight;
-            // Força a atualização do sprite
-            spriteRenderer.enabled = false;
-            spriteRenderer.enabled = true;
+            // Usa scale negativa ao invés de flipX
+            Vector3 scale = spriteRenderer.transform.localScale;
+            scale.x = faceRight ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
+            spriteRenderer.transform.localScale = scale;
         }
     }
     

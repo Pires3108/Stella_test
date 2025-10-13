@@ -178,11 +178,24 @@ public class BossAttackSystem : MonoBehaviour
     /// </summary>
     private BossAttackCollider GetAttackCollider(string attackName)
     {
+        Debug.Log($"🔍 BOSS ATTACK SYSTEM: GetAttackCollider chamado! Procurando: {attackName}");
+        Debug.Log($"📋 BOSS ATTACK SYSTEM: Colliders disponíveis: {attackColliders.Count}");
+        
+        // Lista todos os colliders disponíveis
+        for (int i = 0; i < attackColliders.Count; i++)
+        {
+            if (attackColliders[i] != null)
+            {
+                Debug.Log($"   [{i}] AttackName: {attackColliders[i].attackName}, Damage: {attackColliders[i].attackDamage}, InstanceID: {attackColliders[i].GetInstanceID()}");
+            }
+        }
+        
         // Procura por um collider que corresponda ao nome do ataque
         foreach (var collider in attackColliders)
         {
-            if (collider.attackName == attackName)
+            if (collider != null && collider.attackName == attackName)
             {
+                Debug.Log($"✅ BOSS ATTACK SYSTEM: Collider encontrado por nome exato! AttackName: {collider.attackName}, InstanceID: {collider.GetInstanceID()}");
                 return collider;
             }
         }
@@ -190,19 +203,38 @@ public class BossAttackSystem : MonoBehaviour
         // Se não encontrou por nome exato, tenta correspondência parcial
         foreach (var collider in attackColliders)
         {
-            if (collider.attackName.ToLower().Contains(attackName.ToLower()) || 
-                attackName.ToLower().Contains(collider.attackName.ToLower()))
+            if (collider != null && (collider.attackName.ToLower().Contains(attackName.ToLower()) || 
+                attackName.ToLower().Contains(collider.attackName.ToLower())))
             {
+                Debug.Log($"✅ BOSS ATTACK SYSTEM: Collider encontrado por correspondência parcial! AttackName: {collider.attackName}, InstanceID: {collider.GetInstanceID()}");
                 return collider;
             }
         }
         
-        // Se ainda não encontrou, retorna o primeiro collider disponível
-        if (attackColliders.Count > 0)
+        // Se ainda não encontrou, tenta buscar por índice baseado no nome do ataque
+        // Attack1 = índice 0, Attack2 = índice 1, etc.
+        if (attackName.StartsWith("Attack"))
         {
+            string indexStr = attackName.Replace("Attack", "");
+            if (int.TryParse(indexStr, out int attackIndex))
+            {
+                attackIndex = attackIndex - 1; // Convert to 0-based index
+                if (attackIndex >= 0 && attackIndex < attackColliders.Count && attackColliders[attackIndex] != null)
+                {
+                    Debug.Log($"✅ BOSS ATTACK SYSTEM: Collider encontrado por índice! AttackName: {attackColliders[attackIndex].attackName}, Index: {attackIndex}, InstanceID: {attackColliders[attackIndex].GetInstanceID()}");
+                    return attackColliders[attackIndex];
+                }
+            }
+        }
+        
+        // Se ainda não encontrou, retorna o primeiro collider disponível
+        if (attackColliders.Count > 0 && attackColliders[0] != null)
+        {
+            Debug.Log($"⚠️ BOSS ATTACK SYSTEM: Usando primeiro collider disponível! AttackName: {attackColliders[0].attackName}, InstanceID: {attackColliders[0].GetInstanceID()}");
             return attackColliders[0];
         }
         
+        Debug.LogError($"❌ BOSS ATTACK SYSTEM: Nenhum collider encontrado para {attackName}!");
         return null;
     }
     
@@ -322,6 +354,8 @@ public class BossAttackSystem : MonoBehaviour
     // Métodos para serem chamados pela animação do boss
     public void EnableAttackCollider()
     {
+        Debug.Log($"🎯 BOSS ATTACK SYSTEM: EnableAttackCollider chamado! CurrentAttack: {currentAttack?.attackName}");
+        
         if (currentAttack != null)
         {
             BossAttackCollider attackCollider = GetAttackCollider(currentAttack.attackName);
@@ -329,6 +363,14 @@ public class BossAttackSystem : MonoBehaviour
             {
                 attackCollider.EnableAttackCollider();
             }
+            else
+            {
+                Debug.LogError($"❌ BOSS ATTACK SYSTEM: AttackCollider não encontrado para {currentAttack.attackName}!");
+            }
+        }
+        else
+        {
+            Debug.LogError($"❌ BOSS ATTACK SYSTEM: currentAttack é null!");
         }
     }
     

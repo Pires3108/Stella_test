@@ -13,7 +13,7 @@ public class BossAttackCollider : MonoBehaviour
     public BossFightSystem bossFightSystem;
     public BossHealthSystem bossHealthSystem;
     
-    private bool hasHit = false; // Evita múltiplos hits do mesmo ataque
+    // Sistema hasHit removido - cada ataque pode causar dano
     
     void Start()
     {
@@ -41,40 +41,59 @@ public class BossAttackCollider : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"🔍 BOSS ATTACK COLLIDER: OnTriggerEnter2D chamado! Collision: {collision.name}, Tag: {collision.tag}");
+        Debug.Log($"🎯 COLLIDER INFO: AttackName: {attackName}, Damage: {attackDamage}, GameObject: {gameObject.name}, InstanceID: {GetInstanceID()}");
+        
         // Verifica se é o player
         if (collision.CompareTag("Player"))
         {
-            if (!hasHit)
+            Debug.Log($"✅ BOSS ATTACK COLLIDER: Player detectado! attackDamage: {attackDamage}");
+            Debug.Log($"🎯 BOSS ATTACK COLLIDER: Aplicando dano...");
+            
+            // Usa o método DealDamageToPlayer do BossHealthSystem para consistência
+            if (bossHealthSystem != null)
             {
-                // Usa o método DealDamageToPlayer do BossHealthSystem para consistência
-                if (bossHealthSystem != null)
+                Debug.Log($"💥 BOSS ATTACK COLLIDER: Usando BossHealthSystem.DealDamageToPlayer({attackDamage})");
+                bossHealthSystem.DealDamageToPlayer(attackDamage);
+                Debug.Log($"✅ BOSS ATTACK COLLIDER: Dano aplicado via BossHealthSystem!");
+            }
+            else if (bossFightSystem != null)
+            {
+                Debug.Log($"💥 BOSS ATTACK COLLIDER: Usando BossFightSystem.DealDamageToPlayer({attackDamage})");
+                // Fallback para compatibilidade
+                bossFightSystem.DealDamageToPlayer(attackDamage);
+                Debug.Log($"✅ BOSS ATTACK COLLIDER: Dano aplicado via BossFightSystem!");
+            }
+            else
+            {
+                Debug.Log($"⚠️ BOSS ATTACK COLLIDER: Nenhum sistema encontrado, tentando método direto...");
+                // Fallback: método direto se nenhum sistema estiver disponível
+                Damageable damageable = collision.GetComponent<Damageable>();
+                if (damageable != null)
                 {
-                    bossHealthSystem.DealDamageToPlayer(attackDamage);
-                    hasHit = true; // Evita múltiplos hits
-                }
-                else if (bossFightSystem != null)
-                {
-                    // Fallback para compatibilidade
-                    bossFightSystem.DealDamageToPlayer(attackDamage);
-                    hasHit = true;
+                    Debug.Log($"💥 BOSS ATTACK COLLIDER: Usando Damageable.Hit({attackDamage}) diretamente");
+                    Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+                    Vector2 deliveredKnockback = knockbackDirection * 5f;
+                    
+                    bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
+                    if (gotHit)
+                    {
+                        Debug.Log($"✅ BOSS ATTACK COLLIDER: Dano aplicado diretamente!");
+                    }
+                    else
+                    {
+                        Debug.Log($"❌ BOSS ATTACK COLLIDER: Damageable.Hit retornou false!");
+                    }
                 }
                 else
                 {
-                    // Fallback: método direto se nenhum sistema estiver disponível
-                    Damageable damageable = collision.GetComponent<Damageable>();
-                    if (damageable != null)
-                    {
-                        Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-                        Vector2 deliveredKnockback = knockbackDirection * 5f;
-                        
-                        bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
-                        if (gotHit)
-                        {
-                            hasHit = true;
-                        }
-                    }
+                    Debug.LogError($"❌ BOSS ATTACK COLLIDER: Damageable component não encontrado no player!");
                 }
             }
+        }
+        else
+        {
+            Debug.Log($"❌ BOSS ATTACK COLLIDER: Objeto não é o player! Tag: {collision.tag}");
         }
     }
     
@@ -82,19 +101,16 @@ public class BossAttackCollider : MonoBehaviour
     // Método para ser chamado pela animação para ativar/desativar o collider
     public void EnableAttackCollider()
     {
-        // Só reseta hasHit se o collider estava desabilitado (novo ataque)
-        if (!GetComponent<Collider2D>().enabled)
-        {
-            hasHit = false; // Reseta o flag de hit para o novo ataque
-        }
+        Debug.Log($"🔧 BOSS ATTACK COLLIDER: EnableAttackCollider chamado! Attack: {attackName}");
         
         GetComponent<Collider2D>().enabled = true;
+        Debug.Log($"✅ BOSS ATTACK COLLIDER: Collider ativado! enabled = true");
     }
     
     public void DisableAttackCollider()
     {
         GetComponent<Collider2D>().enabled = false;
-        // NÃO reseta hasHit aqui - mantém o estado até o próximo EnableAttackCollider
+        Debug.Log($"🔧 BOSS ATTACK COLLIDER: Collider desativado! Attack: {attackName}");
     }
     
     // Método para configurar o ataque dinamicamente
@@ -104,4 +120,5 @@ public class BossAttackCollider : MonoBehaviour
         knockback = knockbackForce;
         attackName = name;
     }
+    
 }

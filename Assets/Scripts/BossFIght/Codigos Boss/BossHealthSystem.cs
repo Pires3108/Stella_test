@@ -182,21 +182,41 @@ public class BossHealthSystem : MonoBehaviour
     /// </summary>
     public void DealDamageToPlayer(float damage)
     {
+        Debug.Log($"🎯 BOSS HEALTH SYSTEM: DealDamageToPlayer chamado! Dano: {damage}");
+        
         if (player != null)
         {
+            Debug.Log($"✅ BOSS HEALTH SYSTEM: Player encontrado: {player.name}");
+            
             Damageable playerDamageable = player.GetComponent<Damageable>();
             if (playerDamageable != null)
             {
+                Debug.Log($"✅ BOSS HEALTH SYSTEM: Damageable component encontrado no player");
+                
                 // Calcula knockback baseado na direção do boss
                 Vector2 knockbackDirection = (player.transform.position - transform.position).normalized;
                 Vector2 knockback = knockbackDirection * 5f;
                 
+                Debug.Log($"💥 BOSS HEALTH SYSTEM: Chamando playerDamageable.Hit({Mathf.RoundToInt(damage)}, {knockback})");
                 bool hitSuccess = playerDamageable.Hit(Mathf.RoundToInt(damage), knockback);
+                
                 if (hitSuccess)
                 {
-                    // Debug.Log($"✅ BOSS DAMAGE: SUCESSO! Boss causou {damage} de dano ao player!");
+                    Debug.Log($"✅ BOSS DAMAGE: SUCESSO! Boss causou {damage} de dano ao player!");
+                }
+                else
+                {
+                    Debug.Log($"❌ BOSS DAMAGE: FALHA! playerDamageable.Hit retornou false!");
                 }
             }
+            else
+            {
+                Debug.LogError($"❌ BOSS HEALTH SYSTEM: Damageable component NÃO encontrado no player!");
+            }
+        }
+        else
+        {
+            Debug.LogError($"❌ BOSS HEALTH SYSTEM: Player é null!");
         }
     }
     
