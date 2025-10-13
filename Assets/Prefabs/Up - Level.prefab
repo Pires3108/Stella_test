@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.13, y: -0.22, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 3}
+  m_LocalScale: {x: 0.79499996, y: 0.79499996, z: 0.477}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1258078366, guid: ffdab82099c0bf744b6154eb9b52ed9c, type: 3}
-  m_Color: {r: 0.21690774, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 74053354, guid: 8643be2e0c790e94d93cc4dfb4e0ce11, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,6 +103,10 @@ MonoBehaviour:
   anim: {fileID: 5404820263049329255}
   col: {fileID: 4251060699427579780}
   player: {fileID: 0}
+  powerUpType: 0
+  healthIncrease: 15
+  staminaIncrease: 20
+  damageIncrease: 5
 --- !u!58 &4251060699427579780
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -132,12 +136,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0012856483, y: 0}
+  m_Offset: {x: 0.056446727, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09335852
+  m_Radius: 0.6909485
 --- !u!95 &5404820263049329255
 Animator:
   serializedVersion: 5

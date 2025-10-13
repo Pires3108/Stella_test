@@ -374,10 +374,13 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public IEnumerator UnlockMovementAfterAnimation()
     {
-        // Aguarda um tempo para a animação de comer maçã terminar
-        yield return new WaitForSeconds(1.5f); // Ajuste este valor conforme a duração da animação
-        
-        // Desbloqueia o movimento
+        // Força Stella no Idle usando apenas isMoving e isRunning
+        animator.SetBool(AnimationStrings.isMoving, false);
+        animator.SetBool(AnimationStrings.isRunning, false);
+        // Aguarda o tempo da animação de comer maçã
+        yield return new WaitForSeconds(1.5f); // Ajuste conforme necessário
+
+        // Libera o movimento
         if (damageable != null)
         {
             damageable.LockVelocity = false;
