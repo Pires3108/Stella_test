@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Script de compatibilidade para maçãs de cura
-/// Agora sempre enche a vida ao máximo e ativa animação ComendoMaca
+/// Script para maçãs normais (vermelhas) de cura
+/// Restaura a vida ao máximo sem causar bloqueio de movimento ou animação
 /// </summary>
 public class HealthPickup : MonoBehaviour
 {
@@ -27,41 +27,13 @@ public class HealthPickup : MonoBehaviour
             damageable.Health = damageable.MaxHealth;
             Debug.Log("Vida restaurada ao máximo!");
             
-            // Bloqueia movimento durante a animação
-            damageable.LockVelocity = true;
-            
-            // Zera a velocidade do player para garantir que ele fique parado
-            Rigidbody2D playerRb = collision.GetComponent<Rigidbody2D>();
-            if (playerRb != null)
-            {
-                playerRb.velocity = Vector2.zero;
-            }
-            
-            // Ativa animação de comer maçã
-            Animator playerAnimator = collision.GetComponent<Animator>();
-            if (playerAnimator != null)
-            {
-                playerAnimator.SetTrigger(AnimationStrings.eatingApple);
-            }
-            
-            // Desbloqueia movimento após a animação
-            StartCoroutine(UnlockMovementAfterAnimation(damageable));
+            // Maçã normal não causa bloqueio de movimento nem animação
+            // Apenas restaura a vida e destrói o objeto
             
             Destroy(gameObject);
         }
     }
     
-    private IEnumerator UnlockMovementAfterAnimation(Damageable damageable)
-    {
-        // Aguarda um tempo para a animação de comer maçã terminar
-        yield return new WaitForSeconds(1.5f); // Ajuste este valor conforme a duração da animação
-        
-        // Desbloqueia o movimento
-        if (damageable != null)
-        {
-            damageable.LockVelocity = false;
-        }
-    }
 
     private void Update()
     {
