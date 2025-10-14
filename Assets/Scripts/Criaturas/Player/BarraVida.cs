@@ -20,6 +20,8 @@ public class BarraVida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        slider.maxValue = player._maxHealth;
+        sliderEstamina.maxValue = StellaEstamina.MaxEnergy;
         //igualando o valor do slider ao valor da vida
         slider.value = player.Health;
         sliderEstamina.value = StellaEstamina.Energy;

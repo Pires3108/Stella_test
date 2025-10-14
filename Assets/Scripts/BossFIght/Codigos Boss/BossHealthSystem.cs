@@ -156,7 +156,7 @@ public class BossHealthSystem : MonoBehaviour
         
         if (health <= 0)
         {
-            Die();
+            TesteDie();
         }
     }
     
@@ -219,7 +219,7 @@ public class BossHealthSystem : MonoBehaviour
             Debug.LogError($"❌ BOSS HEALTH SYSTEM: Player é null!");
         }
     }
-    
+
     /// <summary>
     /// Mata o boss
     /// </summary>
@@ -227,34 +227,51 @@ public class BossHealthSystem : MonoBehaviour
     {
         isDead = true;
         // Debug.Log("Boss: Morrendo...");
-        
+
         if (animator != null)
         {
             animator.SetTrigger("Death");
         }
-        
+
         OnBossDeath?.Invoke();
-        
+
         // Desativa a barra de vida quando o boss morre
         if (healthBar != null)
         {
             healthBar.gameObject.SetActive(false);
         }
-        
+
         // Move o troféu para a posição do boss e ativa
         if (victoryReward != null)
         {
             victoryReward.transform.position = transform.position;
             victoryReward.SetActive(true);
         }
-        
+
         // Desabilita o sistema de combate
         enabled = false;
-        
+
         // Destrói o GameObject do boss após um pequeno delay
         StartCoroutine(DestroyBossAfterDeath());
     }
-    
+
+
+#region TesteDie
+    public void TesteDie()
+    {
+        animator.SetTrigger("Death");
+        victoryReward.transform.position = transform.position;
+        StartCoroutine(Teste());
+    }
+
+    public System.Collections.IEnumerator Teste()
+    {
+        yield return new WaitForSeconds(2f);
+        victoryReward.SetActive(true);
+        this.gameObject.SetActive(false);
+    }
+#endregion
+
     /// <summary>
     /// Destrói o boss após a animação de morte
     /// </summary>

@@ -222,10 +222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 3
-  attackDistance: 2
+  attackDistance: 1.88
   maxChaseDistance: 10
-  restDistance: 5
-  restDuration: 3
+  restDistance: 6
+  restDuration: 2
   retreatDistance: 3
   retreatSpeed: 2
   player: {fileID: 0}
@@ -262,8 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b1b6145499b24d9d8a7c0b9af20f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 400
+  maxHealth: 400
   stunChance: 0.3
   healthBar: {fileID: 0}
   healthBarAnimator: {fileID: 0}

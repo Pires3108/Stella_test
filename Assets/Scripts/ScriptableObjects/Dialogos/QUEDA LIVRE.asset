@@ -45,3 +45,6 @@ MonoBehaviour:
     ator: {fileID: 11400000, guid: c3828b39c4fa18b489569b2f9dcaa27f, type: 2}
     texto: "O ch\xE3o n\xE3o est\xE1 \xE0 sua espera. Mas algo mais profundo\u2026
       est\xE1."
+  - identificador: '[MORTE] : a MORTE'
+    ator: {fileID: 11400000, guid: 29cc9f84320757e448418b1b7e493a19, type: 2}
+    texto: a MORTE

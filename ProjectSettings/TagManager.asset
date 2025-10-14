@@ -23,6 +23,8 @@ TagManager:
   - Boss3
   - Boss4
   - Ground
+  - TrofeuTo2
+  - TrofeuTo3
   layers:
   - Default
   - TransparentFX

@@ -323,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3e40a78924c814ea294791eb8fd2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barraBoss: {fileID: 0}
-  AnimBarraBoss: {fileID: 0}
+  barraBoss: {fileID: 356025792}
+  AnimBarraBoss: {fileID: 356025791}
   bossFightSystem: {fileID: 387928963}
 --- !u!1001 &215940803
 PrefabInstance:
@@ -405,6 +405,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cda1687906e05c428a5eb58708e21dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &356025791 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5596403384513056435, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+  m_PrefabInstance: {fileID: 1971122901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &356025792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4374781819236431615, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+  m_PrefabInstance: {fileID: 1971122901}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &387928963 stripped
@@ -230336,7 +230352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4185377323445658833, guid: a8a937979c8732848b171f570181a2a2, type: 3}
       propertyPath: m_TagString
-      value: WinBoss1
+      value: TrofeuTo2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -230358,6 +230374,10 @@ PrefabInstance:
     - target: {fileID: 835534423581804818, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006697574237342194, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3057011621819967353, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_Name
@@ -231564,6 +231584,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 270952796}
+    - target: {fileID: 3671122924809924391, guid: 4795b79f75ae8e847a3d0ce0c49e46a5, type: 3}
+      propertyPath: powerUpType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671122924809924391, guid: 4795b79f75ae8e847a3d0ce0c49e46a5, type: 3}
+      propertyPath: damageIncrease
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671122924809924391, guid: 4795b79f75ae8e847a3d0ce0c49e46a5, type: 3}
+      propertyPath: healthIncrease
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671122924809924391, guid: 4795b79f75ae8e847a3d0ce0c49e46a5, type: 3}
+      propertyPath: staminaIncrease
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5760959408582032385, guid: 4795b79f75ae8e847a3d0ce0c49e46a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.82
@@ -231622,17 +231658,13 @@ PrefabInstance:
       value: BossLagarto
       objectReference: {fileID: 0}
     - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
-      propertyPath: healthBar
+      propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 270952796}
     - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: victoryReward
       value: 
       objectReference: {fileID: 1555158924}
-    - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
-      propertyPath: healthBarAnimator
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.5

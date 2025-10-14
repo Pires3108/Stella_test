@@ -16,9 +16,9 @@ public class PUP : MonoBehaviour
     public PowerUpType powerUpType = PowerUpType.Health;
     
     [Header("Upgrade Settings")]
-    public int healthIncrease = 15; // Aumento da vida máxima
-    public int staminaIncrease = 20; // Aumento da estamina máxima
-    public int damageIncrease = 5; // Aumento do dano
+    public int healthIncrease; // Aumento da vida máxima
+    public int staminaIncrease; // Aumento da estamina máxima
+    public int damageIncrease; // Aumento do dano
 
     public enum PowerUpType
     {

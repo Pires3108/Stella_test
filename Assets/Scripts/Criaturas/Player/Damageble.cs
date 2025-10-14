@@ -10,8 +10,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
 
     Animator animator;
-    [SerializeField]
-    private int _maxHealth = 100;
+    public int _maxHealth = 100;
 
 
     //vida máxima do player

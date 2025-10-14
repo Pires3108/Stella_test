@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
@@ -446,6 +447,49 @@ public class PlayerController : MonoBehaviour
                 key.SetActive(false);
             }
         }
+
+        #region Vitorias 
+
+        //Fase 1
+        if (coll.CompareTag("Trofeu1"))
+        {
+            StartCoroutine(GoCena("F1 - Boss"));
+            Debug.Log("Player has completed fase 1");
+        }
+
+        if (coll.CompareTag("TrofeuTo2"))
+        {
+            StartCoroutine(GoCena("F2"));
+            Debug.Log("Player has completed fase 1 e derrotou o Boss Lagarto");
+        }
+
+        //Fase 2
+        if (coll.CompareTag("Trofeu2"))
+        {
+            StartCoroutine(GoCena("F2 - Boss"));
+            Debug.Log("Player has completed the fase 2");
+        }
+
+        if (coll.CompareTag("TrofeuTo3"))
+        {
+            StartCoroutine(GoCena("F3"));
+            Debug.Log("Player has completed fase 2 e derrotou o Boss Cachorro");
+        }
+
+        //Fase 3
+        if (coll.CompareTag("Trofeu3"))
+        {
+            StartCoroutine(GoCena("F3 - Boss"));
+            Debug.Log("Player has completed the fase 3");
+        }
+
+        if (coll.CompareTag("TrofeuTo4"))
+        {
+            StartCoroutine(GoCena("F3 - Boss"));
+            Debug.Log("Player has completed fase 3 e derrotou o Boss Pato");
+        }
+
+        #endregion
     }
 
 
