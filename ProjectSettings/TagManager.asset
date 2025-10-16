@@ -25,6 +25,7 @@ TagManager:
   - Ground
   - TrofeuTo2
   - TrofeuTo3
+  - TrofeuTo4
   layers:
   - Default
   - TransparentFX

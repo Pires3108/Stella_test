@@ -74,8 +74,6 @@ public class PlayerController : MonoBehaviour
     [Header("Imports")]
     public GameObject MenudePausa;
 
-
-
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
     {
@@ -137,6 +135,7 @@ public class PlayerController : MonoBehaviour
         }
         set
         {
+            _isrunning = value;
             animator.SetBool(AnimationStrings.isRunning, value);   
         }
     }
@@ -149,7 +148,7 @@ public class PlayerController : MonoBehaviour
         {
             if (_isFacingRight != value && canFlip)
             {
-                gameObject.transform.eulerAngles = new Vector2(180, 0);
+                // flip only if allowed
             }
             _isFacingRight = value;
             gameObject.transform.eulerAngles = new Vector2(0, _isFacingRight ? 0 : 180);
@@ -173,8 +172,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private static PlayerController _instance;
+    public static PlayerController Instance => _instance;
+
     private void Awake()
     {
+        // Singleton: mantém apenas uma instância do player entre cenas
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirection = GetComponent<TouchingDirection>();

@@ -230367,12 +230367,52 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 96778708960967781, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96778708960967781, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96778708960967781, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 271320713214180927, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 835534423581804818, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490863458185965718, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490863458185965718, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937353971623520098, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937353971623520098, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937353971623520098, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394625940688282620, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394625940688282620, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3006697574237342194, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
@@ -230439,6 +230479,22 @@ PrefabInstance:
       propertyPath: NPCScript.Array.data[0]
       value: 
       objectReference: {fileID: 339599953}
+    - target: {fileID: 5483698183485862501, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483698183485862501, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873359231025865931, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873359231025865931, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.4
@@ -230477,6 +230533,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228939399809343095, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228939399809343095, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7342173670851621306, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
@@ -231653,9 +231717,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27537608664566188, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: attackDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_Name
       value: BossLagarto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873326400141457544, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: attackDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733705868924252885, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: attackDamage
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: player

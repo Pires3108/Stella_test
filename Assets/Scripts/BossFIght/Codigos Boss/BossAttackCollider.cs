@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossAttackCollider : MonoBehaviour
 {
     [Header("Configurações de Ataque")]
-    public int attackDamage = 10;
+    public int attackDamage;
     public Vector2 knockback = Vector2.zero;
     public string attackName = "DefaultAttack";
     
