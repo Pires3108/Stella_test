@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: b59e21ae6e5000746a26ea6371dc64fb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 102
+        height: 48
+      alignment: 9
+      pivot: {x: 0.51698333, y: 0.52724105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe8d5464e057ee4c81eb155ad72fc4f
+      internalID: 20636528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_4
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 100
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5773828, y: 0.5391202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f7793bababca94fa37565393ac9505
+      internalID: -1405421505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 102
+        height: 48
+      alignment: 9
+      pivot: {x: 0.57368857, y: 0.5412741}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55024ff2c3ae1e94e852d4dff3016eb3
+      internalID: 798001124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_6
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 102
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5780795, y: 0.53533345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7eadcf64411888419d4e99e2918dcc4
+      internalID: 1692271194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 102
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5824944, y: 0.54505545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fd43d51eefad2439126a0d4aae70a6
+      internalID: 1393190279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_8
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 101
+        height: 48
+      alignment: 9
+      pivot: {x: 0.57772917, y: 0.53457755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133bb1d2241c26c4d9559bbd12b59b9a
+      internalID: -831544073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 103
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5751663, y: 0.54302603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c594b7f4db1896c4483b0970f491fdb5
+      internalID: -89394486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_10
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 103
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5206571, y: 0.53966755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81aa02f99e8d444787b18edd96165e3
+      internalID: 1217491672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_11
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 0
+        width: 102
+        height: 48
+      alignment: 9
+      pivot: {x: 0.42113778, y: 0.5404481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93b44aecf0d15e4da52c44ca3a5cb73
+      internalID: 1882399832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 49
+        height: 48
+      alignment: 9
+      pivot: {x: 0.619784, y: 0.5363122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f15b9a6ec1cae4887ee472abaccd85
+      internalID: 1591535007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lenhador Ataque Espinhos 112x48_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 65
+        height: 48
+      alignment: 9
+      pivot: {x: 0.54482216, y: 0.54305226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3344fc5264a174fb197132c861d935
+      internalID: -1200429053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Lenhador Ataque Espinhos 112x48_0: 1591535007
+      Lenhador Ataque Espinhos 112x48_1: -1200429053
+      Lenhador Ataque Espinhos 112x48_10: 1217491672
+      Lenhador Ataque Espinhos 112x48_11: 1882399832
+      Lenhador Ataque Espinhos 112x48_2: 1832511955
+      Lenhador Ataque Espinhos 112x48_3: 20636528
+      Lenhador Ataque Espinhos 112x48_4: -1405421505
+      Lenhador Ataque Espinhos 112x48_5: 798001124
+      Lenhador Ataque Espinhos 112x48_6: 1692271194
+      Lenhador Ataque Espinhos 112x48_7: 1393190279
+      Lenhador Ataque Espinhos 112x48_8: -831544073
+      Lenhador Ataque Espinhos 112x48_9: -89394486
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
