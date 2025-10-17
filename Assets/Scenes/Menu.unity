@@ -2209,6 +2209,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 578c2ad4452b9f34f94c7b2d8195d963, type: 3}
     - target: {fileID: 6324620052980668458, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.32171655

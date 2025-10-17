@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d06a175b2e9a44445bd4dbb94f83e895
+guid: 908d11c77626c874ea6525061a47dbac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,63 +93,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Setas direcionais - Esquerda_0
+      name: Setas direcionais - Esquerdas_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fc49564dc72fc4418241ce2c144a2f3
-      internalID: -738147582
+      spriteID: fecbea7bfa08e7f4ea3e06650f6faa92
+      internalID: -1808704902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setas direcionais - Esquerda_1
+      name: Setas direcionais - Esquerdas_1
       rect:
         serializedVersion: 2
         x: 32
@@ -184,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 367fd9d18d727fe4c8a95d1d9b1f003b
-      internalID: -1160705942
+      spriteID: e3ef643c1923a0d45b84474a5f914d50
+      internalID: 506107795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setas direcionais - Esquerda_2
+      name: Setas direcionais - Esquerdas_2
       rect:
         serializedVersion: 2
         x: 64
@@ -205,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 419330d2e4ea3e14b8121b6bd8a2d98e
-      internalID: 18352312
+      spriteID: cec51b9b655463349bc90b06d9a7716e
+      internalID: 1140356674
       vertices: []
       indices: 
       edges: []
@@ -222,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Setas direcionais - Esquerda_0: -738147582
-      Setas direcionais - Esquerda_1: -1160705942
-      Setas direcionais - Esquerda_2: 18352312
+      Setas direcionais - Esquerdas_0: -1808704902
+      Setas direcionais - Esquerdas_1: 506107795
+      Setas direcionais - Esquerdas_2: 1140356674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

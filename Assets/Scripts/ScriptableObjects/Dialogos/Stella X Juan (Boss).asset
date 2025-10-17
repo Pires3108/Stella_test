@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7af850522a0124e8fc1cb30598d3b4, type: 3}
+  m_Name: Stella X Juan (Boss)
+  m_EditorClassIdentifier: 
+  falasDialogo:
+  - identificador: "[Stella] : Ufa... acho que foi o \xFAltimo deles.\nEssas criaturas
+      n\xE3o param de aparecer... parecem todas iguais."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Ufa... acho que foi o \xFAltimo deles.\nEssas criaturas n\xE3o param
+      de aparecer... parecem todas iguais."
+  - identificador: "[Desconhecido] : \xA1Ay caramba! Ainda viva? Voc\xEA \xE9 mais
+      resistente que pedra em tempestade de areia!"
+    ator: {fileID: 11400000, guid: 64f046a571becfe48a95653bd002aedb, type: 2}
+    texto: "\xA1Ay caramba! Ainda viva? Voc\xEA \xE9 mais resistente que pedra em
+      tempestade de areia!"
+  - identificador: "[Stella] : Pera\xED... voc\xEA fala?\nAchei que era s\xF3 um
+      cacto maluco me encarando de novo."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Pera\xED... voc\xEA fala?\nAchei que era s\xF3 um cacto maluco me encarando
+      de novo."
+  - identificador: "[Juan Pablo] : Mal posso me conter de tanta ofensa!\nEu sou Juan
+      Pablo, o cacto mais s\xE1bio \u2014 e o mais bonito \u2014 deste deserto implac\xE1vel."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Mal posso me conter de tanta ofensa!\nEu sou Juan Pablo, o cacto mais
+      s\xE1bio \u2014 e o mais bonito \u2014 deste deserto implac\xE1vel."
+  - identificador: "[Stella] : Juan?? Certo.\nAcho que o calor finalmente fritou
+      minha cabe\xE7a e agora to alucinando."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Juan?? Certo.\nAcho que o calor finalmente fritou minha cabe\xE7a e agora
+      to alucinando."
+  - identificador: "[Juan Pablo] : Heh, talvez. Mas tamb\xE9m pode ser o destino,
+      chica valiente.\nVoc\xEA cruzou o territ\xF3rio dos Morselinos, sabia?"
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Heh, talvez. Mas tamb\xE9m pode ser o destino, chica valiente.\nVoc\xEA
+      cruzou o territ\xF3rio dos Morselinos, sabia?"
+  - identificador: "[Stella] : Morse... o qu\xEA?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "Morse... o qu\xEA?"
+  - identificador: "[Juan Pablo] : Morselinos! Pequenos guerreiros de areia, clones
+      criados pela pr\xF3pria raiva do deserto.\n"
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Morselinos! Pequenos guerreiros de areia, clones criados pela pr\xF3pria
+      raiva do deserto.\n"
+  - identificador: "[Juan Pablo] : N\xE3o pensam, n\xE3o sentem \u2014 s\xF3 repetem
+      o que veem.\nS\xE3o ecos... de algo muito maior."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "N\xE3o pensam, n\xE3o sentem \u2014 s\xF3 repetem o que veem.\nS\xE3o
+      ecos... de algo muito maior."
+  - identificador: "[Stella] : E esse \u201Calgo maior\u201D seria...?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "E esse \u201Calgo maior\u201D seria...?"
+  - identificador: '[Juan Pablo] : O Cerberosso.
+
+      Um imenso guerreiro canino,
+      forjado em batalhas sangrentas.
+
+'
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: 'O Cerberosso.
+
+      Um imenso guerreiro canino, forjado em batalhas
+      sangrentas.
+
+'
+  - identificador: "[Juan Pablo] : Sua for\xE7a bruta \xE9 comparada \xE0 de um ex\xE9rcito
+      inteiro,\ne ele carrega uma l\xE2mina colossal como extens\xE3o da pr\xF3pria
+      f\xFAria."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Sua for\xE7a bruta \xE9 comparada \xE0 de um ex\xE9rcito inteiro,\ne
+      ele carrega uma l\xE2mina colossal como extens\xE3o da pr\xF3pria f\xFAria."
+  - identificador: "[Stella] : E eu vou ter que enfrentar esse tal Ser Berosso, n\xE3o
+      \xE9?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "E eu vou ter que enfrentar esse tal Ser Berosso, n\xE3o \xE9?"
+  - identificador: "[Juan Pablo] : Heh... ningu\xE9m cruza o deserto sem encarar
+      seu pr\xF3prio monstro.\nMas calma, h\xE1 um jeito de se preparar."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Heh... ningu\xE9m cruza o deserto sem encarar seu pr\xF3prio monstro.\nMas
+      calma, h\xE1 um jeito de se preparar."
+  - identificador: "[Stella] : T\xF4 ouvindo cactuxo."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "T\xF4 ouvindo cactuxo."
+  - identificador: "[Juan Pablo] : Voc\xEA precisa da ma\xE7\xE3 do deserto.\nUm
+      fruto raro, nascido onde o calor \xE9 t\xE3o forte que o solo grita.\n"
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Voc\xEA precisa da ma\xE7\xE3 do deserto.\nUm fruto raro, nascido onde
+      o calor \xE9 t\xE3o forte que o solo grita.\n"
+  - identificador: "[Juan Pablo] : Quem a come recebe o fogo do sol nas veias \u2014
+      e a coragem pra seguir em frente."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Quem a come recebe o fogo do sol nas veias \u2014 e a coragem pra seguir
+      em frente."
+  - identificador: "[Stella] : E se eu n\xE3o aguentar esse poder?"
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "E se eu n\xE3o aguentar esse poder?"
+  - identificador: "[Juan Pablo] : Ent\xE3o vira adubo... e me faz companhia! Hahaha!"
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Ent\xE3o vira adubo... e me faz companhia! Hahaha!"
+  - identificador: "[Stella] : T\xE1, \xF3timo incentivo.\nMas quer saber? Eu topo."
+    ator: {fileID: 11400000, guid: 5dbc56b8fcf4c994a8c69c34beef2d79, type: 2}
+    texto: "T\xE1, \xF3timo incentivo.\nMas quer saber? Eu topo."
+  - identificador: "[Juan Pablo] : Se o deserto te acolher como sua imperatriz, siga
+      \u2014 e liberte-o das garras do rei enfurecido."
+    ator: {fileID: 11400000, guid: 850e46b5e7c472547937067ada299918, type: 2}
+    texto: "Se o deserto te acolher como sua imperatriz, siga \u2014 e liberte-o
+      das garras do rei enfurecido."

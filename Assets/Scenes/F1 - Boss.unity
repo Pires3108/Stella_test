@@ -230550,6 +230550,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+--- !u!82 &1093541385 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+  m_PrefabInstance: {fileID: 1746287048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1155569451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230646,6 +230651,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 527891826330182138, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: audioMusica
+      value: 
+      objectReference: {fileID: 1093541385}
+    - target: {fileID: 527891826330182138, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: audioEfeitos
+      value: 
+      objectReference: {fileID: 1545135173}
     - target: {fileID: 591735307909306067, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -230669,6 +230682,10 @@ PrefabInstance:
     - target: {fileID: 940322433075132199, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940322433075132199, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
       objectReference: {fileID: 0}
     - target: {fileID: 1406049652993822164, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
@@ -231094,6 +231111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee23cad008ddc4ab1c0a1128e1000d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1545135173 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4185737816789064003, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+  m_PrefabInstance: {fileID: 1091534602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1555158924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4185377323445658833, guid: a8a937979c8732848b171f570181a2a2, type: 3}
@@ -231281,6 +231303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14ec5cff494f4a04abb4871226ecfbfc, type: 3}
     - target: {fileID: 6324620052980668458, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
       propertyPath: m_LocalPosition.x
       value: 53.45
@@ -231334,6 +231364,10 @@ PrefabInstance:
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6883145264791959753, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: audioEfeitos
+      value: 
+      objectReference: {fileID: 1545135173}
+    - target: {fileID: 6883145264791959753, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
       propertyPath: sliderMusica
       value: 
       objectReference: {fileID: 1308860719}
@@ -231341,6 +231375,10 @@ PrefabInstance:
       propertyPath: sliderEfeitos
       value: 
       objectReference: {fileID: 1694250358}
+    - target: {fileID: 7054917021780213478, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: "Transi\xE7\xE3o"
+      value: 
+      objectReference: {fileID: 1971122902}
     - target: {fileID: 8396518327373361913, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
       propertyPath: m_LocalPosition.x
       value: -80.85
