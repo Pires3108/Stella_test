@@ -11,6 +11,9 @@ using Unity.Mathematics;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
+
+    #region Inspector Variables
+
     [Header("Component References")]
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
@@ -73,6 +76,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Imports")]
     public GameObject MenudePausa;
+
+    #endregion
 
     // codigo que define o movimento do player true or false
     public float CurrentMoveSpeed
@@ -413,25 +418,7 @@ public class PlayerController : MonoBehaviour
                 key.SetActive(true);
             }
         }
-    }
-
-    void OnTriggerExit2D(Collider2D coll)
-    {
-        if (coll.CompareTag("NPC"))
-        {
-            Personagem npc = coll.GetComponent<Personagem>();
-            if (npc != null)
-            {
-                npc.podeInteragir = false;
-            }
-            projectileLauncher.canFire = true;
-            canAttack = true;
-            foreach (GameObject key in eKey)
-            {
-                key.SetActive(false);
-            }
-        }
-
+     
         #region Vitorias 
 
         //Fase 1
@@ -470,13 +457,45 @@ public class PlayerController : MonoBehaviour
         if (coll.CompareTag("TrofeuTo4"))
         {
             StartCoroutine(GoCena("WinScreen"));
-            Debug.Log("Player has completed the game");
+            Debug.Log("Player has completed fase 3 e derrotou o Boss Pato");
         }
 
         #endregion
+
+
+        #region Out of Map - Reload Scene
+
+        if (coll.CompareTag("OutMap"))
+        {
+            // Get current scene name and reload it
+            string currentScene = SceneManager.GetActiveScene().name;
+            StartCoroutine(GoCena(currentScene));
+        }
+        #endregion           
+
     }
 
+    void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.CompareTag("NPC"))
+        {
+            Personagem npc = coll.GetComponent<Personagem>();
+            if (npc != null)
+            {
+                npc.podeInteragir = false;
+            }
+            projectileLauncher.canFire = true;
+            canAttack = true;
+            foreach (GameObject key in eKey)
+            {
+                key.SetActive(false);
+            }
+        }
 
+        
+    }
+
+    #region Grounded Detection
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.CompareTag("Ground"))
@@ -495,10 +514,17 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(AnimationStrings.isGrounded, false);
         }
     }
+    #endregion
 
+    #region Coroutines for Scene Transitions
+    IEnumerator GoFase2()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("F2");
+    }
     IEnumerator GoMenu()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Menu");
     }
 
@@ -514,4 +540,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("WinScreen");
     }
+    #endregion
 }
