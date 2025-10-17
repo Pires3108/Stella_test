@@ -103,9 +103,9 @@ MonoBehaviour:
   anim: {fileID: 5404820263049329255}
   col: {fileID: 4251060699427579780}
   player: {fileID: 0}
-  powerUpType: 0
-  healthIncrease: 15
-  staminaIncrease: 20
+  powerUpType: 1
+  healthIncrease: 200
+  staminaIncrease: 200
   damageIncrease: 5
 --- !u!58 &4251060699427579780
 CircleCollider2D:

@@ -1335,6 +1335,7 @@ GameObject:
   - component: {fileID: 5207542983288981811}
   - component: {fileID: 5724806424755302618}
   - component: {fileID: 4901059471256243005}
+  - component: {fileID: 527891826330182138}
   m_Layer: 5
   m_Name: Opcoes
   m_TagString: Untagged
@@ -1371,7 +1372,7 @@ Canvas:
   m_GameObject: {fileID: 5690073590396141269}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1383,7 +1384,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 418645843
-  m_SortingOrder: 1000
+  m_SortingOrder: 32766
   m_TargetDisplay: 0
 --- !u!114 &5207542983288981811
 MonoBehaviour:
@@ -1445,6 +1446,23 @@ MonoBehaviour:
   FecharOpcoesButton: {fileID: 6050722374491080973}
   SalvarOpcoesButton: {fileID: 1116928970467127773}
   Opcoes: {fileID: 2065745618460003550}
+--- !u!114 &527891826330182138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5690073590396141269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb58a83da26094840ae66365d2955c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderMusica: {fileID: 1529987813891422201}
+  sliderEfeitos: {fileID: 5004546284333673637}
+  audioMusica: {fileID: 0}
+  audioEfeitos: {fileID: 0}
+  somClip: {fileID: 8300000, guid: 395a03c3003c7cc4ea2ca71ba5941502, type: 3}
 --- !u!1 &6003470897955045689
 GameObject:
   m_ObjectHideFlags: 0

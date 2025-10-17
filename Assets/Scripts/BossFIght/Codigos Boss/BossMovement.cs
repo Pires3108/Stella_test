@@ -14,6 +14,7 @@ public class BossMovement : MonoBehaviour
     public float restDuration = 3f;
     public float retreatDistance = 3f;
     public float retreatSpeed = 2f;
+    public float maxRetreatTime = 2f;
     
     [Header("Referências")]
     public GameObject player;
@@ -140,7 +141,6 @@ public class BossMovement : MonoBehaviour
             animator.SetBool("isWalking", true);
         
         float retreatTime = 0f;
-        float maxRetreatTime = 2f;
         
         // Calcula direção de recuo
         Vector2 retreatDirection = CalculateRetreatDirection();
@@ -186,7 +186,6 @@ public class BossMovement : MonoBehaviour
             animator.SetBool("isWalking", true);
         
         float retreatTime = 0f;
-        float maxRetreatTime = 3f;
         
         // Afasta até atingir a distância de descanso
         while (retreatTime < maxRetreatTime && !isInterrupted)

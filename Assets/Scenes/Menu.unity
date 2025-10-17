@@ -2250,6 +2250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6883145264791959753, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+      propertyPath: audioEfeitos
+      value: 
+      objectReference: {fileID: 2095489487}
+    - target: {fileID: 6883145264791959753, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
       propertyPath: sliderMusica
       value: 
       objectReference: {fileID: 62446796}
@@ -2262,6 +2266,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+--- !u!82 &2095489487 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2355033439787622909, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
+  m_PrefabInstance: {fileID: 2095489486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117508067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,6 +2486,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 527891826330182138, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: audioMusica
+      value: 
+      objectReference: {fileID: 2095489487}
+    - target: {fileID: 527891826330182138, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
+      propertyPath: audioEfeitos
+      value: 
+      objectReference: {fileID: 2095489487}
     - target: {fileID: 591735307909306067, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

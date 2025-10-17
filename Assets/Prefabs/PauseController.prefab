@@ -292,6 +292,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Op\xE7oes"
       objectReference: {fileID: 0}
+    - target: {fileID: 5336156272861331966, guid: 2323053309276f948858b352e3a014ff, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336156272861331966, guid: 2323053309276f948858b352e3a014ff, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336156272861331966, guid: 2323053309276f948858b352e3a014ff, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 418645843
+      objectReference: {fileID: 0}
     - target: {fileID: 6638793136783105171, guid: 2323053309276f948858b352e3a014ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

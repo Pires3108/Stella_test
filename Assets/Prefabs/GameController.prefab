@@ -47,5 +47,10 @@ MonoBehaviour:
   playerscript: {fileID: 0}
   playerInput: {fileID: 0}
   BarraDeVida: {fileID: 0}
+  BarradeEstamina: {fileID: 0}
+  BarraBoss: {fileID: 0}
   Dialogo: {fileID: 0}
+  BossFight: {fileID: 0}
+  CenaAtual: F2 - Boss
+  IsInFight: 0
   IsDialogActive: 0

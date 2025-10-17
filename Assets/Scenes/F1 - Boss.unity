@@ -311,21 +311,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6447145126319376803, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
   m_PrefabInstance: {fileID: 948984366}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &190981964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190981961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3e40a78924c814ea294791eb8fd2cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barraBoss: {fileID: 356025792}
-  AnimBarraBoss: {fileID: 356025791}
-  bossFightSystem: {fileID: 387928963}
 --- !u!1001 &215940803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230219,6 +230204,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635830896131425509, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
+      propertyPath: barraBoss
+      value: 
+      objectReference: {fileID: 356025792}
+    - target: {fileID: 635830896131425509, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
+      propertyPath: AnimBarraBoss
+      value: 
+      objectReference: {fileID: 356025791}
+    - target: {fileID: 635830896131425509, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
+      propertyPath: bossFightSystem
+      value: 
+      objectReference: {fileID: 387928963}
     - target: {fileID: 2522262388562548521, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
       propertyPath: barraBoss
       value: 
@@ -230269,16 +230266,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447145126319376803, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
       propertyPath: m_Name
-      value: Contreller Boss
+      value: BossFight
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2522262388562548521, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6447145126319376803, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 190981964}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c6f7fef84282a439c443ee27d06768, type: 3}
 --- !u!114 &971099836
 MonoBehaviour:
@@ -230567,7 +230561,7 @@ PrefabInstance:
     - target: {fileID: 3467396752551774636, guid: 24c1469c05bcea749bb8c53608745f77, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 541252645}
     - target: {fileID: 4784139184751642230, guid: 24c1469c05bcea749bb8c53608745f77, type: 3}
       propertyPath: HUDS
       value: 
@@ -230671,10 +230665,10 @@ PrefabInstance:
     - target: {fileID: 940322433075132199, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 541252645}
     - target: {fileID: 940322433075132199, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1406049652993822164, guid: 955b86ae221eaaf4b90ec9b66d33df77, type: 3}
       propertyPath: m_AnchorMax.x
@@ -231018,11 +231012,15 @@ PrefabInstance:
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BarraBoss
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1971122904}
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BossFight
       value: 
       objectReference: {fileID: 190981961}
+    - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
+      propertyPath: CenaAtual
+      value: F1 - Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BarraDeVida
       value: 
@@ -231511,6 +231509,10 @@ PrefabInstance:
       propertyPath: estellaController
       value: 
       objectReference: {fileID: 1545135152}
+    - target: {fileID: 3861322169899757374, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1048433910, guid: f121ecc8fd5c1a8418dbf6b407d2ad7d, type: 3}
     - target: {fileID: 3964658852835421628, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -231616,6 +231618,11 @@ GameObject:
 --- !u!1 &1971122903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1081936220691851771, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+  m_PrefabInstance: {fileID: 1971122901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1971122904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2813041658983182355, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 1971122901}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1977910800

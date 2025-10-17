@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1416309509627218400}
   m_Layer: 0
   m_Name: Trofeu
-  m_TagString: Trofeu2
+  m_TagString: WinBoss2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

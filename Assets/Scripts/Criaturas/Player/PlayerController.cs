@@ -177,18 +177,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton: mantém apenas uma instância do player entre cenas
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (_instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirection = GetComponent<TouchingDirection>();
@@ -425,24 +413,6 @@ public class PlayerController : MonoBehaviour
                 key.SetActive(true);
             }
         }
-
-        if (coll.CompareTag("Trofeu1"))
-        {
-            StartCoroutine(GoFase2());
-            Debug.Log("Player has completed fase 1");
-        }
-
-        // FASE 2
-        if (coll.CompareTag("OutMap"))
-        {
-            isAlive.IsAlive = false;
-            Debug.Log("Player has left the map 2");
-        }
-        if (coll.CompareTag("Trofeu2"))
-        {
-            StartCoroutine(GoMenu());
-            Debug.Log("Player has completed the fase 2");
-        }
     }
 
     void OnTriggerExit2D(Collider2D coll)
@@ -499,8 +469,8 @@ public class PlayerController : MonoBehaviour
 
         if (coll.CompareTag("TrofeuTo4"))
         {
-            StartCoroutine(GoCena("F3 - Boss"));
-            Debug.Log("Player has completed fase 3 e derrotou o Boss Pato");
+            StartCoroutine(GoCena("WinScreen"));
+            Debug.Log("Player has completed the game");
         }
 
         #endregion
@@ -526,14 +496,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator GoFase2()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("F2");
-    }
     IEnumerator GoMenu()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Menu");
     }
 
