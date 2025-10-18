@@ -1189,6 +1189,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+--- !u!95 &1274273797 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5596403384513056435, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+  m_PrefabInstance: {fileID: 1274273796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1293538091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1081936220691851771, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
@@ -29064,7 +29069,7 @@ MonoBehaviour:
   maxHealth: 1000
   stunChance: 0
   healthBar: {fileID: 1129976417}
-  healthBarAnimator: {fileID: 8589737919480581096}
+  healthBarAnimator: {fileID: 1274273797}
   victoryReward: {fileID: 66818562}
   player: {fileID: 1308655920}
   animator: {fileID: 8589737919480581096}

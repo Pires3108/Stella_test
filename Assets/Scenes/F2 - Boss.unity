@@ -127,7 +127,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5983737673957898949, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 524816077}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524816082}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -71786,11 +71786,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7758555979169316515, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 524816077}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &524816082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6821254232341470048, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
-  m_PrefabInstance: {fileID: 524816077}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &524816083 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1818857388441635682, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
@@ -77744,7 +77739,7 @@ PrefabInstance:
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BarraDeVida
       value: 
-      objectReference: {fileID: 524816082}
+      objectReference: {fileID: 524816079}
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: playerInput
       value: 

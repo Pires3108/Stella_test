@@ -448915,6 +448915,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 629686682}
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
+      propertyPath: CenaAtual
+      value: F3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BarraDeVida
       value: 
       objectReference: {fileID: 366594031}

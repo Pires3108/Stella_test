@@ -402,7 +402,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4374781819236431615, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 1971122901}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1971122904}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -231041,7 +231041,7 @@ PrefabInstance:
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: BarraDeVida
       value: 
-      objectReference: {fileID: 1777442906}
+      objectReference: {fileID: 1971122903}
     - target: {fileID: 1974557100062691634, guid: a9f703021088c9a4dae9e27283bd6d86, type: 3}
       propertyPath: playerInput
       value: 
@@ -231396,17 +231396,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97cdb18e3d9a9148998e158815b9398, type: 3}
---- !u!1 &1777442906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6821254232341470048, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
-  m_PrefabInstance: {fileID: 1971122901}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1777442908 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5983737673957898949, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 1971122901}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777442906}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -231660,7 +231655,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971122904 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2813041658983182355, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2859606119502931653, guid: b58eec3d7245e3d4f95891317a4c6ae9, type: 3}
   m_PrefabInstance: {fileID: 1971122901}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1977910800
@@ -231783,9 +231778,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 270952796}
     - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 356025792}
+    - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: victoryReward
       value: 
       objectReference: {fileID: 1555158924}
+    - target: {fileID: 5668624931163069878, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: healthBarAnimator
+      value: 
+      objectReference: {fileID: 356025791}
     - target: {fileID: 7540273426080072723, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.5
