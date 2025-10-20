@@ -246,8 +246,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09441503, y: -0.036439776}
-  m_Size: {x: 0.30372876, y: 0.4985125}
+  m_Offset: {x: 0.09441503, y: -0.033011638}
+  m_Size: {x: 0.30372876, y: 0.49165624}
   m_Direction: 0
 --- !u!114 &1990402621003517404
 MonoBehaviour:
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkAcceleration: 50
   maxSpeed: 3
-  walkStopRate: 0.05
+  walkStopRate: 1
   AtackZone: {fileID: 2953356548309387761}
   cliffDetectionZone: {fileID: 6120192616348875918}
   walkDirectionVector: {x: 0, y: 0}
@@ -330,8 +330,8 @@ MonoBehaviour:
   damageableDeath:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 200
-  _health: 200
+  _maxHealth: 60
+  _health: 60
   _isAlive: 1
   isInvincible: 0
   invicibilityTime: 0.25

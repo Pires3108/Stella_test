@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1932c6f960eacd44b5c3a85523ca86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stunDuration: 2
+  stunDuration: -1
 --- !u!114 &405866126337072826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   restDuration: 2
   retreatDistance: 3
   retreatSpeed: 2
+  maxRetreatTime: 2
   player: {fileID: 0}
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 400
   maxHealth: 400
-  stunChance: 0.3
+  stunChance: 0
   healthBar: {fileID: 0}
   healthBarAnimator: {fileID: 0}
   victoryReward: {fileID: 0}

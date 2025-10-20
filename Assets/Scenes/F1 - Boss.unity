@@ -230489,6 +230489,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6397333244049082153, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d85fbc4ca45c9c34b94fe2aebd68175e, type: 2}
     - target: {fileID: 6930828254574346624, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.4
@@ -230545,6 +230549,10 @@ PrefabInstance:
       propertyPath: sliderEstamina
       value: 
       objectReference: {fileID: 1868551667}
+    - target: {fileID: 9043971430343496636, guid: 3ab58ea3c2dd3f34fbb46cb3ba2d164a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d85fbc4ca45c9c34b94fe2aebd68175e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
