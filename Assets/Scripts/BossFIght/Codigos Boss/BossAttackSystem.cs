@@ -309,8 +309,8 @@ public class BossAttackSystem : MonoBehaviour
         {
             attackName = "ComboGiro",
             animationTrigger = "ComboGiro",
-            attackDuration = 1.5f,
-            cooldown = 3f,
+            attackDuration = 0.2f,
+            cooldown = 0f,
             damage = 15f,
             range = 2f
         });
@@ -319,8 +319,8 @@ public class BossAttackSystem : MonoBehaviour
         {
             attackName = "PunchRight",
             animationTrigger = "PunchRight",
-            attackDuration = 1f,
-            cooldown = 2f,
+            attackDuration = 0.4f,
+            cooldown = 0f,
             damage = 10f,
             range = 1.5f
         });
@@ -329,8 +329,8 @@ public class BossAttackSystem : MonoBehaviour
         {
             attackName = "PunchLeft",
             animationTrigger = "PunchLeft",
-            attackDuration = 1f,
-            cooldown = 2f,
+            attackDuration = 0.4f,
+            cooldown = 0f,
             damage = 10f,
             range = 1.5f
         });

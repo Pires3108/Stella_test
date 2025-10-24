@@ -78386,6 +78386,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 270952796}
+    - target: {fileID: 1019723527608980525, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019723527608980525, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
+      propertyPath: availableAttacks.Array.data[0].cooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019723527608980525, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
+      propertyPath: availableAttacks.Array.data[1].cooldown
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1550734500939210562, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
       propertyPath: player
       value: 
@@ -78410,6 +78422,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 270952796}
+    - target: {fileID: 6188227972234102001, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
+      propertyPath: restDuration
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188227972234102001, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
+      propertyPath: maxRetreatTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7403806429615634118, guid: 47f1c16da7f4496498c4f1c689e5fb47, type: 3}
       propertyPath: player
       value: 

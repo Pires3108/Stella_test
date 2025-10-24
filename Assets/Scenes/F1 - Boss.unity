@@ -231769,9 +231769,21 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 405866126337072826, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: restDuration
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 405866126337072826, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: maxRetreatTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 610642823740563994, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: m_Name
       value: BossLagarto
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008218832732980360, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2873326400141457544, guid: e8d4842faa84ae449a0d0ebe41a06369, type: 3}
       propertyPath: attackDamage
