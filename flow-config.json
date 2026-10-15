@@ -1,0 +1,25 @@
+{
+  "name": "Paridade - teste minimo",
+  "createdAt": "2026-10-15T13:44:19.887Z",
+  "source": "agentflow-studio",
+  "projectType": "existing",
+  "changeType": "feature",
+  "description": "Teste de paridade: criar um README.md curto descrevendo o projeto.",
+  "gitProvider": "github",
+  "repoFullName": "Pires3108/Stella_test",
+  "workspace": "",
+  "jira": {
+    "enabled": false,
+    "projectKey": "",
+    "projectName": "",
+    "epicKey": ""
+  },
+  "dataSources": [],
+  "uploadedFiles": [],
+  "flowMetadata": {
+    "flowName": "Paridade - teste minimo",
+    "totalNodes": 4,
+    "llmAgents": 2,
+    "squads": []
+  }
+}
